@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "510495061070",
+    "firebase_url": "https://my-mrce-app-6c85d.firebaseio.com",
+    "project_id": "my-mrce-app-6c85d",
+    "storage_bucket": "my-mrce-app-6c85d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510495061070:android:483e77c93e5b5093b67f1f",
+        "android_client_info": {
+          "package_name": "com.test.mymrceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510495061070-seq220tul141p9p4lkest592atupj00o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpuKE8nndfXJgu63D6LAZq-p83lpVtsOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id":    "510495061070-seq220tul141p9p4lkest592atupj00o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

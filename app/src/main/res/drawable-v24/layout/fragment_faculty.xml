@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:id="@+id/faculty"
+   >
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttona"
+        android:drawableLeft="@drawable/ic_account_balance_black_24dp"
+        android:elevation="10dp"
+        android:paddingLeft="19dp"
+        android:paddingRight="18dp"
+        android:text="Button"
+        android:textColor="#ED8C6B" />
+
+
+    <!--app:icon="@drawable/ic_account_balance_black_24dp"-->
+
+
+        <!--style="@style/Widget.MaterialComponents.Button.Icon"-->
+
+
+
+</LinearLayout>

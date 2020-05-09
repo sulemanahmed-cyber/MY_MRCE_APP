@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="3"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:id="@+id/tplyt"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:orientation="vertical">
+
+   </LinearLayout>
+
+   <GridLayout
+       android:layout_weight="2"
+       android:id="@+id/gridLayout5"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:alignmentMode="alignMargins"
+       android:columnCount="3"
+       android:columnOrderPreserved="false"
+       android:layout_marginTop="300dp"
+       android:padding="14dp"
+       android:rowCount="3"
+       tools:layout_editor_absoluteY="300dp">
+
+      <androidx.cardview.widget.CardView
+
+          android:id="@+id/syllabus"
+          app:cardBackgroundColor="@color/cpl"
+          style="@style/cardmainbtn"
+          android:contentDescription="todo"
+          app:cardCornerRadius="8dp"
+         android:onClick="syllabus"
+          >
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_apps_black_24dp" />
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:text="Syllabus "
+
+                 android:textAlignment="center"
+                 android:textColor="@color/colorPrimaryDark"
+                 android:textSize="10sp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          style="@style/cardmainbtn"
+          android:id="@+id/games"
+          android:contentDescription="todo"
+          app:cardBackgroundColor="@color/cpl"
+          app:cardCornerRadius="8dp"
+          android:onClick="games">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_games_black_24dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="games "
+                android:textAlignment="center"
+                android:textColor="@color/csd"
+                android:textSize="10sp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          style="@style/cardmainbtn"
+          android:id="@+id/campus"
+          android:contentDescription="todo"
+          app:cardBackgroundColor="@color/cpl"
+          app:cardCornerRadius="8dp"
+          android:onClick="campus">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_add_location_black_24dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="campus"
+
+                android:textAlignment="center"
+                android:textColor="@color/csd"
+                android:textSize="10sp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          style="@style/cardmainbtn"
+          android:contentDescription="todo"
+          app:cardBackgroundColor="@color/cpl"
+          android:id="@+id/events"
+          app:cardCornerRadius="8dp"
+          android:onClick="events">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_event_note_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Events"
+
+                android:textAlignment="center"
+                android:textColor="@color/csd"
+                android:textSize="10sp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/notifications"
+          style="@style/cardmainbtn"
+          android:contentDescription="todo"
+          app:cardBackgroundColor="@color/cpl"
+          app:cardCornerRadius="8dp"
+          android:onClick="notifications">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:src="@drawable/ic_notifications_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:textAlignment="center"
+                android:textColor="@color/csd"
+                android:textSize="10dp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          style="@style/cardmainbtn"
+          android:contentDescription="todo"
+          app:cardBackgroundColor="@color/cpl"
+          android:id="@+id/calender"
+          app:cardCornerRadius="8dp"
+          android:onClick="calender">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:src="@drawable/ic_adb_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Calender"
+                android:textAlignment="center"
+
+                android:textColor="@color/csd"
+                android:textSize="10sp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          style="@style/cardmainbtn"
+          android:id="@+id/faculty"
+          android:contentDescription="todo"
+          app:cardBackgroundColor="@color/cpl"
+          app:cardCornerRadius="8dp"
+          android:onClick="faculty">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:src="@drawable/ic_supervisor_account_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faculty "
+                android:textAlignment="center"
+                android:textColor="@color/csd"
+                android:textSize="10sp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+
+          android:id="@+id/about"
+          style="@style/cardmainbtn"
+          android:contentDescription="todo"
+          app:cardBackgroundColor="@color/cpl"
+          app:cardCornerRadius="8dp"
+          android:onClick="aboutclg">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_account_balance_black_24dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About clg"
+                android:textAlignment="center"
+                android:textColor="@color/csd"
+
+                android:textSize="10sp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/help"
+          style="@style/cardmainbtn"
+          android:contentDescription="todo"
+          app:cardBackgroundColor="@color/cpl"
+          app:cardCornerRadius="8dp"
+
+          android:onClick="help">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+             android:layout_margin="16dp"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_help_black_24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:textAlignment="center"
+                android:textColor="@color/csd"
+                android:textSize="10sp" />
+         </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+   </GridLayout>
+
+</LinearLayout>

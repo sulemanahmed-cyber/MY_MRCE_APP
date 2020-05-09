@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">MY MRCE APP</string>
+    <string name="play">play</string>
+
+
+    <!-- //expandable view strings <starts>-->
+    <string name="group1">Ist year (H and S)</string>
+    <string name="group2">C.S.E. (II to IV Year)</string>
+    <string name="group3">I.T.(II to IV Year)</string>
+    <string name="group4">E.C.E.(II to IV Year)</string>
+    <string name="group5">MECHANICAL (II to IV Year)</string>
+    <string name="group6">I.T.E. (II to IV Year)</string>
+    <string-array name="group1">
+        <item>Branch : CSE/IT/EEE</item>
+        <item>Branch : ECE/EIE </item>
+        <item>Branch : MECH/M.E./C.E./CIVIL </item>
+    </string-array>
+    <string-array name="group2">
+        <item>Year-2</item>
+        <item>Year-3</item>
+        <item>Year-4</item>
+    </string-array>
+    <string-array name="group3">
+        <item>Year-2</item>
+        <item>Year-3</item>
+        <item>Year-4</item>
+
+    </string-array>
+    <string-array name="group4">
+        <item>Year-2</item>
+        <item>Year-3</item>
+        <item>Year-4</item>
+    </string-array>
+
+    <string-array name="group5">
+        <item>Year-2</item>
+        <item>Year-3</item>
+        <item>Year-4</item>
+    </string-array>
+
+
+   <string-array name="group6">
+       <item>Year-2</item>
+       <item>Year-3</item>
+       <item>Year-4</item>
+
+</string-array>
+
+    <!-- //expandable view strings<ends/>-->
+</resources>
