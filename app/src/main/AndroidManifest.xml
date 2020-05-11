@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.test.mymrceapp">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -14,31 +16,38 @@
         <activity
             android:name=".bus_routes"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".dummy_1" />
-        <activity android:name=".contact" />
-        <activity android:name=".canteen" />
-        <activity android:name=".notification" />
-        <activity android:name=".cells" />
-        <activity android:name=".student_chapters" />
-        <activity android:name=".events" />
-        <activity android:name=".faculty" />
-        <activity android:name=".notice" /> <!-- <activity android:name=".bus_routes" /> -->
-        <activity android:name=".cources" />
-        <activity android:name=".gallery" />
-        <activity android:name=".syllabus" />
+        <activity android:name=".dummy_1"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".contact"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".canteen"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".notification"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".cells"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".student_chapters"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".events"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".faculty"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".notice"
+            android:parentActivityName=".MainActivity" />/> <!-- <activity android:name=".bus_routes" /> -->
+        <activity android:name=".cources"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".gallery"
+            android:parentActivityName=".MainActivity" />/>
+        <activity android:name=".syllabus"
+            android:parentActivityName=".MainActivity" />/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service android:name=".firebasenotif">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
+<service android:name="FirebaseMessagingService"></service>
     </application>
 
 </manifest>

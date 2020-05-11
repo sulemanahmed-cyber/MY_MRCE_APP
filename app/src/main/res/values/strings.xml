@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MY MRCE APP</string>
     <string name="play">play</string>
+    <string name="fcm_token">FCM Token: %s</string>
 
 
     <!-- //expandable view strings <starts>-->
@@ -10,6 +11,7 @@
     <string name="group4">E.C.E.(II to IV Year)</string>
     <string name="group5">MECHANICAL (II to IV Year)</string>
     <string name="group6">I.T.E. (II to IV Year)</string>
+    <string name="default_notification_channel_id" />
     <string-array name="group1">
         <item>Branch : CSE/IT/EEE</item>
         <item>Branch : ECE/EIE </item>
