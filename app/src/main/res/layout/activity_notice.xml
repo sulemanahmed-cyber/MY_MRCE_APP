@@ -21,12 +21,6 @@
             app:title="Notice"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
 
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NOTICE"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
