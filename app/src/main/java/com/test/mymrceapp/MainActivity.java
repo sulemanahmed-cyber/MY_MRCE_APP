@@ -47,15 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
                     @Override
                     public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                        if (!task.isSuccessful()) {
-//To do//
-                            return;
+                        if (task.isSuccessful()){
+                            String token = task.getResult().getToken();
+                            String message = getString(R.string.fcm_token,token);
                         }
-
-// Get the Instance ID token//
-                        String token = task.getResult().getToken();
-                        String msg = getString(R.string.fcm_token, token);
-
 
                     }
                 });

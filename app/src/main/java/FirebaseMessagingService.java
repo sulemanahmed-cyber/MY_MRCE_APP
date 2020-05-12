@@ -18,46 +18,30 @@ import com.test.mymrceapp.R;
 public class FirebaseMessagingService extends com.google.firebase.messaging.FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
-        showNotification(remoteMessage.getNotification().getBody());
-
-
-    }
-    public void showNotification(String message){
-
-        PendingIntent pi = PendingIntent.getActivity(this,0,new Intent(this,MainActivity.class),0);
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, "M_CH_ID");
-
-        notificationBuilder.setAutoCancel(true)
-                .setDefaults(Notification.DEFAULT_ALL)
-                .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.drawable.ic_account_balance_black_24dp)
-                .setTicker("Hearty365")
-                .setPriority(Notification.PRIORITY_MAX) // this is deprecated in API 26 but you can still use for below 26. check below update for 26 API
-                .setContentTitle("Default notification")
-                .setContentText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-                .setContentInfo("Info");
-        NotificationManager notificationManager = (NotificationManager) getSystemService(FirebaseMessagingService.this.NOTIFICATION_SERVICE);
-          notificationManager.notify(0,notificationBuilder.build());
-
-
-    }
-/* @Override
-    public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        Log.d("msg", "onMessageReceived: " + remoteMessage.getData().get("message"));
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
-        String channelId = "Default";
-        NotificationCompat.Builder builder = new  NotificationCompat.Builder(this, channelId)
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle(remoteMessage.getNotification().getTitle())
-                .setContentText(remoteMessage.getNotification().getBody()).setAutoCancel(true).setContentIntent(pendingIntent);;
-        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(channelId, "Default channel", NotificationManager.IMPORTANCE_DEFAULT);
-            manager.createNotificationChannel(channel);
+        if(remoteMessage.getNotification()!= null){
+            String title = remoteMessage.getNotification().getTitle();
+            String body = remoteMessage.getNotification().getBody();
+            Notification notification = new NotificationCompat.Builder(this,"FCM_CHANNEL_ID")
+                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setContentTitle(title)
+                    .setContentText(body)
+                    .build();
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            manager.notify(1002,notification);
         }
-        manager.notify(0, builder.build());
-    }*/
+        if(remoteMessage.getData().size() > 0){
+
+        }
+    }
+
+    @Override
+    public void onDeletedMessages() {
+        super.onDeletedMessages();
+    }
+
+    @Override
+    public void onNewToken(@NonNull String s) {
+        super.onNewToken(s);
+    }
 }
