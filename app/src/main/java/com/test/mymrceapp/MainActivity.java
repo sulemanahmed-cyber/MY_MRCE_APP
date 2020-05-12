@@ -15,7 +15,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
     AlertDialog alertDialog;
-
+    ViewFlipper v_flipper;
 
 
     @Override
@@ -58,7 +60,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-
+        //viewflipper
+        int images []={R.drawable.mrce1,R.drawable.mrce2,R.drawable.nss1,R.drawable.fresko};
+        v_flipper=findViewById(R.id.v_flipper);
+               for (int image:images){
+                   flipperImages(image);
+               }
 
 
         //toolbar and navigation code <navstarts>
@@ -139,6 +146,24 @@ public class MainActivity extends AppCompatActivity {
 
            //<navends/>
     }
+
+
+    //view flipper images
+    public void  flipperImages(int image){
+        ImageView imageView= new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(4000);
+        v_flipper.setAutoStart(true);
+
+        //animation
+        v_flipper.setInAnimation(this,android.R.anim.fade_in);
+        v_flipper.setInAnimation(this,android.R.anim.fade_out);
+
+    }
+
+
 
     //toolbar code
     private void setUpToolbar()

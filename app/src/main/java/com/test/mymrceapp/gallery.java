@@ -9,7 +9,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 
+import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.google.android.material.navigation.NavigationView;
 
 public class gallery extends AppCompatActivity {
@@ -19,6 +21,8 @@ public class gallery extends AppCompatActivity {
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
+    KenBurnsView kenBurnsView;
+    Button pause, resume;
 
 
     @Override
@@ -26,7 +30,10 @@ public class gallery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         setUpToolbar();
-
+        //ken burns view
+        kenBurnsView=findViewById(R.id.kensburnview);
+        pause=(Button)findViewById(R.id.pause) ;
+        pause=(Button)findViewById(R.id.resume) ;
         navigationView= (NavigationView)findViewById(R.id.navigation_menu);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override

@@ -37,4 +37,15 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    //picasso for loading image
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //ken burns view
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    //smooth bottom bar
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.3'
+
+
+
+
+
 }

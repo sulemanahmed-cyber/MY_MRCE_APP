@@ -20,13 +20,10 @@
             android:background="#FDBD"
             app:title="Notice"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NOTICE"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="my notice"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
