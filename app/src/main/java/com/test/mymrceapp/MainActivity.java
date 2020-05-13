@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.AlertDialog;
@@ -14,7 +15,9 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -34,12 +37,15 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     AlertDialog alertDialog;
     ViewFlipper v_flipper;
+    GridLayout gridLayout;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        gridLayout= findViewById(R.id.gridLayout5);
+        setToggleEvent(gridLayout);
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
                     @Override
@@ -139,7 +145,63 @@ public class MainActivity extends AppCompatActivity {
            //<navends/>
     }
 
+private void setToggleEvent(GridLayout gridLayout){
+        for(int i =0 ;i <gridLayout.getChildCount(); i++){
+            final CardView cardView = (CardView) gridLayout.getChildAt(i);
+            final int finalI = i;
 
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(finalI == 0)
+                    {
+                        Intent intent = new Intent(MainActivity.this,syllabus.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 1)
+                    {
+                        Intent intent = new Intent(MainActivity.this,dummy_1.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 3)
+                    {
+                        Intent intent = new Intent(MainActivity.this,notice.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 4)
+                    {
+                        Intent intent = new Intent(MainActivity.this,events.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 5)
+                    {
+                        Intent intent = new Intent(MainActivity.this,notification.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 6)
+                    {
+                        Intent intent = new Intent(MainActivity.this,student_chapters.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 7)
+                    {
+                        Intent intent = new Intent(MainActivity.this,faculty.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 8)
+                    {
+                        Intent intent = new Intent(MainActivity.this,gallery.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 0)
+                    {
+                        Intent intent = new Intent(MainActivity.this,contact.class);
+                        startActivity(intent);
+                    }
+                }
+            });
+        }
+}
     //view flipper images
     public void  flipperImages(int image){
         ImageView imageView= new ImageView(this);

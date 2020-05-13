@@ -20,29 +20,29 @@
             android:name=".bus_routes"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".dummy_1"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".contact"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".canteen"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".notification"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".cells"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".student_chapters"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".events"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".faculty"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".notice"
-            android:parentActivityName=".MainActivity" />/> <!-- <activity android:name=".bus_routes" /> -->
+            android:parentActivityName=".MainActivity" /> <!-- <activity android:name=".bus_routes" /> -->
         <activity android:name=".cources"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".gallery"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".syllabus"
-            android:parentActivityName=".MainActivity" />/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

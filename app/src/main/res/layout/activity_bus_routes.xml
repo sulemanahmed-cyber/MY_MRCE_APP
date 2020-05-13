@@ -20,12 +20,812 @@
         app:title="Bus routes"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
 
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
 
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="BUS ROUTES"/>
+
+            <LinearLayout
+
+
+                android:background="@color/lavender"
+                android:layout_width="match_parent"
+                android:id="@+id/LL"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <GridLayout
+                    android:layout_weight="1"
+                    android:id="@+id/gridLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:columnOrderPreserved="false"
+                    android:rowCount="3"
+                    android:padding="14dp"
+                    tools:layout_editor_absoluteY="300dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games11"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="50"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="Driver Name :"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="Route :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="Ph No : "
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games1"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/LL22"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                android:layout_weight="50"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="50">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="Driver Name :"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="Route :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="Ph No :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games3"
+                        android:layout_width="match_parent"
+
+                        android:layout_margin="10dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/LL33"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                android:layout_weight="50"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="50"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/cardview_dark_background"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="50"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/cardview_dark_background"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="50"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games111"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="50"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games15"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/LL2"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                android:layout_weight="50"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="50">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games31"
+                        android:layout_width="match_parent"
+
+                        android:layout_margin="10dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/LL3"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                android:layout_weight="50"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games41"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="50"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/orange"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/orange"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games123"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/cardview_dark_background"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="50"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games121"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:contentDescription="todo"
+                        app:cardBackgroundColor="@color/cardview_dark_background"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100"
+                            android:orientation="horizontal">
+
+
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="50"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    android:text="BUS NUMBER :"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_weight="1"
+                                    android:textSize="19dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

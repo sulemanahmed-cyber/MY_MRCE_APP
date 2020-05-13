@@ -11,4 +11,8 @@
     <color name="cs">#37474f</color>
     <color name="csl">#62727b</color>
     <color name="csd">#102027</color>
+    <color name="white">#F0F6F5</color>
+    <color name="lavender">#D86FEA</color>
+    <color name="green">#9EF68A</color>
+
 </resources>
