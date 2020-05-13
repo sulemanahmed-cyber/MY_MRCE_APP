@@ -19,6 +19,13 @@
             android:background="#FDBD"
             app:title="cources"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -73,7 +80,7 @@
                     android:id="@+id/name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Computer Science"
+                    android:text="Computer Science Engineering"
                     style="@style/TextAppearance.AppCompat.Title"
                     android:layout_marginStart="12dp"
                     app:layout_constraintStart_toEndOf="@+id/view"
@@ -101,7 +108,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/view" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:id="@+id/expandableView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -112,6 +120,10 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
                     <ImageView
 
                         android:id="@+id/phoneIcon"
@@ -125,9 +137,9 @@
 
                     <TextView
                         android:id="@+id/hod_name"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dr.M. Narayanan"
+                        android:text="Dr.M. Narayanan(H.O.D.)"
                         android:layout_marginStart="32dp"
                         android:textColor="#000"
                         style="@style/TextAppearance.AppCompat.Medium"
@@ -135,6 +147,8 @@
                         app:layout_constraintStart_toEndOf="@id/phoneIcon"
                         app:layout_constraintBottom_toTopOf="@+id/hod"/>
 
+                    </LinearLayout>
+                        <!--
                     <TextView
                         android:id="@+id/hod"
                         android:layout_width="0dp"
@@ -145,8 +159,12 @@
                         style="@style/TextAppearance.AppCompat.Body1"
                         app:layout_constraintTop_toBottomOf="@id/hod_name"
                         app:layout_constraintStart_toEndOf="@id/phoneIcon"
-                        app:layout_constraintBottom_toBottomOf="@+id/phoneIcon"/>
+                        app:layout_constraintBottom_toBottomOf="@+id/phoneIcon"/>-->
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
                     <ImageView
                         android:id="@+id/mailIcon"
                         android:layout_width="30dp"
@@ -157,36 +175,515 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/phoneIcon"/>
 
-                    <TextView
+                 <!--   <TextView
                         android:id="@+id/branch_desc"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="workemail@gmail.com"
+                        android:text="Computer Science"
                         android:layout_marginStart="32dp"
                         android:textColor="#000"
                         style="@style/TextAppearance.AppCompat.Medium"
                         app:layout_constraintTop_toTopOf="@+id/mailIcon"
                         app:layout_constraintStart_toEndOf="@id/mailIcon"
-                        app:layout_constraintBottom_toTopOf="@+id/mailDesc"/>
+                        app:layout_constraintBottom_toTopOf="@+id/info_Desc"/>-->
 
                     <TextView
-                        android:id="@+id/mailDesc"
-                        android:layout_width="0dp"
+                        android:id="@+id/info_Desc"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Work"
+                        android:text="@string/CSE_desc"
                         android:layout_marginStart="32dp"
                         android:textColor="#8A000000"
                         style="@style/TextAppearance.AppCompat.Body1"
                         app:layout_constraintTop_toBottomOf="@+id/branch_desc"
                         app:layout_constraintStart_toEndOf="@id/mailIcon"
                         app:layout_constraintBottom_toBottomOf="@+id/mailIcon"/>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.cardview.widget.CardView>
+
+
+                <!--                   Card View It           -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_It"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.Light"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="12dp">
+
+                        <ImageView
+                            android:id="@+id/imageView_It"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:src="@drawable/it"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintDimensionRatio="H,16:9"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/view_It"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="12dp"
+                            android:elevation="12dp"
+                            app:cardCornerRadius="25dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_It">
+
+                            <ImageView
+                                android:id="@+id/circleImage_It"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/it"
+                                android:scaleType="centerCrop"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/name_It"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Information Technology"
+                            style="@style/TextAppearance.AppCompat.Title"
+                            android:layout_marginStart="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/view_It"
+                            app:layout_constraintTop_toTopOf="@+id/view_It"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_It"/>
+
+                        <TextView
+                            android:id="@+id/cource_It"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="B.TECH"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#8A000000"
+                            android:layout_marginStart="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/view_It"
+                            app:layout_constraintTop_toBottomOf="@+id/name_It"/>
+
+                        <Button
+                            android:id="@+id/arrowBtn_It"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/view_It"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/view_It" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/expandableView_It"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="12dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="12dp"
+                            app:layout_constraintTop_toBottomOf="@+id/cource_It"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+
+                                    android:id="@+id/phoneIcon_It"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="22dp"
+                                    android:layout_marginStart="12dp"
+                                    android:src="@drawable/ic_phone_black_24dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+
+                                <TextView
+                                    android:id="@+id/hod_name_It"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dr.M. Narayanan (H.O.D.)"
+                                    android:layout_marginStart="32dp"
+                                    android:textColor="#000"
+                                    style="@style/TextAppearance.AppCompat.Medium"
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon"
+                                    app:layout_constraintStart_toEndOf="@id/phoneIcon"
+                                    app:layout_constraintBottom_toTopOf="@+id/hod"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:id="@+id/mailIcon_It"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="22dp"
+                                    android:layout_marginStart="12dp"
+                                    android:src="@drawable/ic_mail_black_24dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon"/>
+
+
+                                <TextView
+                                    android:id="@+id/info_Desc_It"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/it_Desc"
+                                    android:layout_marginStart="32dp"
+                                    android:textColor="#8A000000"
+                                    style="@style/TextAppearance.AppCompat.Body1"
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc"
+                                    app:layout_constraintStart_toEndOf="@id/mailIcon"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+                <!--                   Card View ECE          -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_Ece"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.Light"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="12dp">
+
+                        <ImageView
+                            android:id="@+id/imageView_Ece"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:src="@drawable/ece"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintDimensionRatio="H,16:9"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/view_Ece"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="12dp"
+                            android:elevation="12dp"
+                            app:cardCornerRadius="25dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_Ece">
+
+                            <ImageView
+                                android:id="@+id/circleImage_Ece"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ece"
+                                android:scaleType="centerCrop"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/name_Ece"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Electronics Communication Engineering"
+                            style="@style/TextAppearance.AppCompat.Title"
+                            android:layout_marginStart="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/view_Ece"
+                            app:layout_constraintTop_toTopOf="@+id/view_Ece"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_Ece"/>
+
+                        <TextView
+                            android:id="@+id/cource_Ece"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="B.TECH"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#8A000000"
+                            android:layout_marginStart="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/view_Ece"
+                            app:layout_constraintTop_toBottomOf="@+id/name_Ece"/>
+
+                        <Button
+                            android:id="@+id/arrowBtn_Ece"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/view_Ece"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/view_Ece" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/expandableView_Ece"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="12dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="12dp"
+                            app:layout_constraintTop_toBottomOf="@+id/cource_Ece"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+
+                                    android:id="@+id/phoneIcon_Ece"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="22dp"
+                                    android:layout_marginStart="12dp"
+                                    android:src="@drawable/ic_phone_black_24dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+
+                                <TextView
+                                    android:id="@+id/hod_name_Ece"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dr.M.Narayanan (H.O.D.)"
+                                    android:layout_marginStart="32dp"
+                                    android:textColor="#000"
+                                    style="@style/TextAppearance.AppCompat.Medium"
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon"
+                                    app:layout_constraintStart_toEndOf="@id/phoneIcon"
+                                    app:layout_constraintBottom_toTopOf="@+id/hod"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:id="@+id/mailIcon_Ece"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="22dp"
+                                    android:layout_marginStart="12dp"
+                                    android:src="@drawable/ic_mail_black_24dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon"/>
+
+
+                                <TextView
+                                    android:id="@+id/info_Desc_Ece"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ECe_desc"
+                                    android:layout_marginStart="32dp"
+                                    android:textColor="#8A000000"
+                                    style="@style/TextAppearance.AppCompat.Body1"
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc"
+                                    app:layout_constraintStart_toEndOf="@id/mailIcon"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+                <!--                   Card View mec          -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_Mec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.Light"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="12dp">
+
+                        <ImageView
+                            android:id="@+id/imageView_Mec"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:src="@drawable/mec"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintDimensionRatio="H,16:9"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/view_Mec"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="12dp"
+                            android:elevation="12dp"
+                            app:cardCornerRadius="25dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_Mec">
+
+                            <ImageView
+                                android:id="@+id/circleImage_Mec"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/mec"
+                                android:scaleType="centerCrop"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/name_Mec"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Mechanical Engineering"
+                            style="@style/TextAppearance.AppCompat.Title"
+                            android:layout_marginStart="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/view_Mec"
+                            app:layout_constraintTop_toTopOf="@+id/view_Mec"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_Mec"/>
+
+                        <TextView
+                            android:id="@+id/cource_Mec"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="B.TECH"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="#8A000000"
+                            android:layout_marginStart="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/view_Mec"
+                            app:layout_constraintTop_toBottomOf="@+id/name_Mec"/>
+
+                        <Button
+                            android:id="@+id/arrowBtn_Mec"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/view_Mec"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/view_Mec" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/expandableView_Mec"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="12dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="12dp"
+                            app:layout_constraintTop_toBottomOf="@+id/cource_Mec"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+
+                                    android:id="@+id/phoneIcon_Mec"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="22dp"
+                                    android:layout_marginStart="12dp"
+                                    android:src="@drawable/ic_phone_black_24dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+
+                                <TextView
+                                    android:id="@+id/hod_name_Mec"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dr.Purushottam (H.O.D.)"
+                                    android:layout_marginStart="32dp"
+                                    android:textColor="#000"
+                                    style="@style/TextAppearance.AppCompat.Medium"
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon"
+                                    app:layout_constraintStart_toEndOf="@id/phoneIcon"
+                                    app:layout_constraintBottom_toTopOf="@+id/hod"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:id="@+id/mailIcon_Mec"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="22dp"
+                                    android:layout_marginStart="12dp"
+                                    android:src="@drawable/ic_mail_black_24dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon"/>
+
+
+                                <TextView
+                                    android:id="@+id/info_Desc_Mec"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mec_desc"
+                                    android:layout_marginStart="32dp"
+                                    android:textColor="#8A000000"
+                                    style="@style/TextAppearance.AppCompat.Body1"
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc"
+                                    app:layout_constraintStart_toEndOf="@id/mailIcon"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

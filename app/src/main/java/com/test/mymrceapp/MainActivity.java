@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
 
+import android.animation.ArgbEvaluator;
 import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -16,7 +18,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ExpandableListView;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -28,6 +29,9 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -38,7 +42,11 @@ public class MainActivity extends AppCompatActivity {
     AlertDialog alertDialog;
     ViewFlipper v_flipper;
     GridLayout gridLayout;
-
+    ViewPager  viewPager;
+    Adapter adapter;
+    List<Model> models;
+    Integer[] colors=null;
+    ArgbEvaluator argbEvaluator= new ArgbEvaluator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +54,55 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         gridLayout= findViewById(R.id.gridLayout5);
         setToggleEvent(gridLayout);
+        models=new ArrayList<>();
+        models.add(new Model(R.drawable.mrce1,"mrce","this is mrce"));
+        models.add(new Model(R.drawable.mrce2,"mrce two","this is also mrce"));
+        models.add(new Model(R.drawable.nss_1,"nss","this is Nss"));
+        models.add(new Model(R.drawable.nss_1,"nss_1","this is nss_1"));
+
+        adapter=new Adapter(models,this);
+
+        viewPager=findViewById(R.id.viewPager);
+        viewPager.setAdapter(adapter);
+        viewPager.setPadding(130,0,130,0);
+
+        Integer[] colors_temp={getResources().getColor(R.color.cpl),
+                getResources().getColor(R.color.cp),
+                getResources().getColor(R.color.cpd),
+                getResources().getColor(R.color.lavender)};
+
+       /* viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (position<(adapter.getCount()-1)&&position<(colors.length-1)){
+                    viewPager.setBackgroundColor(
+                            (Integer) argbEvaluator.evaluate(
+                            positionOffset,
+                            colors[position],
+                            colors[position+1]));
+                }
+                else{
+                    viewPager.setBackgroundColor(colors[colors.length-1]);
+                }
+
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });*/
+
+
+
+
+        //firebase
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
                     @Override
@@ -59,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         //viewflipper
-        int images []={R.drawable.mrce1,R.drawable.mrce2,R.drawable.nss1,R.drawable.fresko};
+        int images []={R.drawable.mrce1,R.drawable.mrce2,R.drawable.nss_1,R.drawable.nss_1};
         v_flipper=findViewById(R.id.v_flipper);
                for (int image:images){
                    flipperImages(image);

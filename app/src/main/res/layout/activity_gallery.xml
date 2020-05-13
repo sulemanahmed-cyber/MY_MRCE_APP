@@ -24,13 +24,13 @@
         <com.flaviofaria.kenburnsview.KenBurnsView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/fresko"
+            android:src="@drawable/nss_1"
             android:id="@+id/kensburnview"/>
 
         <com.flaviofaria.kenburnsview.KenBurnsView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/nss1"
+            android:src="@drawable/nss_1"
             android:id="@+id/kensburnview1"/>
 
         <LinearLayout

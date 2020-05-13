@@ -15,6 +15,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.QuickContactBadge;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,9 +25,9 @@ public class cources extends AppCompatActivity {
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
-    ConstraintLayout expandableView;
-    Button arrowBtn;
-    CardView cardView;
+    LinearLayout expandableView,expandableView_Ece,expandableView_It,expandableView_Mec;
+    Button arrowBtn, arrowBtn_Ece,arrowBtn_It,arrowBtn_Mec;
+    CardView cardView ,cardview_Ece,cardview_It,cardview_Mec;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +36,24 @@ public class cources extends AppCompatActivity {
         setUpToolbar();
 
         expandableView = findViewById(R.id.expandableView);
-        arrowBtn = findViewById(R.id.arrowBtn);
-        cardView = findViewById(R.id.cardView);
+        expandableView_Ece=findViewById(R.id.expandableView_Ece);
+        expandableView_It=findViewById(R.id.expandableView_It);
+        expandableView_Mec=findViewById(R.id.expandableView_Mec);
 
+
+        arrowBtn = findViewById(R.id.arrowBtn);
+        arrowBtn_Ece=findViewById(R.id.arrowBtn_Ece);
+        arrowBtn_It=findViewById(R.id.arrowBtn_It);
+        arrowBtn_Mec=findViewById(R.id.arrowBtn_Mec);
+
+
+        cardView = findViewById(R.id.cardView);
+        cardview_Ece=findViewById(R.id.cardView_Ece);
+        cardview_It=findViewById(R.id.cardView_It);
+        cardview_Mec=findViewById(R.id.cardView_Mec);
+
+
+            //CsE onclickkkkk
         arrowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +68,57 @@ public class cources extends AppCompatActivity {
                 }
             }
         });
+
+        //EcE on clickkkk
+        arrowBtn_Ece.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (expandableView_Ece.getVisibility()==View.GONE){
+                    TransitionManager.beginDelayedTransition(cardview_Ece, new AutoTransition());
+                    expandableView_Ece.setVisibility(View.VISIBLE);
+                    arrowBtn_Ece.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
+                } else {
+                    TransitionManager.beginDelayedTransition(cardview_Ece, new AutoTransition());
+                    expandableView_Ece.setVisibility(View.GONE);
+                    arrowBtn_Ece.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                }
+
+            }
+        });
+               //It on clickkkk
+        arrowBtn_It.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (expandableView_It.getVisibility()==View.GONE){
+                    TransitionManager.beginDelayedTransition(cardview_It, new AutoTransition());
+                    expandableView_It.setVisibility(View.VISIBLE);
+                    arrowBtn_It.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
+                } else {
+                    TransitionManager.beginDelayedTransition(cardview_It, new AutoTransition());
+                    expandableView_It.setVisibility(View.GONE);
+                    arrowBtn_It.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                }
+            }
+        });
+
+         //mec on clickkkkk
+        arrowBtn_Mec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (expandableView_Mec.getVisibility()==View.GONE){
+                    TransitionManager.beginDelayedTransition(cardview_Mec, new AutoTransition());
+                    expandableView_Mec.setVisibility(View.VISIBLE);
+                    arrowBtn_Mec.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
+                } else {
+                    TransitionManager.beginDelayedTransition(cardview_Mec, new AutoTransition());
+                    expandableView_Mec.setVisibility(View.GONE);
+                    arrowBtn_Mec.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                }
+
+            }
+        });
+
+
 
         navigationView= (NavigationView)findViewById(R.id.navigation_menu);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
