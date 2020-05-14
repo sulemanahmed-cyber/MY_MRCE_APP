@@ -9,9 +9,13 @@
         android:id="@+id/list_parent"
         android:layout_width="match_parent"
         android:layout_height="108dp"
-        android:fontFamily="serif-monospace"
-        android:textSize="20sp"
-        android:background="#EBD4C8"
-        android:textStyle="bold" />
+        android:background="@drawable/elips_2"
+        android:elevation="10dp"
+        android:fontFamily="@font/vollkorn_italic"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp"
 
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <!--android:backgroundTint="#FF7A8B"-->
 </LinearLayout>

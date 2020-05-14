@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:textSize="20sp"
-        android:background="#DEBBC7"/>
+        android:paddingLeft="10dp"
+        android:drawableRight="@drawable/ic_archive_black_24dp"
+        android:background="@drawable/m_rect1"/>
 
 </LinearLayout>
