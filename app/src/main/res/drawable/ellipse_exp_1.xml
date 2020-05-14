@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="490dp"
+    android:height="82dp"
+    android:viewportWidth="490"
+    android:viewportHeight="82"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M487 41C487 61.9868 378.653 79 245 79C111.347 79 3 61.9868 3 41C3 20.0132 111.347 3 245 3C378.653 3 487 20.0132 487 41Z"
+            />
+
+        <group
+            android:translateX="2.026"
+            android:translateY="-5.908"
+            android:pivotX="245"
+            android:pivotY="41"
+            android:scaleX="6.133"
+            android:scaleY="24.406"
+            android:rotation="84.549"
+            >
+
+            <path
+                android:pathData="M3 3V79H487V3"
+                >
+
+                <aapt:attr name="android:fillColor">
+
+                    <gradient
+                        android:type="linear"
+                        android:startX="124"
+                        android:startY="41"
+                        android:endX="366"
+                        android:endY="41"
+                        >
+
+                        <item
+                            android:color="#26C6DA"
+                            android:offset="0"
+                            />
+
+                        <item
+                            android:color="#000277BD"
+                            android:offset="1"
+                            />
+
+                    </gradient>
+
+                </aapt:attr>
+
+            </path>
+
+        </group>
+
+    </group>
+
+    <group>
+
+        <clip-path
+            android:pathData="M0 0V82H490V0M487 41C487 61.9868 378.653 79 245 79C111.347 79 3 61.9868 3 41C3 20.0132 111.347 3 245 3C378.653 3 487 20.0132 487 41Z"
+            />
+
+        <path
+            android:pathData="M487 41C487 61.9868 378.653 79 245 79C111.347 79 3 61.9868 3 41C3 20.0132 111.347 3 245 3C378.653 3 487 20.0132 487 41Z"
+            android:strokeWidth="6"
+            android:strokeColor="#C21313"
+            />
+
+    </group>
+
+</vector>
