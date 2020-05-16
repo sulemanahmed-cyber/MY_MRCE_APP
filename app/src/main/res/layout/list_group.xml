@@ -3,18 +3,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:paddingTop="8dp"
+     >
 
     <TextView
         android:id="@+id/list_parent"
         android:layout_width="match_parent"
-        android:layout_height="108dp"
-        android:background="@drawable/elips_2"
-        android:elevation="10dp"
-        android:fontFamily="@font/vollkorn_italic"
-        android:gravity="center_horizontal"
-        android:paddingTop="8dp"
+        android:layout_height="60dp"
 
+        android:layout_gravity="left"
+        android:background="@drawable/velvet_sun"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:fontFamily="@font/crimson_text_semibold"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+
+        android:textColor="#0c0f0a"
         android:textSize="20sp"
         android:textStyle="bold" />
     <!--android:backgroundTint="#FF7A8B"-->

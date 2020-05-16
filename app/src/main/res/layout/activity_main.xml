@@ -50,20 +50,20 @@
                     android:id="@+id/v_flipper"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:background="@drawable/borderrss"/>
+                    android:background="@drawable/borderrss" />
 
-              
-                
+
                 <androidx.viewpager.widget.ViewPager
-                    android:foregroundGravity="center"
                     android:id="@+id/viewPager"
-                    android:layout_centerInParent="true"
-                    android:overScrollMode="never"
-                    android:clipToPadding="false"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp">
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:clipToPadding="false"
+                    android:foregroundGravity="center"
+                    android:overScrollMode="never">
 
                 </androidx.viewpager.widget.ViewPager>
+
                 <GridLayout
 
                     android:id="@+id/gridLayout5"
@@ -128,7 +128,7 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="40dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
                                 android:src="@drawable/ic_games_black_24dp" />
@@ -370,7 +370,7 @@
                 </GridLayout>
 
                 <Button
-
+                    android:id="@+id/my_abt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"

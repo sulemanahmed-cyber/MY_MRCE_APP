@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "626029221543-ilq3q8klq3isdlvf1s0175adnhlaci90.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.test.mymrceapp",
+            "certificate_hash": "a3a996e3ed74df8bbbbc244b30c737fdf9197ded"
+          }
+        },
+        {
           "client_id": "626029221543-nl0c1uvr1degkl3a3n84r9aho0a54oo5.apps.googleusercontent.com",
           "client_type": 3
         }

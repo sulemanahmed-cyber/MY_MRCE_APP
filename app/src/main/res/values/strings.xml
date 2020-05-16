@@ -6,11 +6,11 @@
 
     <!-- //expandable view strings <starts>-->
     <string name="group1">Ist year</string>
-    <string name="group2">C.S.E.</string>
-    <string name="group3">I.T.</string>
-    <string name="group4">E.C.E.</string>
-    <string name="group5">MECHANICAL</string>
-    <string name="group6">I.T.E.</string>
+    <string name="group2">C.s.e.</string>
+    <string name="group3">I.t.</string>
+    <string name="group4">E.c.e.</string>
+    <string name="group5">Mechanical</string>
+    <string name="group6">I.t.e.</string>
     <string name="default_notification_channel_id" />
     <string-array name="group1">
         <item>Branch : CSE/IT/EEE</item>
@@ -41,15 +41,14 @@
     </string-array>
 
 
-   <string-array name="group6">
-       <item>Year-2</item>
-       <item>Year-3</item>
-       <item>Year-4</item>
+    <string-array name="group6">
+        <item>Year-2</item>
+        <item>Year-3</item>
+        <item>Year-4</item>
 
-</string-array>
+    </string-array>
 
     <!-- //expandable view strings<ends/>-->
-
 
 
     <string name="CSE_desc">Computer science is the study of processes that interact with data and that can be represented as data in the form of programs. It enables the use of algorithms to manipulate, store, and communicate digital information. A computer scientist studies the theory of computation and the design of software systems.</string>
@@ -57,4 +56,13 @@
     <string name="it_Desc">Information technology (IT) is the use of computers to store, retrieve, transmit, and manipulate data[1] or information. IT is typically used within the context of business operations as opposed to personal or entertainment technologies.[2] IT is considered to be a subset of information and communications technology (ICT). An information technology system (IT system) is generally an information system, a communications system or, more specifically speaking, a computer system – including all hardware, software and peripheral equipment – operated by a limited group of users.</string>
     <string name="mec_desc">Mechanical engineering is an engineering discipline that combines engineering physics and mathematics principles with materials science to design, analyze, manufacture, and maintain mechanical systems.[1] It is one of the oldest and broadest of the engineering disciplines.</string>
     <string name="ite_desc">Information Technology Engineering plays a vital role in our modern day lifestyles. It has touched each and every aspect of human life. With the emergence of computers, we are witnessing a sea change in the business world. Starting from multi-national corporations to small businesses, IT plays a stupendous role. In the field of Communication, Inventory Management, Data Management, Management Information Systems and Customer Relationship Management, IT plays a pivotal role. IT has also opened up various concepts like online shopping, digital marketing, social networking, digital communication, cloud computing, Mobile, and big data for solving many social and business problems. In addition, for making long-term business successful, IT has developed many tools and software applications.</string>
+    <string name="title_activity_my_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>

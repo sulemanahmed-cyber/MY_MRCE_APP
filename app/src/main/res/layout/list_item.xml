@@ -3,15 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/list_child"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:textSize="20sp"
+
+        android:layout_width="300dp"
+        android:layout_gravity="right"
+        android:layout_height="42dp"
+        android:background="@drawable/n_gradient"
+        android:fontFamily="@font/alegreya_sans_sc_light_italic"
         android:paddingLeft="10dp"
-        android:drawableRight="@drawable/ic_archive_black_24dp"
-        android:background="@drawable/m_rect1"/>
+
+        android:textColor="#2d3142"
+        android:textSize="20sp" />
 
 </LinearLayout>
