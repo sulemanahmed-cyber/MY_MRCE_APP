@@ -81,7 +81,7 @@
 
                         android:id="@+id/syllabus"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp"
 
@@ -103,9 +103,9 @@
 
                             <TextView
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:text="Syllabus "
+                                android:text="@string/Syllabus"
 
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
@@ -116,7 +116,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp">
 
@@ -148,7 +148,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/campus"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp">
 
@@ -181,7 +181,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/events"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp">
 
@@ -212,7 +212,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/notifications"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp">
 
@@ -243,7 +243,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/calender"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp">
 
@@ -275,7 +275,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/faculty"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp">
 
@@ -307,7 +307,7 @@
 
                         android:id="@+id/about"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp">
 
@@ -338,7 +338,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/help"
                         style="@style/cardmainbtn"
-                        android:contentDescription="todo"
+
                         app:cardBackgroundColor="#37474f"
                         app:cardCornerRadius="8dp"
 
