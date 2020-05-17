@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,7 @@ public class my_loginn extends AppCompatActivity {
 private EditText mEmailField,email;
 private EditText mPasswordField,password;
 private Button mLoginBtn,button2;
+TextView mregister;
 
 private FirebaseAuth mAuth;
 private FirebaseAuth.AuthStateListener mAuthListener;
@@ -47,7 +49,16 @@ private static final String TAG ="my_loginn";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_loginn);
         mAuth=FirebaseAuth.getInstance();
+        mregister = findViewById(R.id.register_here);
+        mregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Activity_Register.class));
+            }
+        });
+/*
         button2=(Button) findViewById(R.id.button2);
+*/
         mEmailField=(EditText) findViewById(R.id.email_et);
         mPasswordField=(EditText)findViewById(R.id.password_et);
         mLoginBtn=(Button) findViewById(R.id.login_btn);
@@ -84,10 +95,17 @@ private static final String TAG ="my_loginn";
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (!task.isSuccessful()) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    } else
+                    {
+                        Toast.makeText(my_loginn.this, "error", Toast.LENGTH_SHORT).show();
+                    }
+                    /*if (!task.isSuccessful()) {
 
                         Toast.makeText(my_loginn.this, "Sign in problem", Toast.LENGTH_SHORT).show();
-                    }
+                    }*/
                 }
             });
         }

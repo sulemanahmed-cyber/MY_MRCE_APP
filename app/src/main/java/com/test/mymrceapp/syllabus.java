@@ -74,7 +74,12 @@ i.setData(Uri.parse(url));
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus);
-        setUpToolbar();
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitle("Syllabus");
+        navigationView= findViewById(R.id.navigation_menu);
         //expandable view code <exstarts>
         expandableListView=findViewById(R.id.expandable_listview);
         listGroup= new ArrayList<>();
@@ -268,20 +273,22 @@ i.setData(Uri.parse(url));
 
         //<EXPNDBLends/>
 
+/*
         navigationView = (NavigationView) findViewById(R.id.navigation_menu);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+*/
+       /* navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
-                        /*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*/
+                        *//*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*//*
                         break;
                     case R.id.nav_cources:
                         Intent intent1 = new Intent(getApplicationContext(), cources.class);
                         startActivity(intent1);
-                        /* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*/
+                        *//* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*//*
                         break;
 
                     case R.id.nav_gallery:
@@ -339,11 +346,11 @@ i.setData(Uri.parse(url));
                 return false;
             }
         });
-
+*/
 
     }
 
-    private void setUpToolbar() {
+  /*  private void setUpToolbar() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -354,7 +361,7 @@ i.setData(Uri.parse(url));
     @Override
     public void onBackPressed() {
         finish();
-    }
+    }*/
 
     //expndbl method <starts>
     private void initListData() {

@@ -23,7 +23,9 @@ import com.google.android.material.navigation.NavigationView;
 public class cources extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
+/*
     ActionBarDrawerToggle actionBarDrawerToggle;
+*/
     NavigationView navigationView;
     LinearLayout expandableView_Hs, expandableView_Cse, expandableView_Ece, expandableView_It, expandableView_Mec, expandableView_Ite;
     Button arrowBtn_Hs, arrowBtn_Cse, arrowBtn_Ece, arrowBtn_It, arrowBtn_Mec, arrowBtn_Ite;
@@ -33,7 +35,12 @@ public class cources extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cources);
-        setUpToolbar();
+        navigationView = findViewById(R.id.navigation_menu);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitle("Cources");
 
         expandableView_Hs = findViewById(R.id.expandableView_Hs);
         expandableView_Cse = findViewById(R.id.expandableView_Cse);
@@ -159,20 +166,19 @@ public class cources extends AppCompatActivity {
         });
 
 
-        navigationView = (NavigationView) findViewById(R.id.navigation_menu);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+      /*  navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
-                        /*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*/
+                        *//*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*//*
                         break;
                     case R.id.nav_cources:
                         Intent intent1 = new Intent(getApplicationContext(), cources.class);
                         startActivity(intent1);
-                        /* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*/
+                        *//* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*//*
                         break;
 
                     case R.id.nav_gallery:
@@ -231,24 +237,34 @@ public class cources extends AppCompatActivity {
                 return false;
             }
         });
-
+*/
 
     }
 
-    private void setUpToolbar() {
+ /*  private void setUpToolbar() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       setSupportActionBar(toolbar);
+       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       toolbar.setTitle("Cources");
+
+
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
+
+
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
+
+
         actionBarDrawerToggle.syncState();
+
+
 
     }
 
     @Override
     public void onBackPressed() {
         finish();
-    }
+    }*/
 
 
 }

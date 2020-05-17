@@ -28,6 +28,7 @@ import android.widget.ViewFlipper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     GridLayout gridLayout;
     ViewPager  viewPager;
     Adapter adapter;
+    Button button;
 
     List<Model> models;
     Integer[] colors=null;
@@ -57,8 +59,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         gridLayout= findViewById(R.id.gridLayout5);
-
-
+       button = findViewById(R.id.my_abt);
+      /* button.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(getApplicationContext(),Activity_Register.class);
+               startActivity(intent);
+           }
+       });
+*/
 
 
 
@@ -210,6 +219,8 @@ public class MainActivity extends AppCompatActivity {
                       Intent intent13 = new Intent(getApplicationContext(),dummy_1.class);
                       startActivity(intent13);
                       break;
+
+
               }
 
                 return false;
@@ -267,7 +278,7 @@ private void setToggleEvent(GridLayout gridLayout){
                         Intent intent = new Intent(MainActivity.this,gallery.class);
                         startActivity(intent);
                     }
-                    if(finalI == 0)
+                    if(finalI == 9)
                     {
                         Intent intent = new Intent(MainActivity.this,contact.class);
                         startActivity(intent);
@@ -354,5 +365,19 @@ private void setToggleEvent(GridLayout gridLayout){
     }
 
 
+    public void my_register(View view) {
+        Toast.makeText(this, "okie", Toast.LENGTH_SHORT).show();
 
+
+        Intent intent_reg= new Intent(getApplicationContext(),Activity_Register.class);
+        startActivity(intent_reg);
+
+
+    }
+
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        finish();
+    }
 }
