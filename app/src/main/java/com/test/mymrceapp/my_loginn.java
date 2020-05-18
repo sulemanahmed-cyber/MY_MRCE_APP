@@ -53,6 +53,13 @@ private static final String TAG ="my_loginn";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_loginn);
         mAuth=FirebaseAuth.getInstance();
+        mregister = findViewById(R.id.register_here);
+        mregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Activity_Register.class));
+            }
+        });
         /*mregister = findViewById(R.id.register_here);
         mregister.setOnClickListener(new View.OnClickListener() {
             @Override

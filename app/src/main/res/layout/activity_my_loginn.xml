@@ -7,70 +7,93 @@
     android:orientation="vertical"
     tools:context=".my_loginn">
 
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="40dp"
+        android:src="@drawable/mrce"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <EditText
         android:id="@+id/email_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/password_et"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.716" />
 
-    <EditText
-        android:id="@+id/password_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
-        android:ems="10"
-        android:hint="password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="178dp" />
+        android:fontFamily="@font/montserrat"
+        android:drawablePadding="13dp"
+        android:paddingTop="15dp"
+        android:hint="Email"
+        android:drawableLeft="@drawable/ic_mail_black_24dp"
+        android:layout_gravity="center"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/et_rect"/>
+         </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_1"
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/password_et"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="13dp"
+            android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Password"
+            android:background="@drawable/et_rect"
+            android:inputType="textPassword"
+            android:paddingTop="10dp"
+            tools:layout_editor_absoluteY="178dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
     <Button
         android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
         android:text="login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_et"
-        tools:layout_editor_absoluteX="159dp" />
+android:paddingTop="5dp"
+        android:background="@drawable/bt_bg"
+        android:layout_gravity="right"
+         />
 
 
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints="/@gm               ail.com"
-        android:ems="10"
-        android:hint="email"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="password"
-        android:inputType="textPassword" />
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_btn"
-        app:layout_constraintVertical_bias="0.518" />
     <com.google.android.gms.common.SignInButton
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+android:paddingTop="28dp"
+        android:paddingBottom="13dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/register_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/bt_cont"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="not yet registered ? register here" />
+
+    <TextView
+        android:id="@+id/forgotpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:paddingTop="14dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Forgot Password ?"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold" />
 </LinearLayout>
