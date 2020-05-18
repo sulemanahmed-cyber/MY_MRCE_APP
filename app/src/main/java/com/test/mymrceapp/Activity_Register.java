@@ -20,7 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Activity_Register extends AppCompatActivity {
-    EditText mEmail,mPassword,mrollnumber;
+    EditText mEmail,mPassword;
     Button mRegister;
     FirebaseAuth fAuth;
     TextView mlogin;
@@ -35,7 +35,6 @@ public class Activity_Register extends AppCompatActivity {
         mRegister = findViewById(R.id.button3);
         fAuth = FirebaseAuth.getInstance();
         mlogin = findViewById(R.id.login_here);
-        mrollnumber = findViewById(R.id.roll_number);
         /*progressBar = findViewById(R.id.progressBar);*/
         mlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,27 +53,15 @@ public class Activity_Register extends AppCompatActivity {
             public void onClick(View v) {
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
-                String roll_number = mrollnumber.getText().toString().toUpperCase().trim();
 
                 if(TextUtils.isEmpty(email)){
                     mEmail.setError("email is required");
                     return;
                 }
-
                 if(TextUtils.isEmpty(password)){
                     mPassword.setError("password is required");
                     return;
                 }
-                if (TextUtils.isEmpty(roll_number)){
-                    mrollnumber.setError("enter  roll number");
-                }
-                if(password.length() < 6){
-                    mPassword.setError("password must be greater than 6 characters");
-                }
-                if(roll_number.length() < 10 ){
-                    mrollnumber.setError("enter a valid jntu roll number");
-                }
-
 /*
                 progressBar.setVisibility(View.VISIBLE);
 */

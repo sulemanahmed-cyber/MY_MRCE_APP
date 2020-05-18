@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     Adapter adapter;
     Button button;
 
+
     List<Model> models;
     Integer[] colors=null;
     ArgbEvaluator argbEvaluator= new ArgbEvaluator();
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         gridLayout= findViewById(R.id.gridLayout5);
        button = findViewById(R.id.my_abt);
+
       /* button.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {

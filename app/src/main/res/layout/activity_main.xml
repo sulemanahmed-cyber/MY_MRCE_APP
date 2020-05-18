@@ -369,6 +369,13 @@
 
                 </GridLayout>
 
+                <TextView
+                    android:id="@+id/m_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
                 <Button
                     android:id="@+id/my_abt"
                     android:layout_width="wrap_content"
@@ -383,7 +390,7 @@
                     android:layout_height="wrap_content"
                     android:text="logout"
                     android:onClick="logout"
-                    />
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
         </ScrollView>
@@ -398,7 +405,8 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
 
-        app:menu="@menu/drawer_menu"></com.google.android.material.navigation.NavigationView>
-    // app:itemTextColor="@color/draweritem"
-    app:itemBackground="@android:color/transparent"//
+        app:menu="@menu/drawer_menu">
+
+    </com.google.android.material.navigation.NavigationView>
+
 </androidx.drawerlayout.widget.DrawerLayout>

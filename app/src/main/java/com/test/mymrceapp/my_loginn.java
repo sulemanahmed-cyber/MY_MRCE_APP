@@ -53,13 +53,13 @@ private static final String TAG ="my_loginn";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_loginn);
         mAuth=FirebaseAuth.getInstance();
-        mregister = findViewById(R.id.register_here);
+        /*mregister = findViewById(R.id.register_here);
         mregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),Activity_Register.class));
             }
-        });
+        });*/
 /*
         button2=(Button) findViewById(R.id.button2);
 */
@@ -89,7 +89,7 @@ private static final String TAG ="my_loginn";
         });
     }
 
-    private void startSignin() {
+    public void startSignin() {
         String email = mEmailField.getText().toString();
         String password = mPasswordField.getText().toString();
 
@@ -153,4 +153,5 @@ private static final String TAG ="my_loginn";
     }
 
 
-    }
+
+}
