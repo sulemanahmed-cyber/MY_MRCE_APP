@@ -15,6 +15,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -28,8 +34,10 @@ private EditText mEmailField,email;
 private EditText mPasswordField,password;
 private Button mLoginBtn,button2;
 TextView mregister,mforgot;
-
+SignInButton google_button;
 private FirebaseAuth mAuth;
+GoogleSignInClient mGoogleSignInClient;
+int RC_SIGN_IN = 0;
 private FirebaseAuth.AuthStateListener mAuthListener;
 private static final String TAG ="my_loginn";
 
@@ -37,6 +45,10 @@ private static final String TAG ="my_loginn";
     @Override
     protected void onStart() {
         super.onStart();
+/*
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+*/
+
         FirebaseUser currentUser=mAuth.getCurrentUser();
         if (currentUser==null){
 
@@ -52,6 +64,12 @@ private static final String TAG ="my_loginn";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_loginn);
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        google_button = findViewById(R.id.google_button);
         mAuth=FirebaseAuth.getInstance();
         mregister = findViewById(R.id.register_here);
         mregister.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +78,7 @@ private static final String TAG ="my_loginn";
                 startActivity(new Intent(getApplicationContext(),Activity_Register.class));
             }
         });
+
         /*mregister = findViewById(R.id.register_here);
         mregister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +93,17 @@ private static final String TAG ="my_loginn";
         mPasswordField=(EditText)findViewById(R.id.password_et);
         mLoginBtn=(Button) findViewById(R.id.login_btn);
         mforgot = findViewById(R.id.forgotpassword);
+        google_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch(view.getId()){
+                    case R.id.google_button:
+                    SignIn();
+                    break;
+                }
 
+            }
+        });
         /*mAuthListener=new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -95,6 +124,37 @@ private static final String TAG ="my_loginn";
             }
         });
     }
+
+    private void SignIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            // The Task returned from this call is always completed, no need to attach
+            // a listener.
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            handleSignInResult(task);
+        }
+    }
+    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+        try {
+            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+
+            // Signed in successfully, show authenticated UI.
+            Intent intent = new Intent(getApplicationContext(),contact.class);
+            startActivity(intent);
+        } catch (ApiException e) {
+            // The ApiException status code indicates the detailed failure reason.
+            // Please refer to the GoogleSignInStatusCodes class reference for more information.
+            Log.w( "Error", "signInResult:failed code=" + e.getStatusCode());
+        }
+    }
+
 
     public void startSignin() {
         String email = mEmailField.getText().toString();
@@ -157,6 +217,10 @@ private static final String TAG ="my_loginn";
              passwordResetDialog.create().show();
          }
      });
+
+
+
+
     }
 
 

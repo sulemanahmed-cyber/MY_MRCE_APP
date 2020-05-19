@@ -70,6 +70,7 @@ android:paddingTop="5dp"
 
 
     <com.google.android.gms.common.SignInButton
+        android:id="@+id/google_button"
         android:layout_width="match_parent"
 android:paddingTop="28dp"
         android:paddingBottom="13dp"

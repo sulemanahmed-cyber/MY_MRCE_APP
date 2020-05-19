@@ -8,9 +8,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 
 public class contact extends AppCompatActivity {
@@ -20,21 +31,68 @@ public class contact extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
     AlertDialog alertDialog;
+    TextView google_name ,google_email;
+    Button google_signout;
+    GoogleSignInClient mGoogleSignInClient;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
-        setUpToolbar();
-        navigationView= (NavigationView)findViewById(R.id.navigation_menu);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        navigationView=findViewById(R.id.navigation_menu);
+        toolbar=findViewById(R.id.toolbar);
+        drawerLayout=findViewById(R.id.drawer_layout);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        google_name = findViewById(R.id.google_name);
+        google_email = findViewById(R.id.google_email);
+        google_signout = findViewById(R.id.google_signout);
+        google_signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()) {
+                    // ...
+                    case R.id.google_signout:
+                        signOut();
+                        break;
+                    // ...
+                }
+
+            }
+        });
+        //to get account information
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if (acct != null) {
+            String personName = acct.getDisplayName();
+           String personGivenName = acct.getGivenName();
+            String personFamilyName = acct.getFamilyName();
+            String personEmail = acct.getEmail();
+            String personId = acct.getId();
+
+            Uri personPhoto = acct.getPhotoUrl();
+
+            google_name.setText(personName);
+            google_email.setText(personEmail);
+
+
+        }
+
+
+
+      /*  navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch(menuItem.getItemId()){
                     case R.id.nav_home:
                         Intent intent= new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
-                        /*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*/
+                        *//*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*//*
                         break;
 
                     case R.id.nav_syllabus:
@@ -45,7 +103,7 @@ public class contact extends AppCompatActivity {
                     case R.id.nav_cources:
                         Intent intent1= new Intent(getApplicationContext(), cources.class);
                         startActivity(intent1);
-                        /* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*/
+                        *//* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*//*
                         break ;
 
                     case R.id.nav_gallery:
@@ -98,15 +156,25 @@ public class contact extends AppCompatActivity {
 
                 return false;
             }
-        });
+        });*/
 
 
     }
-    private void setUpToolbar()
+    private void signOut() {
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        // ...
+                        Toast.makeText(contact.this, "signed out", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                });
+    }
+
+   /* private void setUpToolbar()
     {
-        drawerLayout=(DrawerLayout) findViewById(R.id.drawer_layout);
-        toolbar=(Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
         actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.app_name,R.string.app_name);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
@@ -115,5 +183,5 @@ public class contact extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
-    }
+    }*/
 }

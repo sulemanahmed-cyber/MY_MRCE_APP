@@ -21,10 +21,33 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
 
         <TextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:text="@string/contact"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/google_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="contact"
-            android:textSize="50dp" />
+            android:editable="false"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/google_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/google_signout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sign out" />
 
     </LinearLayout>
 
