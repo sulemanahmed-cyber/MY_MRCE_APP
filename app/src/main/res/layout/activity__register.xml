@@ -1,87 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Register">
-
-    <EditText
-        android:id="@+id/editText3"
+    tools:context=".Activity_Register"
+    android:background="#b2ebf2"
+    android:orientation="vertical"
+    >
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="41dp"
-        android:ems="10"
-        android:hint="password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/roll_number"
-        app:layout_constraintStart_toStartOf="@+id/editText4"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
-
-    <Button
-        android:id="@+id/button3"
+        android:src="@drawable/mrce"
+        android:layout_gravity="center"
+        android:paddingTop="56dp"/>
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="117dp"
         android:text="Register"
-        app:layout_constraintBottom_toTopOf="@+id/login_here"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roll_number" />
+        android:textColor="#212121"
+        android:layout_gravity="center"
+        android:textSize="50sp"
+        android:fontFamily="@font/montserrat"
+        android:paddingBottom="10dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_1"
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
         android:ems="10"
-        android:hint="email"
+        android:fontFamily="@font/montserrat"
+        android:layout_gravity="center"
+        android:background="@drawable/et_rect"
+        android:hint="Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:drawableLeft="@drawable/ic_mail_black_24dp"
+        android:drawablePadding="6dp"
 
-    <Button
-        android:id="@+id/login_here"
-        android:layout_width="0dp"
+          />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_2"
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="94dp"
-        android:text="already a user ? login here"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:layout_gravity="center"
+        android:background="@drawable/et_rect"
+        android:hint="Password"
+        android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+        android:inputType="textPassword"
+        android:drawablePadding="6dp"
+
+         />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_3"
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
     <EditText
         android:id="@+id/roll_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="33dp"
         android:ems="10"
-        android:hint="jntu roll number"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        android:fontFamily="@font/montserrat"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_create_black_24dp"
+        android:background="@drawable/et_rect"
+        android:hint="Jntu Roll Number"
+        android:drawablePadding="6dp"
+        android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingRight="44dp"
+        android:paddingTop="14dp">
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_gravity="right"
+        android:paddingRight="10dp"
+        android:background="@drawable/bt_bg"
+        /></LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="84dp"
-        android:editable="false"
-        android:text="REGISTER "
-        android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="44dp"
+    android:paddingTop="20dp">
+    <Button
+        android:id="@+id/login_here"
+        android:layout_width="200dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_cont"
+        android:text="already a user ? \nlogin here"
+       /></LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
 

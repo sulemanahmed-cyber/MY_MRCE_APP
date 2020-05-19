@@ -89,7 +89,7 @@
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="54dp"
                             android:layout_gravity="center_horizontal|center_vertical"
                             android:layout_margin="6dp"
                             android:orientation="vertical">
@@ -98,15 +98,17 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
-                                android:src="@drawable/ic_apps_black_24dp" />
+                                android:src="@drawable/ic_library_books_cyan_24dp" />
 
 
                             <TextView
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
-                                android:text="@string/Syllabus"
+                                android:fontFamily="@font/raleway_semibold"
 
+                                android:text="Syllabus"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -131,14 +133,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
-                                android:src="@drawable/ic_games_black_24dp" />
+                                android:src="@drawable/ic_view_module_cyan_24dp" />
 
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="games "
+                                android:text="Cources"
+                                android:fontFamily="@font/raleway_semibold"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -161,17 +164,17 @@
 
                             <ImageView
                                 android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="center_horizontal"
-                                android:src="@drawable/ic_add_location_black_24dp" />
+                                android:src="@drawable/ic_directions_bus_cyan_24dp" />
 
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="campus"
-
+                                android:text="Bus \nRoutes"
+                                android:fontFamily="@font/raleway_semibold"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -202,7 +205,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Events"
-
+                                android:fontFamily="@font/raleway_semibold"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -228,12 +231,13 @@
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_notifications_black_24dp" />
+                                android:src="@drawable/ic_supervisor_account_black_24dp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Notifications"
+                                android:text="Faculty"
+                                android:fontFamily="@font/raleway_semibold"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10dp" />
@@ -259,14 +263,14 @@
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_adb_black_24dp" />
+                                android:src="@drawable/ic_streetview_black_24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=" Calender"
+                                android:text=" Student \nChapters"
                                 android:textAlignment="center"
-
+                                android:fontFamily="@font/raleway_semibold"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
                         </LinearLayout>
@@ -288,15 +292,16 @@
 
                             <ImageView
                                 android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_height="42dp"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_supervisor_account_black_24dp" />
+                                android:src="@drawable/ic_canteen_cyan_24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Faculty"
+                                android:text="Canteen"
+                                android:fontFamily="@font/raleway_semibold"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -330,7 +335,7 @@
                                 android:text="About clg"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
-
+                                android:fontFamily="@font/raleway_semibold"
                                 android:textSize="10sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -360,10 +365,12 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Help"
+                                android:text="Contact"
+                                android:textSize="9sp"
+                                android:fontFamily="@font/raleway_semibold"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
-                                android:textSize="10sp" />
+                                  />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -382,7 +389,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:onClick="my_register"
-                    android:text="About Developers" />
+                    android:text="About Developers"
+                    android:background="@drawable/bt_bg"/>
 
                 <Button
                     android:id="@+id/logout"
@@ -390,6 +398,7 @@
                     android:layout_height="wrap_content"
                     android:text="logout"
                     android:onClick="logout"
+                    android:background="@drawable/bt_cont"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -404,7 +413,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
-
+android:background="#B2EBF2"
         app:menu="@menu/drawer_menu">
 
     </com.google.android.material.navigation.NavigationView>

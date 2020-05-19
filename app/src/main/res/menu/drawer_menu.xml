@@ -1,52 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
     
-    <group android:checkableBehavior="single">
+    <group
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="HOME"
+            android:icon="@drawable/ic_home_black_24dp"
+
+            android:title="HOME" />
+        <item
+            android:id="@+id/nav_syllabus"
+            android:title="syllabus"
+            android:icon="@drawable/ic_library_books_black_24dp"/>
+        <item
+            android:id="@+id/nav_cources"
+            android:title="Cources"
+            android:icon="@drawable/ic_view_module_black_24dp"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="Gallery"
+            android:icon="@drawable/ic_image_black_24dp"
 
             />
         <item
-            android:id="@+id/nav_syllabus"
-            android:title="syllabus" />
-        <item
-            android:id="@+id/nav_cources"
-            android:title="Cources" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:title="Gallery" />
-        <item
             android:id="@+id/nav_bus_routes"
+            android:icon="@drawable/ic_directions_bus_black_24dp"
             android:title="Bus routes"/>
         <item
             android:id="@+id/nav_notice"
-            android:title="Notice"/>
+            android:title="Notice"
+        android:icon="@drawable/ic_comment_black_24dp"
+        />
 
         <item
             android:id="@+id/nav_faculty"
-            android:title="faculty"/>
+            android:title="faculty"
+            android:icon="@drawable/ic_supervisor_account_cyan_24dp"
+            />
         <item
             android:id="@+id/nav_events"
-            android:title="Events"/>
+            android:title="Events"
+        android:icon="@drawable/ic_event_black_24dp"
+        />
         <item
             android:id="@+id/nav_studentc"
-            android:title="Student chapters"/>
+            android:title="Student chapters"
+            android:icon="@drawable/ic_streetview_black_24dp"
+            />
         <item
             android:id="@+id/nav_cells"
-            android:title="Cells"/>
+            android:title="Cells"
+        android:icon="@drawable/ic_cell_black_24dp"/>
         <item
             android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notificationsmmmmm_none_black_24dp"
             android:title="Notification"/>
         <item
             android:id="@+id/nav_canteen"
-            android:title="Canteen"/>
+            android:title="Canteen"
+        android:icon="@drawable/ic_add_shopping_cartt_black_24dp"/>
         <item
             android:id="@+id/nav_contact"
-            android:title="Contact"/>
+            android:title="Contact"
+            android:icon="@drawable/ic_call_blackk_24dp"
+            />
         <item
             android:id="@+id/nav_dum_1"
-            android:title="Dummy_1"/>
+            android:title="Dummy_1"
+            android:icon="@drawable/ic_add_black_24dp"/>
 
 
 

@@ -12,6 +12,8 @@
         <item>@font/montserrat</item>
         <item>@font/montserrat_bold</item>
         <item>@font/quicksand_medium</item>
+        <item>@font/raleway_semibold</item>
+        <item>@font/source_sans_pro_semibold</item>
         <item>@font/vollkorn_italic</item>
     </array>
 </resources>

@@ -6,6 +6,7 @@ android:width="123dp"
 android:height="44dp"
 android:viewportWidth="123"
 android:viewportHeight="44"
+
     >
 
 <group>
@@ -31,7 +32,7 @@ android:viewportHeight="44"
                     >
 
                     <item
-                        android:color="#6FCF97"
+                        android:color="#0097a7"
                         android:offset="0"
                         />
 
