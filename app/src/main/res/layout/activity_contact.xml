@@ -24,6 +24,7 @@
             android:id="@+id/contact"
             android:layout_width="match_parent"
             android:layout_height="20sp"
+            android:layout_marginTop="0dp"
             android:text="@string/contact"
             android:textSize="50dp" />
 
@@ -31,7 +32,6 @@
             android:id="@+id/google_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,6 @@
             android:id="@+id/google_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
             android:ems="10"
             android:inputType="textEmailAddress" />
 
@@ -48,6 +47,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="sign out" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:editable="false"
+            android:gravity="center_horizontal"
+            android:text="Email  not verified"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="verify now"
+            android:visibility="gone" />
 
     </LinearLayout>
 

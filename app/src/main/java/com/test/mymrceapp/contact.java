@@ -21,8 +21,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class contact extends AppCompatActivity {
 
@@ -31,9 +35,12 @@ public class contact extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
     AlertDialog alertDialog;
-    TextView google_name ,google_email;
+    TextView google_name ,google_email,verify_msg;
     Button google_signout;
     GoogleSignInClient mGoogleSignInClient;
+    Button verify;
+    FirebaseAuth fAuth;
+
 
 
     @Override
@@ -47,6 +54,37 @@ public class contact extends AppCompatActivity {
         navigationView=findViewById(R.id.navigation_menu);
         toolbar=findViewById(R.id.toolbar);
         drawerLayout=findViewById(R.id.drawer_layout);
+        verify = findViewById(R.id.verify);
+        verify_msg = findViewById(R.id.tv1);
+        fAuth = FirebaseAuth.getInstance();
+/*
+        userId = fAuth.getCurrentUser().getUid();
+*/
+        FirebaseUser user = fAuth.getCurrentUser();
+        if(!user.isEmailVerified()){
+            verify.setVisibility(View.VISIBLE);
+            verify_msg.setVisibility(View.VISIBLE);
+
+            verify.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FirebaseUser user = fAuth.getCurrentUser();
+                    user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(getApplicationContext(), "verification mail sent", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+                }
+            });
+
+        }
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

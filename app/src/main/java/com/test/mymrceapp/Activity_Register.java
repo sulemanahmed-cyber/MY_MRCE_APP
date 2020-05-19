@@ -16,9 +16,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Activity_Register extends AppCompatActivity {
     EditText mEmail,mPassword;
@@ -73,6 +76,21 @@ public class Activity_Register extends AppCompatActivity {
                    @Override
                    public void onComplete(@NonNull Task<AuthResult> task) {
                        if (task.isSuccessful()){
+                           //verification
+                           FirebaseUser user = fAuth.getCurrentUser();
+                           user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                               @Override
+                               public void onSuccess(Void aVoid) {
+                                   Toast.makeText(Activity_Register.this, "verification mail sent", Toast.LENGTH_SHORT).show();
+                               }
+                           }).addOnFailureListener(new OnFailureListener() {
+                               @Override
+                               public void onFailure(@NonNull Exception e) {
+                                   Toast.makeText(Activity_Register.this, "failed", Toast.LENGTH_SHORT).show();
+
+                               }
+                           });
+
                            Toast.makeText(Activity_Register.this, "user created", Toast.LENGTH_SHORT).show();
                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
                        }  else {
