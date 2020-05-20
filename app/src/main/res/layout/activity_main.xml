@@ -46,12 +46,12 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+
                 <ViewFlipper
                     android:id="@+id/v_flipper"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:background="@drawable/borderrss" />
-
 
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/viewPager"
@@ -390,14 +390,17 @@
                     android:layout_gravity="center_vertical"
                     android:onClick="my_register"
                     android:text="About Developers"
+
                     android:background="@drawable/bt_bg"/>
 
                 <Button
+                    android:layout_gravity="right"
                     android:id="@+id/logout"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="logout"
                     android:onClick="logout"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/bt_cont"
                     tools:ignore="HardcodedText" />
 

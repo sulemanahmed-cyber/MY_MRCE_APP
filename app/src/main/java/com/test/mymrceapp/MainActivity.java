@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         //viewflipper
-        int images []={R.drawable.mrce1,R.drawable.mrce2,R.drawable.nss_1,R.drawable.nss_1};
+        int images []={R.drawable.mrce1,R.drawable.mrce2,R.drawable.person,R.drawable.mrce};
         v_flipper=findViewById(R.id.v_flipper);
                for (int image:images){
                    flipperImages(image);
@@ -300,10 +300,8 @@ private void setToggleEvent(GridLayout gridLayout){
         v_flipper.setAutoStart(true);
 
         //animation
-        v_flipper.setInAnimation(this,android.R.anim.fade_in);
-        v_flipper.setInAnimation(this,android.R.anim.fade_out);
-
-    }
+        v_flipper.setInAnimation(this,android.R.anim.slide_in_left);
+     }
 
 
 

@@ -32,16 +32,16 @@ android:viewportHeight="44"
                     >
 
                     <item
-                        android:color="#0097a7"
+                        android:color="#2196f3"
                         android:offset="0"
                         />
 
                     <item
-                        android:color="#66D2EA"
+                        android:color="#A9ACFF"
                         android:offset="1"
                         />
 
-                </gradient>
+                                    </gradient>
 
             </aapt:attr>
 

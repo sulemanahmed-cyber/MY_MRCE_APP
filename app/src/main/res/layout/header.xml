@@ -1,45 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/ThemeOverlay.AppCompat.Dark"
     android:layout_width="match_parent"
     android:layout_height="192dp"
-    android:weightSum="100"
-    android:background="#52898f"
+
+    android:background="#0097a7"
     android:orientation="horizontal"
 
-    android:padding="25dp">
+    >
+
 
     <LinearLayout
         android:layout_width="477dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         android:layout_weight="50"
         android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="25dp"
+
+
+            >
+
+            <TextView
+                android:layout_width="118dp"
+                android:layout_height="48dp"
+                android:background="@drawable/side_chipp"
+                android:fontFamily="@font/slabo_13px"
+                android:text="Student"
+                android:textSize="30sp" />
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/textView2"
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:fontFamily="@font/source_sans_pro_semibold"
+            android:paddingLeft="25dp"
             android:text="Mr. Roozevelt"
             android:textColor="#212121"
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/email_tv"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/source_sans_pro_semibold"
-            android:paddingTop="10dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="0dp"
             android:text="roozevelt007@mymail.com"
             android:textColor="#212121"
             android:textSize="20sp" />
+
 
     </LinearLayout>
 
@@ -47,7 +67,7 @@
         android:id="@+id/account_img"
         android:layout_width="281dp"
         android:layout_height="109dp"
-
+        android:padding="10dp"
         android:layout_weight="50"
         android:src="@drawable/person_sq" />
 
