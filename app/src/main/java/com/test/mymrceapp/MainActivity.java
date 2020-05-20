@@ -248,40 +248,40 @@ private void setToggleEvent(GridLayout gridLayout){
                     }
                     if(finalI == 1)
                     {
-                        Intent intent = new Intent(MainActivity.this,dummy_1.class);
+                        Intent intent = new Intent(MainActivity.this,cources.class);
+                        startActivity(intent);
+                    }
+                    if(finalI == 2)
+                    {
+                        Intent intent = new Intent(MainActivity.this,bus_routes.class);
                         startActivity(intent);
                     }
                     if(finalI == 3)
                     {
-                        Intent intent = new Intent(MainActivity.this,notice.class);
+                        Intent intent = new Intent(MainActivity.this,events.class);
                         startActivity(intent);
                     }
                     if(finalI == 4)
                     {
-                        Intent intent = new Intent(MainActivity.this,events.class);
+                        Intent intent = new Intent(MainActivity.this,faculty.class);
                         startActivity(intent);
                     }
                     if(finalI == 5)
                     {
-                        Intent intent = new Intent(MainActivity.this,notification.class);
+                        Intent intent = new Intent(MainActivity.this,student_chapters.class);
                         startActivity(intent);
                     }
                     if(finalI == 6)
                     {
-                        Intent intent = new Intent(MainActivity.this,student_chapters.class);
+                        Intent intent = new Intent(MainActivity.this,canteen.class);
                         startActivity(intent);
                     }
                     if(finalI == 7)
                     {
-                        Intent intent = new Intent(MainActivity.this,faculty.class);
+                        Intent intent = new Intent(MainActivity.this,dummy_1.class);
                         startActivity(intent);
                     }
                     if(finalI == 8)
-                    {
-                        Intent intent = new Intent(MainActivity.this,gallery.class);
-                        startActivity(intent);
-                    }
-                    if(finalI == 9)
                     {
                         Intent intent = new Intent(MainActivity.this,contact.class);
                         startActivity(intent);
