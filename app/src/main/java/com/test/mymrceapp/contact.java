@@ -54,14 +54,15 @@ public class contact extends AppCompatActivity {
         navigationView=findViewById(R.id.navigation_menu);
         toolbar=findViewById(R.id.toolbar);
         drawerLayout=findViewById(R.id.drawer_layout);
+/*
         verify = findViewById(R.id.verify);
         verify_msg = findViewById(R.id.tv1);
         fAuth = FirebaseAuth.getInstance();
-/*
-        userId = fAuth.getCurrentUser().getUid();
 */
-        FirebaseUser user = fAuth.getCurrentUser();
-        if(!user.isEmailVerified()){
+
+        //google_email = fAuth.getCurrentUser().getUid();
+
+     /*   if(!user.isEmailVerified()){
             verify.setVisibility(View.VISIBLE);
             verify_msg.setVisibility(View.VISIBLE);
 
@@ -84,14 +85,14 @@ public class contact extends AppCompatActivity {
                 }
             });
 
-        }
+        }*/
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        google_name = findViewById(R.id.google_name);
+       /* google_name = findViewById(R.id.google_name);
         google_email = findViewById(R.id.google_email);
-        google_signout = findViewById(R.id.google_signout);
-        google_signout.setOnClickListener(new View.OnClickListener() {
+        google_signout = findViewById(R.id.google_signout);*/
+        /*google_signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switch (view.getId()) {
@@ -103,9 +104,9 @@ public class contact extends AppCompatActivity {
                 }
 
             }
-        });
-        //to get account information
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        });*/
+     //to get account information
+       /* GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
         if (acct != null) {
             String personName = acct.getDisplayName();
            String personGivenName = acct.getGivenName();
@@ -120,7 +121,7 @@ public class contact extends AppCompatActivity {
 
 
         }
-
+*/
 
 
       /*  navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -198,7 +199,7 @@ public class contact extends AppCompatActivity {
 
 
     }
-    private void signOut() {
+   /* private void signOut() {
         mGoogleSignInClient.signOut()
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
                     @Override
@@ -209,7 +210,7 @@ public class contact extends AppCompatActivity {
                     }
                 });
     }
-
+*/
    /* private void setUpToolbar()
     {
 

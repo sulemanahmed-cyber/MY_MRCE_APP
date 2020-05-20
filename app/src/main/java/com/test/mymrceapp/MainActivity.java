@@ -30,6 +30,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.internal.NavigationMenu;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager  viewPager;
     Adapter adapter;
     Button button;
-
+    FirebaseAuth fAuth;
 
     List<Model> models;
     Integer[] colors=null;
@@ -215,13 +216,24 @@ public class MainActivity extends AppCompatActivity {
                       startActivity(intent11);
                       break;
                   case R.id.nav_contact:
+                      /*fAuth = FirebaseAuth.getInstance();
+                      FirebaseUser user = fAuth.getCurrentUser();
+                      if(user.isEmailVerified()){
+                          startActivity(new Intent(getApplicationContext(),contact.class));
+                      }else {
+                          startActivity(new Intent(getApplicationContext(),Activity_Register.class));
+                      }*/
+
                       Intent intent12 = new Intent(getApplicationContext(),contact.class);
                       startActivity(intent12);
                       break;
                   case R.id.nav_dum_1:
-                      Intent intent13 = new Intent(getApplicationContext(),dummy_1.class);
+                      FirebaseUser user = fAuth.getCurrentUser();
+
+
+                     /* Intent intent13 = new Intent(getApplicationContext(),dummy_1.class);
                       startActivity(intent13);
-                      break;
+                      break;*/
 
 
               }
@@ -285,6 +297,13 @@ private void setToggleEvent(GridLayout gridLayout){
                     {
                         Intent intent = new Intent(MainActivity.this,contact.class);
                         startActivity(intent);
+                      /*  fAuth = FirebaseAuth.getInstance();
+                        FirebaseUser user = fAuth.getCurrentUser();
+                        if(user.isEmailVerified()){
+                            startActivity(new Intent(getApplicationContext(),contact.class));
+                        }else {
+                            startActivity(new Intent(getApplicationContext(),Activity_Register.class));
+                        }*/
                     }
                 }
             });
