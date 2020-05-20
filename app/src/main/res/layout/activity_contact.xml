@@ -42,13 +42,13 @@
             android:ems="10"
             android:inputType="textEmailAddress" />
 
-        <Button
+      <!--  <Button
             android:id="@+id/google_signout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="sign out" />
+            android:text="sign out" />-->
 
-        <TextView
+        <!--<TextView
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
@@ -57,14 +57,14 @@
             android:gravity="center_horizontal"
             android:text="Email  not verified"
             android:textStyle="bold"
-            android:visibility="gone" />
+            android:visibility="gone" />-->
 
-        <Button
+       <!-- <Button
             android:id="@+id/verify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="verify now"
-            android:visibility="gone" />
+            android:visibility="gone" />-->
 
     </LinearLayout>
 
