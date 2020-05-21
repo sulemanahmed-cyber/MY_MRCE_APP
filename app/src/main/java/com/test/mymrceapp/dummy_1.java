@@ -63,4 +63,10 @@ public class dummy_1 extends AppCompatActivity {
     public void onBackPressed() {
         finish();
     }
+
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        finish();
+    }
 }

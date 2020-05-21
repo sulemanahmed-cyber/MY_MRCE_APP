@@ -24,6 +24,16 @@
          android:layout_height="wrap_content"
          android:text="verify now"
          android:visibility="gone" />
+    <Button
+        android:layout_gravity="right"
+        android:id="@+id/logout1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="logout"
+        android:onClick="logout"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_cont"
+        tools:ignore="HardcodedText" />
 
 
 </LinearLayout>

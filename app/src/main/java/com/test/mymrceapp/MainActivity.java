@@ -37,6 +37,8 @@ import com.google.firebase.iid.InstanceIdResult;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.test.mymrceapp.my_loginn.flag;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     GridLayout gridLayout;
     ViewPager  viewPager;
     Adapter adapter;
-    Button button;
+    Button button,logout1;
     FirebaseAuth fAuth;
 
     List<Model> models;
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         gridLayout= findViewById(R.id.gridLayout5);
        button = findViewById(R.id.my_abt);
+       logout1 = findViewById(R.id.logout1);
 
       /* button.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -216,6 +219,13 @@ public class MainActivity extends AppCompatActivity {
                       startActivity(intent11);
                       break;
                   case R.id.nav_contact:
+                      /*
+                      if(user.isAnonymous()){
+                          startActivity(new Intent(getApplicationContext(),Activity_Register.class));
+                      } else {
+                          startActivity(new Intent(getApplicationContext(),contact.class));
+                      }
+
                       /*fAuth = FirebaseAuth.getInstance();
                       FirebaseUser user = fAuth.getCurrentUser();
                       if(user.isEmailVerified()){
@@ -224,16 +234,20 @@ public class MainActivity extends AppCompatActivity {
                           startActivity(new Intent(getApplicationContext(),Activity_Register.class));
                       }*/
 
-                      Intent intent12 = new Intent(getApplicationContext(),contact.class);
-                      startActivity(intent12);
+                     if(flag==1){
+                         Intent intent12 = new Intent(getApplicationContext(),contact.class);
+                         startActivity(intent12);
+                     }else {
+                         Intent intent12 = new Intent(getApplicationContext(),Activity_Register.class);
+                         startActivity(intent12);
+                     }
                       break;
                   case R.id.nav_dum_1:
-                      FirebaseUser user = fAuth.getCurrentUser();
 
 
-                     /* Intent intent13 = new Intent(getApplicationContext(),dummy_1.class);
+                      Intent intent13 = new Intent(getApplicationContext(),dummy_1.class);
                       startActivity(intent13);
-                      break;*/
+                      break;
 
 
               }
@@ -295,8 +309,15 @@ private void setToggleEvent(GridLayout gridLayout){
                     }
                     if(finalI == 8)
                     {
-                        Intent intent = new Intent(MainActivity.this,contact.class);
-                        startActivity(intent);
+                       /* Intent intent = new Intent(MainActivity.this,contact.class);
+                        startActivity(intent);*/
+                        if(flag==1){
+                            Intent intent12 = new Intent(getApplicationContext(),contact.class);
+                            startActivity(intent12);
+                        }else {
+                            Intent intent12 = new Intent(getApplicationContext(),Activity_Register.class);
+                            startActivity(intent12);
+                        }
                       /*  fAuth = FirebaseAuth.getInstance();
                         FirebaseUser user = fAuth.getCurrentUser();
                         if(user.isEmailVerified()){

@@ -29,6 +29,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
 public class my_loginn extends AppCompatActivity {
 private EditText mEmailField,email;
 private EditText mPasswordField,password;
@@ -38,6 +39,7 @@ SignInButton google_button;
 private FirebaseAuth mAuth;
 GoogleSignInClient mGoogleSignInClient;
 int RC_SIGN_IN = 0;
+public static int flag;
 private FirebaseAuth.AuthStateListener mAuthListener;
 private static final String TAG ="my_loginn";
 
@@ -146,6 +148,7 @@ private static final String TAG ="my_loginn";
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             // Signed in successfully, show authenticated UI.
+            flag=1;
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
         } catch (ApiException e) {
@@ -169,6 +172,7 @@ private static final String TAG ="my_loginn";
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
+                        flag=1;
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                     } else
                     {
