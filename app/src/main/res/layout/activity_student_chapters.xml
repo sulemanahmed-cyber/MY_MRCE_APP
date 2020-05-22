@@ -28,6 +28,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="studentISTe12  chapters"/>
+
+        <Spinner
+            android:id="@+id/spin_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+
+<!--
+
+        <Spinner
+            android:id="@+id/spin_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+-->
+
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
