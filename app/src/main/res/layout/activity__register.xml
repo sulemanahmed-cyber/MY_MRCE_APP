@@ -8,23 +8,24 @@
     android:background="#b2ebf2"
     android:orientation="vertical"
     >
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/mrce"
         android:layout_gravity="center"
-        android:paddingTop="56dp"/>
+        android:paddingTop="50dp"
+        android:src="@drawable/mrce" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:textColor="#212121"
         android:layout_gravity="center"
-        android:textSize="50sp"
         android:fontFamily="@font/montserrat"
         android:paddingBottom="10dp"
-        />
+        android:text="Register"
+        android:textColor="#212121"
+        android:textSize="40sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_1"

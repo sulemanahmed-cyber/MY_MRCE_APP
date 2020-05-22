@@ -29,7 +29,7 @@
 
             <TextView
                 android:layout_width="118dp"
-                android:layout_height="48dp"
+                android:layout_height="40dp"
                 android:background="@drawable/side_chipp"
                 android:fontFamily="@font/slabo_13px"
                 android:text="Student"
@@ -42,6 +42,7 @@
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/source_sans_pro_semibold"
             android:paddingLeft="25dp"
             android:text="Mr. Roozevelt"

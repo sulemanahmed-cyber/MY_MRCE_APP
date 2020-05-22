@@ -63,26 +63,27 @@
         android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="login"
-android:paddingTop="5dp"
+        android:layout_gravity="center"
         android:background="@drawable/bt_bg"
-        android:layout_gravity="right"
-         />
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingTop="5dp"
+        android:text="login" />
 
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_button"
-        android:layout_width="match_parent"
-android:paddingTop="28dp"
-        android:paddingBottom="13dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="28dp"
+        android:paddingBottom="13dp" />
 
     <Button
         android:id="@+id/register_here"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bt_cont"
         android:fontFamily="@font/montserrat_bold"
         android:text="not yet registered ? register here" />
@@ -92,10 +93,11 @@ android:paddingTop="28dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:clickable="true"
+        android:layout_marginTop="30dp"
 
-        android:paddingTop="14dp"
+        android:clickable="true"
         android:fontFamily="@font/montserrat_bold"
+        android:paddingTop="14dp"
         android:text="Forgot Password ?"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"

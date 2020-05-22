@@ -45,7 +45,8 @@
                     android:layout_height="match_parent"
                     android:alignmentMode="alignMargins"
                     android:columnCount="1"
-                    android:columnOrderPreserved="false"
+                    android:columnOrderPreserved="true"
+                    android:rowOrderPreserved="true"
                     android:rowCount="3"
                     android:padding="14dp"
                     tools:layout_editor_absoluteY="300dp">
