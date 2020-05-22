@@ -21,10 +21,39 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NEW faculty"
-            android:textSize="50dp" />
+            android:gravity="center"
+            android:text="STAFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="9dp"
+            android:text="PRINCIPLE :"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="9dp"
+            android:text="DESIGNATIION :"
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
