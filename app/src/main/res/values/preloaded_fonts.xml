@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/alegreya_sans_sc_light_italic</item>
+        <item>@font/amiko_semibold</item>
         <item>@font/antic_didone</item>
         <item>@font/aref_ruqaa</item>
         <item>@font/averia_gruesa_libre</item>
