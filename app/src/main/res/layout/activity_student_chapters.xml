@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yel"
     tools:context=".student_chapters"
     android:id="@+id/drawer_layout"
     android:orientation="vertical"
@@ -22,12 +23,47 @@
             app:title="Student Chapters"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
 
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 ) Computer Society Of India"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:text="Discription"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:text="chair person :"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="studentISTe12  chapters"/>
+            android:layout_marginTop="10dp"
+            android:text="No of Students :"
+            android:textSize="20sp" />
+
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

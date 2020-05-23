@@ -21,12 +21,31 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="AutoCompleteTextView" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CANTEEN"/>
+            android:text="fried rice" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nooodles" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="puff" />
+
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
