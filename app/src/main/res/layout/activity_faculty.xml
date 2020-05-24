@@ -14,6 +14,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:background="@color/light_green"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -36,7 +37,8 @@
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="match_parent"
+            android:layout_width="172dp"
+            android:layout_gravity="center"
             android:layout_height="172dp"
             android:layout_marginTop="10dp"
             app:srcCompat="@mipmap/ic_launcher" />
@@ -45,6 +47,7 @@
             android:id="@+id/tv1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
 
             android:layout_marginTop="9dp"
             android:text="PRINCIPLE :"

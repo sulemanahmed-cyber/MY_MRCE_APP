@@ -416,7 +416,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
-        android:background="#B2EBF2"
+        app:itemTextColor="@color/reply_orange"
+        app:itemIconTint="@color/reply_orange"
+        android:background="@color/navy"
          app:menu="@menu/drawer_menu">
 
     </com.google.android.material.navigation.NavigationView>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="192dp"
 
-    android:background="#0097a7"
+    android:background="@color/navy_black"
     android:orientation="horizontal"
 
     >
@@ -33,6 +33,7 @@
                 android:background="@drawable/side_chipp"
                 android:fontFamily="@font/slabo_13px"
                 android:text="Student"
+
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -46,7 +47,7 @@
             android:fontFamily="@font/source_sans_pro_semibold"
             android:paddingLeft="25dp"
             android:text="Mr. Roozevelt"
-            android:textColor="#212121"
+            android:textColor="@color/white"
             android:textSize="30sp" />
 
         <TextView
@@ -58,7 +59,7 @@
             android:paddingLeft="25dp"
             android:paddingTop="0dp"
             android:text="roozevelt007@mymail.com"
-            android:textColor="#212121"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
 

@@ -33,7 +33,7 @@
                 android:id="@+id/LL"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#B2EBF2"
+                android:background="@color/light_green"
                 android:orientation="vertical">
 
                 <GridLayout
@@ -53,7 +53,7 @@
                         android:id="@+id/games11"
 
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
                         android:contentDescription="todo"
@@ -69,7 +69,7 @@
 
                             <ImageView
                                 android:layout_width="94dp"
-                                android:layout_height="94dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="50"
                                 android:src="@drawable/tst_bus" />
 
@@ -122,7 +122,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
 
                         android:layout_margin="6dp"
                         android:layout_weight="1"
@@ -140,7 +140,7 @@
 
                             <ImageView
                                 android:layout_width="94dp"
-                                android:layout_height="94dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="50"
                                 android:src="@drawable/tst_bus" />
 
@@ -196,7 +196,7 @@
                         android:id="@+id/games3"
                         android:layout_width="match_parent"
 
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
 
                         android:layout_margin="6dp"
                         android:layout_weight="1"
@@ -214,8 +214,8 @@
 
                             <ImageView
                                 android:layout_width="94dp"
-                                android:layout_height="94dp"
-                                android:layout_weight="70"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
                                 android:src="@drawable/tst_bus" />
 
                             <LinearLayout
@@ -268,7 +268,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
                         android:contentDescription="todo"
@@ -284,8 +284,8 @@
 
                             <ImageView
                                 android:layout_width="94dp"
-                                android:layout_height="94dp"
-                                android:layout_weight="70"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
                                 android:src="@drawable/tst_bus" />
 
                             <LinearLayout
@@ -338,7 +338,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
                         android:contentDescription="todo"
@@ -354,8 +354,8 @@
 
                             <ImageView
                                 android:layout_width="94dp"
-                                android:layout_height="94dp"
-                                android:layout_weight="70"
+                                android:layout_height="140dp"
+                                android:layout_weight="50"
                                 android:src="@drawable/tst_bus" />
 
                             <LinearLayout
@@ -408,7 +408,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games12"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
                         android:contentDescription="todo"
@@ -478,7 +478,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games111"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
                         android:contentDescription="todo"
@@ -548,7 +548,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games15"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
 
                         android:layout_margin="6dp"
                         android:layout_weight="1"
@@ -621,7 +621,7 @@
                         android:id="@+id/games31"
                         android:layout_width="match_parent"
 
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
 
                         android:layout_margin="6dp"
                         android:layout_weight="1"
@@ -693,7 +693,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games41"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
                         android:contentDescription="todo"
@@ -763,7 +763,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games123"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
                         android:contentDescription="todo"
@@ -833,7 +833,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/games121"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_margin="6dp"
                         android:layout_weight="1"
                         android:contentDescription="todo"

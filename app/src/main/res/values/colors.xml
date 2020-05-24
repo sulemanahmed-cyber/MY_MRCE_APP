@@ -15,5 +15,13 @@
     <color name="lavender">#D86FEA</color>
     <color name="green">#9EF68A</color>
     <color name="yel">#ACA173</color>
+    <color name="cream">#F4E7B0</color>
+    <color name="navy">#344955</color>
+    <color name="reply_orange">#F9AA33</color>
+    <color name="navy_black">#232f34</color>
+    <color name="light">#fedbd0</color>
+    <color name="brown">#442c2e</color>
+    <color name="light_green">#b9e4c9</color>
+    <color name="dark_green">#37966f</color>
 
 </resources>

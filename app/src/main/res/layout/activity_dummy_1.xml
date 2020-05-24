@@ -24,15 +24,24 @@
          android:layout_height="wrap_content"
          android:text="verify now"
          android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:textSize="30sp"
+        android:text="Please Logout and Sign in directly after verifying your email"
+        android:id="@+id/text"/>
+
     <Button
-        android:layout_gravity="right"
         android:id="@+id/logout1"
+
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="logout"
-        android:onClick="logout"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="250dp"
         android:background="@drawable/bt_cont"
+        android:onClick="logout"
+        android:text="logout"
         tools:ignore="HardcodedText" />
 
 
