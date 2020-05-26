@@ -13,11 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_Register"></activity>
+        <activity android:name=".Activity_Register" />
         <activity android:name=".my_loginn" />
-        <activity
+       <!-- <activity
             android:name=".ui.login.my_loginActivity"
-            android:label="@string/title_activity_my_login" />
+            android:label="@string/title_activity_my_login" />-->
         <activity android:name=".pdfviewer" />
         <activity
             android:name=".bus_routes"
@@ -67,7 +67,8 @@
             </intent-filter>
         </activity>
 
-       <service android:name="FirebaseMessagingService"/>
+        <service android:name="FirebaseMessagingService"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

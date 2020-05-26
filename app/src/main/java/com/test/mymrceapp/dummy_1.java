@@ -66,7 +66,7 @@ public class dummy_1 extends AppCompatActivity {
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        startActivity(new Intent(getApplicationContext(),my_loginn.class));
         finish();
     }
 }

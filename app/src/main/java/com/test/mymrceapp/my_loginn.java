@@ -125,6 +125,62 @@ private static final String TAG ="my_loginn";
 
             }
         });
+
+
+        mforgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final EditText resetmail = new EditText(v.getContext());
+                final AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
+                passwordResetDialog.setTitle("reset password");
+                passwordResetDialog.setMessage("enter your email");
+                passwordResetDialog.setView(resetmail);
+
+                passwordResetDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(final DialogInterface dialog, int which) {
+
+                        String email = resetmail.getText().toString();
+                        if (TextUtils.isEmpty(email)) {
+                          //  resetmail.setError("Please Provide valid mail !!");
+
+                            Toast.makeText(my_loginn.this, "please provide mail !!", Toast.LENGTH_SHORT).show();
+                        } else {
+
+
+
+                            final String mail = resetmail.getText().toString().trim();
+                           /* if (mail.equals("null")) {
+                                resetmail.setError("please provide mail !");
+                               // Toast.makeText(my_loginn.this, "enter your email ", Toast.LENGTH_SHORT).show();
+                            }*/
+
+                            mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+
+
+                                    Toast.makeText(my_loginn.this, "reset link sent to your mail", Toast.LENGTH_SHORT).show();
+
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(my_loginn.this, "Error ! reset link failed", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+                    }
+                });
+                passwordResetDialog.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                passwordResetDialog.create().show();
+            }
+        });
     }
 
     private void SignIn() {
@@ -185,43 +241,14 @@ private static final String TAG ="my_loginn";
                 }
             });
         }
-
-     mforgot.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             final EditText resetmail = new EditText(v.getContext());
-             AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
-             passwordResetDialog.setTitle("reset password");
-             passwordResetDialog.setMessage("enter your email");
-             passwordResetDialog.setView(resetmail);
-
-             passwordResetDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                 @Override
-                 public void onClick(DialogInterface dialog, int which) {
-                     String mail = resetmail.getText().toString();
-                     mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
-                         @Override
-                         public void onSuccess(Void aVoid) {
-                             Toast.makeText(my_loginn.this, "reset link sent to your mail", Toast.LENGTH_SHORT).show();
-                         }
-                     }).addOnFailureListener(new OnFailureListener() {
-                         @Override
-                         public void onFailure(@NonNull Exception e) {
-                             Toast.makeText(my_loginn.this, "Error ! reset link failed", Toast.LENGTH_SHORT).show();
-                         }
-                     });
-                 }
-             });
-             passwordResetDialog.setNegativeButton("no", new DialogInterface.OnClickListener() {
-                 @Override
-                 public void onClick(DialogInterface dialog, int which) {
-
-                 }
-             });
-             passwordResetDialog.create().show();
-         }
-     });
-
+/*mforgot.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(getApplicationContext(),Password_Activity.class));
+    }
+});*/
+    /*
+*/
 
 
 
