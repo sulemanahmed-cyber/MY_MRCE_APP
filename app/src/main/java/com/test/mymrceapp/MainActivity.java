@@ -1,6 +1,6 @@
 package com.test.mymrceapp;
 
-import androidx.annotation.NonNull;
+import      androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
         setToggleEvent(gridLayout);
         models=new ArrayList<>();
-        models.add(new Model(R.drawable.mrce1,"mrce","this is mrce"));
-        models.add(new Model(R.drawable.mrce2,"mrce two","this is also mrce"));
+        models.add(new Model(R.drawable.the_nn,"Sri. Ch. Malla Reddy","Founder Chairman, MRGI"));
+        models.add(new Model(R.drawable.pres_bhadra,"Dr. Ch. Bhadra Reddy","(President, MRGI)"));
         models.add(new Model(R.drawable.nss_1,"nss","this is Nss"));
         models.add(new Model(R.drawable.nss_1,"nss_1","this is nss_1"));
 
@@ -91,8 +91,44 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager=findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
-        viewPager.setPadding(130,0,130,0);
+        viewPager.setPadding(10,0,130,0);
+         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+             @Override
+             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+             }
+
+             @Override
+             public void onPageSelected(int position) {
+
+                /* switch (position){
+                     case 0:
+                         drawerLayout.setBackgroundResource(R.color.cpl);
+                         Toast.makeText(MainActivity.this, "1st page", Toast.LENGTH_SHORT).show();
+                         break;
+
+
+                     case 1:
+
+                         drawerLayout.setBackgroundResource(R.color.brown);
+                         Toast.makeText(MainActivity.this, "second page", Toast.LENGTH_SHORT).show();
+                         break;
+
+                     case 2:
+
+                         drawerLayout.setBackgroundResource(R.color.cpd);
+                         Toast.makeText(MainActivity.this, "third  page", Toast.LENGTH_SHORT).show();
+                         break;
+
+
+                 }*/
+             }
+
+             @Override
+             public void onPageScrollStateChanged(int state) {
+
+             }
+         });
         Integer[] colors_temp={getResources().getColor(R.color.cpl),
                 getResources().getColor(R.color.cp),
                 getResources().getColor(R.color.cpd),

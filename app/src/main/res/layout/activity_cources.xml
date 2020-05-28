@@ -10,18 +10,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#B2EBF2"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FDBD"
-            app:title="cources"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
+            android:background="#0097A7"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="cources"></androidx.appcompat.widget.Toolbar>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -31,16 +34,15 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_Hs"
+                    style="@style/CardView.Light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/CardView.Light"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    >
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -51,19 +53,19 @@
                             android:id="@+id/imageView_Hs"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/hs"
                             android:scaleType="centerCrop"
+                            android:src="@drawable/hs"
                             app:layout_constraintDimensionRatio="H,16:9"
-                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/view_Hs"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginTop="16dp"
                             android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
                             android:elevation="12dp"
                             app:cardCornerRadius="25dp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -73,32 +75,36 @@
                                 android:id="@+id/circleImage_Hs"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:src="@drawable/hs"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/hs" />
 
                         </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:id="@+id/name_Hs"
+                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Humanities And Sciences"
-                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Humanities And \nSciences"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_Hs"
                             app:layout_constraintStart_toEndOf="@+id/view_Hs"
-                            app:layout_constraintTop_toTopOf="@+id/view_Hs"
-                            app:layout_constraintBottom_toTopOf="@+id/cource_Hs"/>
+                            app:layout_constraintTop_toTopOf="@+id/view_Hs" />
 
                         <TextView
                             android:id="@+id/cource_Hs"
+                            style="@style/TextAppearance.AppCompat.Body1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="B.TECH"
-                            style="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="#8A000000"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/autour_one"
+                            android:text="B.TECH"
+
+                            android:textColor="#8A000000"
                             app:layout_constraintStart_toEndOf="@+id/view_Hs"
-                            app:layout_constraintTop_toBottomOf="@+id/name_Hs"/>
+                            app:layout_constraintTop_toBottomOf="@+id/name_Hs" />
 
                         <Button
                             android:id="@+id/arrowBtn_Hs"
@@ -111,43 +117,47 @@
                             app:layout_constraintTop_toTopOf="@+id/view_Hs" />
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:id="@+id/expandableView_Hs"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical"
                             android:paddingBottom="12dp"
                             android:visibility="gone"
-                            android:layout_marginTop="12dp"
-                            app:layout_constraintTop_toBottomOf="@+id/cource_Hs"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            app:layout_constraintTop_toBottomOf="@+id/cource_Hs">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
 
                                     android:id="@+id/phoneIcon_Hs"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_phone_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+                                    app:layout_constraintTop_toTopOf="parent" /><!--picture of HOD-->
 
                                 <TextView
                                     android:id="@+id/hod_name_Hs"
+                                    style="@style/TextAppearance.AppCompat.Medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Dr.J. Shashi Kumar(H.O.D.)"
                                     android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/cousine_bold"
+                                    android:text="Dr.J. Shashi Kumar(H.O.D.)"
                                     android:textColor="#000"
-                                    style="@style/TextAppearance.AppCompat.Medium"
-                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon_Hs"
+                                    app:layout_constraintBottom_toTopOf="@+id/hod_Hs"
                                     app:layout_constraintStart_toEndOf="@id/phoneIcon_Hs"
-                                    app:layout_constraintBottom_toTopOf="@+id/hod_Hs"/>
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon_Hs"
+
+                                    />
 
                             </LinearLayout>
 
@@ -155,15 +165,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:id="@+id/mailIcon_Hs"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_mail_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon_Hs"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon_Hs" />
 
                                 <!--   <TextView
                                        android:id="@+id/branch_desc"
@@ -179,15 +190,16 @@
 
                                 <TextView
                                     android:id="@+id/info_Desc_Hs"
+                                    style="@style/TextAppearance.AppCompat.Body1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="humanities and sciences is a department common for all branches of study"
                                     android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/raleway_semibold"
+                                    android:text="humanities and sciences is a department common for all branches of study"
                                     android:textColor="#8A000000"
-                                    style="@style/TextAppearance.AppCompat.Body1"
-                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc_Hs"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon_Hs"
                                     app:layout_constraintStart_toEndOf="@id/mailIcon_Hs"
-                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon_Hs"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc_Hs" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -199,198 +211,196 @@
                 <!--                   Card view Cse          -->
 
                 <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_Cse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardView.Light"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="12dp">
-
-                <ImageView
-                    android:id="@+id/imageView_Cse"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:src="@drawable/computers"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintDimensionRatio="H,16:9"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/view_Cse"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="12dp"
-                    android:elevation="12dp"
-                    app:cardCornerRadius="25dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView_Cse">
-
-                    <ImageView
-                        android:id="@+id/circleImage_Cse"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/computers"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/name_Cse"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Computer Science Engineering"
-                    style="@style/TextAppearance.AppCompat.Title"
-                    android:layout_marginStart="12dp"
-                    app:layout_constraintStart_toEndOf="@+id/view_Cse"
-                    app:layout_constraintTop_toTopOf="@+id/view_Cse"
-                    app:layout_constraintBottom_toTopOf="@+id/cource_Cse"/>
-
-                <TextView
-                    android:id="@+id/cource_Cse"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="B.TECH"
-                    style="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#8A000000"
-                    android:layout_marginStart="12dp"
-                    app:layout_constraintStart_toEndOf="@+id/view_Cse"
-                    app:layout_constraintTop_toBottomOf="@+id/name_Cse"/>
-
-                <Button
-                    android:id="@+id/arrowBtn_Cse"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="12dp"
-                    android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/view_Cse"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/view_Cse" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:id="@+id/expandableView_Cse"
+                    android:id="@+id/cardView_Cse"
+                    style="@style/CardView.Light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="12dp"
-                    android:visibility="gone"
-                    android:layout_marginTop="12dp"
-                    app:layout_constraintTop_toBottomOf="@+id/cource_Cse"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                    <ImageView
+                        android:paddingBottom="12dp">
 
-                        android:id="@+id/phoneIcon_Cse"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="22dp"
-                        android:layout_marginStart="12dp"
-                        android:src="@drawable/ic_phone_black_24dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+                        <ImageView
+                            android:id="@+id/imageView_Cse"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/computers"
+                            app:layout_constraintDimensionRatio="H,16:9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/hod_name_Cse"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dr.M. Narayanan(H.O.D.)"
-                        android:layout_marginStart="32dp"
-                        android:textColor="#000"
-                        style="@style/TextAppearance.AppCompat.Medium"
-                        app:layout_constraintTop_toTopOf="@+id/phoneIcon_Cse"
-                        app:layout_constraintStart_toEndOf="@id/phoneIcon_Cse"
-                        app:layout_constraintBottom_toTopOf="@+id/hod_Cse"/>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/view_Cse"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
+                            android:elevation="12dp"
+                            app:cardCornerRadius="25dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_Cse">
 
-                    </LinearLayout>
-                        <!--
-                    <TextView
-                        android:id="@+id/hod"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="H.O.D."
-                        android:layout_marginStart="32dp"
-                        android:textColor="#8A000000"
-                        style="@style/TextAppearance.AppCompat.Body1"
-                        app:layout_constraintTop_toBottomOf="@id/hod_name"
-                        app:layout_constraintStart_toEndOf="@id/phoneIcon"
-                        app:layout_constraintBottom_toBottomOf="@+id/phoneIcon"/>-->
+                            <ImageView
+                                android:id="@+id/circleImage_Cse"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/computers" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                    <ImageView
-                        android:id="@+id/mailIcon_Cse"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="22dp"
-                        android:layout_marginStart="12dp"
-                        android:src="@drawable/ic_mail_black_24dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/phoneIcon_Cse"/>
+                        </androidx.cardview.widget.CardView>
 
-                 <!--   <TextView
-                        android:id="@+id/branch_desc"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Computer Science"
-                        android:layout_marginStart="32dp"
-                        android:textColor="#000"
-                        style="@style/TextAppearance.AppCompat.Medium"
-                        app:layout_constraintTop_toTopOf="@+id/mailIcon"
-                        app:layout_constraintStart_toEndOf="@id/mailIcon"
-                        app:layout_constraintBottom_toTopOf="@+id/info_Desc"/>-->
+                        <TextView
+                            android:id="@+id/name_Cse"
+                            style="@style/TextAppearance.AppCompat.Title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Computer Science Engineering"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_Cse"
+                            app:layout_constraintStart_toEndOf="@+id/view_Cse"
+                            app:layout_constraintTop_toTopOf="@+id/view_Cse" />
 
-                    <TextView
-                        android:id="@+id/info_Desc_Cse"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/CSE_desc"
-                        android:layout_marginStart="32dp"
-                        android:textColor="#8A000000"
-                        style="@style/TextAppearance.AppCompat.Body1"
-                        app:layout_constraintTop_toBottomOf="@+id/branch_desc_Cse"
-                        app:layout_constraintStart_toEndOf="@id/mailIcon_Cse"
-                        app:layout_constraintBottom_toBottomOf="@+id/mailIcon_Cse"/>
-                    </LinearLayout>
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/cource_Cse"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="B.TECH"
+                            android:textColor="#8A000000"
+                            app:layout_constraintStart_toEndOf="@+id/view_Cse"
+                            app:layout_constraintTop_toBottomOf="@+id/name_Cse" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                        <Button
+                            android:id="@+id/arrowBtn_Cse"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/view_Cse"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/view_Cse" />
+
+                        <LinearLayout
+                            android:id="@+id/expandableView_Cse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical"
+                            android:paddingBottom="12dp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cource_Cse">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+
+                                    android:id="@+id/phoneIcon_Cse"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
+                                    android:src="@drawable/ic_phone_black_24dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" /><!--picture of HOD-->
+
+                                <TextView
+                                    android:id="@+id/hod_name_Cse"
+                                    style="@style/TextAppearance.AppCompat.Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/cousine_bold"
+                                    android:text="Dr.M.Narayanan (H.O.D.)"
+                                    android:textColor="#000"
+                                    app:layout_constraintBottom_toTopOf="@+id/hod_Cse"
 
 
-        </androidx.cardview.widget.CardView>
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon_Cse" />
+
+                            </LinearLayout>
+                            <!--
+                        <TextView
+                            android:id="@+id/hod"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="H.O.D."
+                            android:layout_marginStart="32dp"
+                            android:textColor="#8A000000"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            app:layout_constraintTop_toBottomOf="@id/hod_name"
+                            app:layout_constraintStart_toEndOf="@id/phoneIcon"
+                            app:layout_constraintBottom_toBottomOf="@+id/phoneIcon"/>-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+
+                                    android:id="@+id/mailIcon_Cse"
+
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
+                                    android:fontFamily="@font/cousine_bold"
+                                    android:src="@drawable/ic_mail_black_24dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon_Cse" />
+
+
+                                <TextView
+                                    android:id="@+id/info_Desc_Cse"
+                                    style="@style/TextAppearance.AppCompat.Body1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/raleway_semibold"
+
+                                    android:text="@string/CSE_desc"
+                                    android:textColor="#8A000000"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon_Cse"
+                                    app:layout_constraintStart_toEndOf="@id/mailIcon_Cse"
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc_Cse" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
 
                 <!--                   Card View It           -->
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_It"
+                    style="@style/CardView.Light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/CardView.Light"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    >
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -401,19 +411,19 @@
                             android:id="@+id/imageView_It"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/it"
                             android:scaleType="centerCrop"
+                            android:src="@drawable/it"
                             app:layout_constraintDimensionRatio="H,16:9"
-                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/view_It"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginTop="16dp"
                             android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
                             android:elevation="12dp"
                             app:cardCornerRadius="25dp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -423,32 +433,35 @@
                                 android:id="@+id/circleImage_It"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:src="@drawable/it"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/it" />
 
                         </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:id="@+id/name_It"
+                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Information Technology"
-                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Information \nTechnology"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_It"
                             app:layout_constraintStart_toEndOf="@+id/view_It"
-                            app:layout_constraintTop_toTopOf="@+id/view_It"
-                            app:layout_constraintBottom_toTopOf="@+id/cource_It"/>
+                            app:layout_constraintTop_toTopOf="@+id/view_It" />
 
                         <TextView
                             android:id="@+id/cource_It"
+                            style="@style/TextAppearance.AppCompat.Body1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="B.TECH"
-                            style="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="#8A000000"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/autour_one"
+                            android:text="B.TECH"
+                            android:textColor="#8A000000"
                             app:layout_constraintStart_toEndOf="@+id/view_It"
-                            app:layout_constraintTop_toBottomOf="@+id/name_It"/>
+                            app:layout_constraintTop_toBottomOf="@+id/name_It" />
 
                         <Button
                             android:id="@+id/arrowBtn_It"
@@ -461,43 +474,47 @@
                             app:layout_constraintTop_toTopOf="@+id/view_It" />
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:id="@+id/expandableView_It"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical"
                             android:paddingBottom="12dp"
                             android:visibility="gone"
-                            android:layout_marginTop="12dp"
-                            app:layout_constraintTop_toBottomOf="@+id/cource_It"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            app:layout_constraintTop_toBottomOf="@+id/cource_It">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
 
                                     android:id="@+id/phoneIcon_It"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_phone_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+                                    app:layout_constraintTop_toTopOf="parent" /><!--picture of HOD-->
 
                                 <TextView
                                     android:id="@+id/hod_name_It"
+                                    style="@style/TextAppearance.AppCompat.Medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Dr.M. Narayanan (H.O.D.)"
                                     android:layout_marginStart="32dp"
+                                    android:text="Dr.M. Narayanan (H.O.D.)"
                                     android:textColor="#000"
-                                    style="@style/TextAppearance.AppCompat.Medium"
-                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon"
+                                    app:layout_constraintBottom_toTopOf="@+id/hod"
                                     app:layout_constraintStart_toEndOf="@id/phoneIcon"
-                                    app:layout_constraintBottom_toTopOf="@+id/hod"/>
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon" />
+
+                                android:fontFamily="@font/cousine_bold"
+
 
                             </LinearLayout>
 
@@ -505,28 +522,30 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:id="@+id/mailIcon_It"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_mail_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon" />
 
 
                                 <TextView
                                     android:id="@+id/info_Desc_It"
+                                    style="@style/TextAppearance.AppCompat.Body1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/it_Desc"
                                     android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/raleway_semibold"
+                                    android:text="@string/it_Desc"
                                     android:textColor="#8A000000"
-                                    style="@style/TextAppearance.AppCompat.Body1"
-                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"
                                     app:layout_constraintStart_toEndOf="@id/mailIcon"
-                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -538,16 +557,15 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_Ece"
+                    style="@style/CardView.Light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/CardView.Light"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    >
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -558,19 +576,19 @@
                             android:id="@+id/imageView_Ece"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/ece"
                             android:scaleType="centerCrop"
+                            android:src="@drawable/ece"
                             app:layout_constraintDimensionRatio="H,16:9"
-                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/view_Ece"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginTop="16dp"
                             android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
                             android:elevation="12dp"
                             app:cardCornerRadius="25dp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -580,32 +598,35 @@
                                 android:id="@+id/circleImage_Ece"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:src="@drawable/ece"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ece" />
 
                         </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:id="@+id/name_Ece"
+                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Electronics Communication Engineering"
-                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Electronics Communication Engineering"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_Ece"
                             app:layout_constraintStart_toEndOf="@+id/view_Ece"
-                            app:layout_constraintTop_toTopOf="@+id/view_Ece"
-                            app:layout_constraintBottom_toTopOf="@+id/cource_Ece"/>
+                            app:layout_constraintTop_toTopOf="@+id/view_Ece" />
 
                         <TextView
                             android:id="@+id/cource_Ece"
+                            style="@style/TextAppearance.AppCompat.Body1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="B.TECH"
-                            style="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="#8A000000"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/autour_one"
+                            android:text="B.TECH"
+                            android:textColor="#8A000000"
                             app:layout_constraintStart_toEndOf="@+id/view_Ece"
-                            app:layout_constraintTop_toBottomOf="@+id/name_Ece"/>
+                            app:layout_constraintTop_toBottomOf="@+id/name_Ece" />
 
                         <Button
                             android:id="@+id/arrowBtn_Ece"
@@ -618,43 +639,47 @@
                             app:layout_constraintTop_toTopOf="@+id/view_Ece" />
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:id="@+id/expandableView_Ece"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical"
                             android:paddingBottom="12dp"
                             android:visibility="gone"
-                            android:layout_marginTop="12dp"
-                            app:layout_constraintTop_toBottomOf="@+id/cource_Ece"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            app:layout_constraintTop_toBottomOf="@+id/cource_Ece">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
 
                                     android:id="@+id/phoneIcon_Ece"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_phone_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+                                    app:layout_constraintTop_toTopOf="parent" /><!--picture of HOD-->
 
                                 <TextView
                                     android:id="@+id/hod_name_Ece"
+                                    style="@style/TextAppearance.AppCompat.Medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Dr.M.Narayanan (H.O.D.)"
                                     android:layout_marginStart="32dp"
+                                    android:text="Dr.M.Narayanan (H.O.D.)"
                                     android:textColor="#000"
-                                    style="@style/TextAppearance.AppCompat.Medium"
-                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon"
+                                    app:layout_constraintBottom_toTopOf="@+id/hod"
                                     app:layout_constraintStart_toEndOf="@id/phoneIcon"
-                                    app:layout_constraintBottom_toTopOf="@+id/hod"/>
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon" />
+
+                                android:fontFamily="@font/cousine_bold"
+
 
                             </LinearLayout>
 
@@ -662,28 +687,30 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:id="@+id/mailIcon_Ece"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_mail_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon" />
 
 
                                 <TextView
                                     android:id="@+id/info_Desc_Ece"
+                                    style="@style/TextAppearance.AppCompat.Body1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/ECe_desc"
                                     android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/raleway_semibold"
+                                    android:text="@string/ECe_desc"
                                     android:textColor="#8A000000"
-                                    style="@style/TextAppearance.AppCompat.Body1"
-                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"
                                     app:layout_constraintStart_toEndOf="@id/mailIcon"
-                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -695,16 +722,15 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_Mec"
+                    style="@style/CardView.Light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/CardView.Light"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    >
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -715,19 +741,19 @@
                             android:id="@+id/imageView_Mec"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/mec"
                             android:scaleType="centerCrop"
+                            android:src="@drawable/mec"
                             app:layout_constraintDimensionRatio="H,16:9"
-                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/view_Mec"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginTop="16dp"
                             android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
                             android:elevation="12dp"
                             app:cardCornerRadius="25dp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -737,32 +763,35 @@
                                 android:id="@+id/circleImage_Mec"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:src="@drawable/mec"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mec" />
 
                         </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:id="@+id/name_Mec"
+                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Mechanical Engineering"
-                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Mechanical \nEngineering"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_Mec"
                             app:layout_constraintStart_toEndOf="@+id/view_Mec"
-                            app:layout_constraintTop_toTopOf="@+id/view_Mec"
-                            app:layout_constraintBottom_toTopOf="@+id/cource_Mec"/>
+                            app:layout_constraintTop_toTopOf="@+id/view_Mec" />
 
                         <TextView
                             android:id="@+id/cource_Mec"
+                            style="@style/TextAppearance.AppCompat.Body1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="B.TECH"
-                            style="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="#8A000000"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/autour_one"
+                            android:text="B.TECH"
+                            android:textColor="#8A000000"
                             app:layout_constraintStart_toEndOf="@+id/view_Mec"
-                            app:layout_constraintTop_toBottomOf="@+id/name_Mec"/>
+                            app:layout_constraintTop_toBottomOf="@+id/name_Mec" />
 
                         <Button
                             android:id="@+id/arrowBtn_Mec"
@@ -775,43 +804,47 @@
                             app:layout_constraintTop_toTopOf="@+id/view_Mec" />
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:id="@+id/expandableView_Mec"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical"
                             android:paddingBottom="12dp"
                             android:visibility="gone"
-                            android:layout_marginTop="12dp"
-                            app:layout_constraintTop_toBottomOf="@+id/cource_Mec"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            app:layout_constraintTop_toBottomOf="@+id/cource_Mec">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
 
                                     android:id="@+id/phoneIcon_Mec"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_phone_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+                                    app:layout_constraintTop_toTopOf="parent" /><!--picture of HOD-->
 
                                 <TextView
                                     android:id="@+id/hod_name_Mec"
+                                    style="@style/TextAppearance.AppCompat.Medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Dr.Purushottam (H.O.D.)"
                                     android:layout_marginStart="32dp"
+                                    android:text="Dr.Purushottam (H.O.D.)"
                                     android:textColor="#000"
-                                    style="@style/TextAppearance.AppCompat.Medium"
-                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon"
+                                    app:layout_constraintBottom_toTopOf="@+id/hod"
                                     app:layout_constraintStart_toEndOf="@id/phoneIcon"
-                                    app:layout_constraintBottom_toTopOf="@+id/hod"/>
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIcon" />
+
+                                android:fontFamily="@font/cousine_bold"
+
 
                             </LinearLayout>
 
@@ -819,28 +852,30 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:id="@+id/mailIcon_Mec"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_mail_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon" />
 
 
                                 <TextView
                                     android:id="@+id/info_Desc_Mec"
+                                    style="@style/TextAppearance.AppCompat.Body1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/mec_desc"
                                     android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/raleway_semibold"
+                                    android:text="@string/mec_desc"
                                     android:textColor="#8A000000"
-                                    style="@style/TextAppearance.AppCompat.Body1"
-                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"
                                     app:layout_constraintStart_toEndOf="@id/mailIcon"
-                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -853,16 +888,15 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView_Ite"
+                    style="@style/CardView.Light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/CardView.Light"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    >
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -873,19 +907,19 @@
                             android:id="@+id/imageView_Ite"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/ite"
                             android:scaleType="centerCrop"
+                            android:src="@drawable/ite"
                             app:layout_constraintDimensionRatio="H,16:9"
-                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/view_Ite"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginTop="16dp"
                             android:layout_marginStart="12dp"
+                            android:layout_marginTop="16dp"
                             android:elevation="12dp"
                             app:cardCornerRadius="25dp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -895,32 +929,35 @@
                                 android:id="@+id/circleImage_Ite"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:src="@drawable/ite"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ite" />
 
                         </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:id="@+id/name_Ite"
+                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Information Technology Engineering"
-                            style="@style/TextAppearance.AppCompat.Title"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Information \nTechnology Engineering"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/cource_Ite"
                             app:layout_constraintStart_toEndOf="@+id/view_Ite"
-                            app:layout_constraintTop_toTopOf="@+id/view_Ite"
-                            app:layout_constraintBottom_toTopOf="@+id/cource_Ite"/>
+                            app:layout_constraintTop_toTopOf="@+id/view_Ite" />
 
                         <TextView
                             android:id="@+id/cource_Ite"
+                            style="@style/TextAppearance.AppCompat.Body1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="B.TECH"
-                            style="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="#8A000000"
                             android:layout_marginStart="12dp"
+                            android:fontFamily="@font/autour_one"
+                            android:text="B.TECH"
+                            android:textColor="#8A000000"
                             app:layout_constraintStart_toEndOf="@+id/view_Ite"
-                            app:layout_constraintTop_toBottomOf="@+id/name_Ite"/>
+                            app:layout_constraintTop_toBottomOf="@+id/name_Ite" />
 
                         <Button
                             android:id="@+id/arrowBtn_Ite"
@@ -933,43 +970,47 @@
                             app:layout_constraintTop_toTopOf="@+id/view_Ite" />
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:id="@+id/expandableView_Ite"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical"
                             android:paddingBottom="12dp"
                             android:visibility="gone"
-                            android:layout_marginTop="12dp"
-                            app:layout_constraintTop_toBottomOf="@+id/cource_Ite"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            app:layout_constraintTop_toBottomOf="@+id/cource_Ite">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
 
                                     android:id="@+id/phoneIcon_Ite"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_phone_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"/><!--picture of HOD-->
+                                    app:layout_constraintTop_toTopOf="parent" /><!--picture of HOD-->
 
                                 <TextView
                                     android:id="@+id/hod_name_Ite"
+                                    style="@style/TextAppearance.AppCompat.Medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Dr.M.Narayanan (H.O.D.)"
                                     android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/cousine_bold"
+                                    android:text="Dr.M.Narayanan(H.O.D.)"
                                     android:textColor="#000"
-                                    style="@style/TextAppearance.AppCompat.Medium"
-                                    app:layout_constraintTop_toTopOf="@+id/phoneIconIte"
+                                    app:layout_constraintBottom_toTopOf="@+id/hodIte"
                                     app:layout_constraintStart_toEndOf="@id/phoneIconIte"
-                                    app:layout_constraintBottom_toTopOf="@+id/hodIte"/>
+                                    app:layout_constraintTop_toTopOf="@+id/phoneIconIte"
+
+                                    />
 
                             </LinearLayout>
 
@@ -977,28 +1018,30 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:id="@+id/mailIcon_Ite"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_marginTop="22dp"
                                     android:layout_marginStart="12dp"
+                                    android:layout_marginTop="22dp"
                                     android:src="@drawable/ic_mail_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/phoneIconIte"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/phoneIconIte" />
 
 
                                 <TextView
                                     android:id="@+id/info_Desc_Ite"
+                                    style="@style/TextAppearance.AppCompat.Body1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/ite_desc"
                                     android:layout_marginStart="32dp"
+                                    android:fontFamily="@font/raleway_semibold"
+                                    android:text="@string/ite_desc"
                                     android:textColor="#8A000000"
-                                    style="@style/TextAppearance.AppCompat.Body1"
-                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"
                                     app:layout_constraintStart_toEndOf="@id/mailIcon"
-                                    app:layout_constraintBottom_toBottomOf="@+id/mailIcon"/>
+                                    app:layout_constraintTop_toBottomOf="@+id/branch_desc" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1010,17 +1053,16 @@
             </LinearLayout>
 
 
-
         </ScrollView>
     </LinearLayout>
 
-    <com.google.android.material.navigation.NavigationView
+  <!--  <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
         app:menu="@menu/drawer_menu"></com.google.android.material.navigation.NavigationView>
-
+-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

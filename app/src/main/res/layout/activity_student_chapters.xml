@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cpl"
+
     android:orientation="vertical"
     tools:context=".student_chapters"
     tools:openDrawer="end">
@@ -14,13 +14,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#B2EBF2">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FDBD"
+            android:background="#0097a7"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:title="Student Chapters"></androidx.appcompat.widget.Toolbar>
 

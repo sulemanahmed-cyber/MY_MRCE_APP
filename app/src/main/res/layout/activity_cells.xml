@@ -2,31 +2,32 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".cells"
-    android:id="@+id/drawer_layout"
-    tools:openDrawer="end"
-    android:orientation="vertical">
+    tools:openDrawer="end">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#B2EBF2"
         android:orientation="vertical">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FDBD"
-            app:title="cell"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
-
+            android:background="#0097a7"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="cell"></androidx.appcompat.widget.Toolbar>
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cells"/>
+            android:text="cells" />
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
