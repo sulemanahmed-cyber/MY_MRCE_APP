@@ -59,14 +59,22 @@
             android:name=".syllabus"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+
+
         </activity>
+<activity android:name=".IntroActivity">
+    <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
 
+        <category android:name="android.intent.category.LAUNCHER" />
+
+    </intent-filter>
+
+
+</activity>
         <service android:name="FirebaseMessagingService"/>
 
         <meta-data
