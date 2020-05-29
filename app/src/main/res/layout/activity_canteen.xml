@@ -27,7 +27,7 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:queryHint="search here"
-           android:background="#F8BBD0"
+           android:background="#80cbc4"
            android:iconifiedByDefault="false"
            android:id="@+id/search">
 
@@ -36,7 +36,7 @@
 <ListView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light"
+    android:background="#b2fef7"
     android:elevation="8dp"
     android:id="@+id/list">
 
