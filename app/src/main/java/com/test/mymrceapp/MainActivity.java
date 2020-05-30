@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     GridLayout gridLayout;
     ViewPager  viewPager;
     Adapter adapter;
-    Button button,logout1;
+    Button button,logout1,my_login;
     FirebaseAuth fAuth;
 
     List<Model> models;
@@ -68,12 +68,23 @@ public class MainActivity extends AppCompatActivity {
         gridLayout= findViewById(R.id.gridLayout5);
        button = findViewById(R.id.my_abt);
        logout1 = findViewById(R.id.logout1);
+       my_login=findViewById(R.id.my_login);
 
-      /* button.setOnClickListener(new View.OnClickListener() {
+
+
+       my_login.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(getApplicationContext(),Activity_Register.class);
+               Intent intent=new Intent(getApplicationContext(),my_loginn.class);
                startActivity(intent);
+
+           }
+       });
+      /* button.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {ikirthis
+               Intent intent = new Intent(getApplicationContext(),Activity_Register.class);
+               startActivity(intent);th
            }
        });
 */
@@ -187,13 +198,13 @@ public class MainActivity extends AppCompatActivity {
                    flipperImages(image);
                }
 
-       v_flipper.setOnClickListener(new View.OnClickListener() {
+    /*   v_flipper.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                Intent intent=new Intent(getApplicationContext(),my_loginn.class);
                startActivity(intent);
            }
-       });
+       });*/
         //toolbar and navigation code <navstarts>
         setUpToolbar();
         navigationView= (NavigationView)findViewById(R.id.navigation_menu);

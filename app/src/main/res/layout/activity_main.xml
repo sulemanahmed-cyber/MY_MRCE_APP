@@ -385,10 +385,10 @@
                     />
 
                 <Button
-                    android:id="@+id/my_reg"
+                    android:id="@+id/my_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Register"
+                    android:text="login"
                     android:background="@drawable/draw_ripple_bordered"
                     />
 
