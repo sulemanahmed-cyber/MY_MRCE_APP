@@ -1,0 +1,59 @@
+
+i
+java:S1128"NRemove this unused import 'androidx.constraintlayout.widget.ConstraintLayout'.(¨‘úÿÿÿÿ
+l	java:S116 "WRename this field "cardView_Cse" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂˆ
+?
+java:S1659 ")Declare "cardview_It" on a separate line.(ËÂˆ
+k	java:S116 "VRename this field "cardview_It" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂˆ
+F
+java:S1659"0Declare "expandableView_Ece" on a separate line.(à½£…
+F
+java:S1659"0Declare "expandableView_Ite" on a separate line.(à½£…
+R
+java:S1128"=Remove this unused import 'android.widget.QuickContactBadge'.(”ü>
+q	java:S116"\Rename this field "expandableView_It" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à½£…
+q	java:S116"WRename this field "arrowBtn_Ece" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ—Îğÿÿÿÿÿ
+r	java:S116"]Rename this field "expandableView_Cse" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à½£…
+r	java:S116"]Rename this field "expandableView_Ite" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à½£…
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ï„üÿÿÿÿ
+F
+java:S1659"0Declare "expandableView_Mec" on a separate line.(à½£…
+p	java:S116"VRename this field "arrowBtn_Hs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ—Îğÿÿÿÿÿ
+E
+java:S1659"*Declare "arrowBtn_Ite" on a separate line.(Ñ—Îğÿÿÿÿÿ
+p	java:S116"VRename this field "arrowBtn_It" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ—Îğÿÿÿÿÿ
+q	java:S116"WRename this field "arrowBtn_Mec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ—Îğÿÿÿÿÿ
+k	java:S116 "VRename this field "cardView_Hs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂˆ
+W	java:S125©"<This block of commented-out lines of code should be removed.(¹£õ­üÿÿÿÿ
+q	java:S116"WRename this field "arrowBtn_Ite" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ—Îğÿÿÿÿÿ
+@
+java:S1659 "*Declare "cardview_Ece" on a separate line.(ËÂˆ
+E
+java:S1659"/Declare "expandableView_It" on a separate line.(à½£…
+@
+java:S1659 "*Declare "cardview_Ite" on a separate line.(ËÂˆ
+E
+java:S1659"*Declare "arrowBtn_Ece" on a separate line.(Ñ—Îğÿÿÿÿÿ
+E
+java:S1659"*Declare "arrowBtn_Cse" on a separate line.(Ñ—Îğÿÿÿÿÿ
+l	java:S116 "WRename this field "cardview_Ite" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂˆ
+D
+java:S1659")Declare "arrowBtn_It" on a separate line.(Ñ—Îğÿÿÿÿÿ
+m
+java:S3776#"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(¨Œşÿÿÿÿ
+R	java:S125ô"<This block of commented-out lines of code should be removed.(ùêÅå
+q	java:S116"WRename this field "arrowBtn_Cse" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ—Îğÿÿÿÿÿ
+r	java:S116"]Rename this field "expandableView_Ece" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à½£…
+l	java:S116 "WRename this field "cardview_Ece" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂˆ
+r	java:S116"]Rename this field "expandableView_Mec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à½£…
+@
+java:S1659 "*Declare "cardview_Mec" on a separate line.(ËÂˆ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ïßµÀ
+E
+java:S1659"*Declare "arrowBtn_Mec" on a separate line.(Ñ—Îğÿÿÿÿÿ
+l	java:S116 "WRename this field "cardview_Mec" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂˆ
+F
+java:S1659"0Declare "expandableView_Cse" on a separate line.(à½£…
+@
+java:S1659 "*Declare "cardView_Cse" on a separate line.(ËÂˆ
+q	java:S116"\Rename this field "expandableView_Hs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à½£…

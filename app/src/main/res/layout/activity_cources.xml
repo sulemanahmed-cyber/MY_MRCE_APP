@@ -37,9 +37,9 @@
                     style="@style/CardView.Light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -62,19 +62,19 @@
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/view_Hs"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="16dp"
-                            android:elevation="12dp"
-                            app:cardCornerRadius="25dp"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:elevation="@dimen/_12sdp"
+                            app:cardCornerRadius="@dimen/_25sdp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/imageView_Hs">
 
                             <ImageView
                                 android:id="@+id/circleImage_Hs"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/hs" />
 
@@ -85,10 +85,10 @@
                             style="@style/TextAppearance.AppCompat.Title"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginStart="@dimen/_12sdp"
                             android:fontFamily="@font/montserrat_bold"
                             android:text="Humanities And \nSciences"
-                            android:textSize="17sp"
+                            android:textSize="@dimen/_17ssp"
                             app:layout_constraintBottom_toTopOf="@+id/cource_Hs"
                             app:layout_constraintStart_toEndOf="@+id/view_Hs"
                             app:layout_constraintTop_toTopOf="@+id/view_Hs" />
@@ -98,7 +98,7 @@
                             style="@style/TextAppearance.AppCompat.Body1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginStart="@dimen/_12sdp"
                             android:fontFamily="@font/autour_one"
                             android:text="B.TECH"
 
@@ -108,9 +108,9 @@
 
                         <Button
                             android:id="@+id/arrowBtn_Hs"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_marginEnd="12dp"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
                             android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
                             app:layout_constraintBottom_toBottomOf="@+id/view_Hs"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -120,9 +120,9 @@
                             android:id="@+id/expandableView_Hs"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="@dimen/_12sdp"
                             android:orientation="vertical"
-                            android:paddingBottom="12dp"
+                            android:paddingBottom="@dimen/_12sdp"
                             android:visibility="gone"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -136,10 +136,10 @@
                                 <ImageView
 
                                     android:id="@+id/phoneIcon_Hs"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_marginStart="12dp"
-                                    android:layout_marginTop="22dp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginStart="@dimen/_12sdp"
+                                    android:layout_marginTop="@dimen/_22sdp"
                                     android:src="@drawable/ic_phone_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" /><!--picture of HOD-->
@@ -149,7 +149,7 @@
                                     style="@style/TextAppearance.AppCompat.Medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="32dp"
+                                    android:layout_marginStart="@dimen/_32sdp"
                                     android:fontFamily="@font/cousine_bold"
                                     android:text="Dr.J. Shashi Kumar(H.O.D.)"
                                     android:textColor="#000"
@@ -168,10 +168,10 @@
 
                                 <ImageView
                                     android:id="@+id/mailIcon_Hs"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_marginStart="12dp"
-                                    android:layout_marginTop="22dp"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginStart="@dimen/_12sdp"
+                                    android:layout_marginTop="@dimen/_22sdp"
                                     android:src="@drawable/ic_mail_black_24dp"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/phoneIcon_Hs" />
@@ -1056,13 +1056,13 @@
         </ScrollView>
     </LinearLayout>
 
-  <!--  <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_menu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/drawer_menu"></com.google.android.material.navigation.NavigationView>
--->
+    <!--  <com.google.android.material.navigation.NavigationView
+          android:id="@+id/navigation_menu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="start"
+          app:headerLayout="@layout/header"
+          app:menu="@menu/drawer_menu"></com.google.android.material.navigation.NavigationView>
+  -->
 
 </androidx.drawerlayout.widget.DrawerLayout>

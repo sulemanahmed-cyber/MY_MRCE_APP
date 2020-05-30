@@ -1,0 +1,46 @@
+
+X	java:S125h"<This block of commented-out lines of code should be removed.(·Ëá·8‹¯ã¥.
+R
+java:S1854¯";Remove this useless assignment to local variable "message".(‘¹Ğ¾
+k
+java:S1128"PRemove this unused import 'com.google.android.material.internal.NavigationMenu'.(«¥ø¬øÿÿÿÿ
+\
+java:S1874_"?Remove this use of "setOnPageChangeListener"; it is deprecated.(ÈÀ®˜8Ô™±Ü¥.
+Q	java:S125¨"<This block of commented-out lines of code should be removed.(ÌİºG
+Q	java:S125F"<This block of commented-out lines of code should be removed.(’ËØñ
+V
+java:S1854„"?Remove this useless assignment to local variable "colors_temp".(º†½Ğ
+R	java:S125†"<This block of commented-out lines of code should be removed.(°ÓÌ¥
+h	java:S1162"TRename this field "v_flipper" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’‰À8
+G
+java:S1481„"0Remove this unused "colors_temp" local variable.(º†½Ğ
+O
+java:S1197¶"8Move the array designator from the variable to the type.(ÿ‰İâ
+c	java:S100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õèÊ
+Q	java:S125‰"<This block of commented-out lines of code should be removed.(¸õÛ
+£
+java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ø´´øÿÿÿÿ8Ô™±Ü¥.
+A
+java:S1172½"+Remove this unused method parameter "view".(õèÊ
+g	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ÏÙÂ
+g	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º†½Ğ
+n
+java:S3776ª"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(—ŸŸëşÿÿÿÿ
+O
+java:S1128"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ
+R	java:S125ƒ"<This block of commented-out lines of code should be removed.(Êî¹â
+C
+java:S1481¯",Remove this unused "message" local variable.(‘¹Ğ¾
+R	java:S125Í"<This block of commented-out lines of code should be removed.(ÒàÍˆ
+=
+java:S1068,"'Remove this unused "TAG" private field.(Ö—ÈÚ
+G
+java:S1172Ç"+Remove this unused method parameter "view".(Õºû şÿÿÿÿ
+R	java:S125Ü"<This block of commented-out lines of code should be removed.(Ì„ô™
+;
+java:S16596"%Declare "logout1" on a separate line.(µã¨
+W	java:S125Ø"<This block of commented-out lines of code should be removed.(âÜ¶úÿÿÿÿ
+R	java:S125å"<This block of commented-out lines of code should be removed.(†»ï©
+¤
+java:S1186€"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™Î«şÿÿÿÿ8Ô™±Ü¥.
+8	java:S131É""Add a default case to this switch.(¿›İ”

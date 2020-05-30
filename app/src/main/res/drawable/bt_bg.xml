@@ -32,12 +32,12 @@ android:viewportHeight="44"
                     >
 
                     <item
-                        android:color="#2196f3"
+                        android:color="#f4decb"
                         android:offset="0"
                         />
 
                     <item
-                        android:color="#A9ACFF"
+                        android:color="#fffffe"
                         android:offset="1"
                         />
 

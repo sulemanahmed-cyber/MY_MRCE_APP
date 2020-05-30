@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B2EBF2"
+    android:background="#BA94618E"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
@@ -398,8 +398,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:onClick="my_register"
-                    android:text="About Developers"
-
+                    android:text="\t\tAbout Developers\t\t"
+                    android:textColor="#49274a"
                     android:background="@drawable/bt_bg"/>
 
                 <Button
