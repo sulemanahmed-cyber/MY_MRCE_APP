@@ -33,6 +33,7 @@ public class ThirdFragment extends Fragment {
             public void onClick(View v) {
                 startActivity(new Intent(getContext(),MainActivity.class));
 
+
             }
         });
         back = view.findViewById(R.id.slidethreeback);

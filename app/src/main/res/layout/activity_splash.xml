@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    tools:context=".Splash">
+
+    <ImageView
+        android:layout_width="251dp"
+        android:layout_gravity="center_horizontal"
+         android:layout_marginTop="50dp"
+        android:id="@+id/mimage"
+        android:layout_height="182dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/full"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/antic_didone"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="@color/brown"
+        android:layout_height="wrap_content"
+        android:text="Malla Reddy College Of Engineering" />
+    <TextView
+        android:id="@+id/half"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/antic_didone"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="@color/dark_green"
+        android:layout_height="wrap_content"
+        android:text="MRCE" />
+
+
+</LinearLayout>

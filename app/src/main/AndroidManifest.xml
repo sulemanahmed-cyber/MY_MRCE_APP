@@ -13,11 +13,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Activity_Register" />
         <activity android:name=".my_loginn" />
-       <!-- <activity
+        <!--
+ <activity
             android:name=".ui.login.my_loginActivity"
-            android:label="@string/title_activity_my_login" />-->
+            android:label="@string/title_activity_my_login" />
+        -->
         <activity android:name=".pdfviewer" />
         <activity
             android:name=".bus_routes"
@@ -64,17 +73,16 @@
 
 
         </activity>
-<activity android:name=".IntroActivity">
-    <intent-filter>
-    <action android:name="android.intent.action.MAIN" />
-        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        <activity android:name=".IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
-    </intent-filter>
+        </activity>
 
-
-</activity>
         <service android:name="FirebaseMessagingService"/>
 
         <meta-data
