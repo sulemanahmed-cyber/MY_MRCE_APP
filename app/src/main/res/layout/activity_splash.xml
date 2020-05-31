@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream"
+    android:background="#B2EBF2"
     tools:context=".Splash">
 
     <ImageView
@@ -14,28 +14,29 @@
          android:layout_marginTop="50dp"
         android:id="@+id/mimage"
         android:layout_height="182dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/mrce" />
 
     <TextView
         android:id="@+id/full"
         android:layout_width="match_parent"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/antic_didone"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textColor="@color/brown"
         android:layout_height="wrap_content"
-        android:text="Malla Reddy College Of Engineering" />
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Malla Reddy College Of Engineering"
+        android:textAlignment="center"
+        android:textColor="@color/brown"
+        android:textSize="@dimen/_30ssp" />
+
     <TextView
         android:id="@+id/half"
         android:layout_width="match_parent"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/antic_didone"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textColor="@color/dark_green"
         android:layout_height="wrap_content"
-        android:text="MRCE" />
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:text="MRCE"
+        android:textAlignment="center"
+         android:textColor="#3e2723"
+        android:textSize="@dimen/_35ssp" />
 
 
 </LinearLayout>

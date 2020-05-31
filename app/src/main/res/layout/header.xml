@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/ThemeOverlay.AppCompat.Dark"
     android:layout_width="match_parent"
-    android:layout_height="192dp"
+    android:layout_height="@dimen/_152sdp"
 
     android:background="@color/navy_black"
     android:orientation="horizontal"
@@ -43,9 +43,9 @@
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="@dimen/_3sdp"
             android:fontFamily="@font/source_sans_pro_semibold"
-            android:paddingLeft="25dp"
+            android:paddingLeft="@dimen/_25sdp"
             android:text="Mr. Roozevelt"
             android:textColor="@color/white"
             android:textSize="30sp" />
@@ -54,11 +54,11 @@
             android:id="@+id/email_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:fontFamily="@font/source_sans_pro_semibold"
-            android:paddingLeft="25dp"
+            android:paddingLeft="@dimen/_25sdp"
             android:paddingTop="0dp"
-            android:text="roozevelt007@mymail.com"
+            android:text="roozevelt007@mail.com"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -67,8 +67,8 @@
 
     <ImageView
         android:id="@+id/account_img"
-        android:layout_width="281dp"
-        android:layout_height="109dp"
+        android:layout_width="@dimen/_261sdp"
+        android:layout_height="@dimen/_90sdp"
         android:padding="10dp"
         android:layout_weight="50"
         android:src="@drawable/person_sq" />

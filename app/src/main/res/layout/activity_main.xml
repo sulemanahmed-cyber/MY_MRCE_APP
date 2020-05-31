@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BA94618E"
+    android:background="#B2EBF2"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
@@ -47,10 +47,83 @@
                 android:orientation="vertical">
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            android:src="@drawable/mrce"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+
+                            android:layout_height="wrap_content">
+                        <TextView
+                            android:paddingTop="@dimen/_13sdp"
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/Description"
+                            android:textAlignment="center"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/brown"
+                            android:textSize="@dimen/_12ssp"
+                            />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/raleway_semibold"
+                                android:paddingTop="@dimen/_6sdp"
+                                android:text="Approved By AICTE-NewDelhi \n Affiliated To JNTUH\nAccredited by NBA and NAAC"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_marginTop="1dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:gravity="top"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:text="Approved By AICTE-NewDelhi \n Affiliated To JNTUH\nAccredited by NBA and NAAC\n ISO 9001:2015 Certifies Institution\nRecognition of College Under Section 2(f) and 12(b) of UGC Act,1956\nAccredited By ISO-USA"
+                            android:textAlignment="center" />
+
+
+
+                    </LinearLayout>-->
+                </LinearLayout>
+
+
                 <ViewFlipper
                     android:id="@+id/v_flipper"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
+                    android:paddingTop="@dimen/_10sdp"
                     android:background="@drawable/borderrss" />
 
                 <androidx.viewpager.widget.ViewPager
@@ -392,7 +465,7 @@
                     android:background="@drawable/draw_ripple_bordered"
                     />
 
-                <Button
+             <!--   <Button
                     android:id="@+id/my_abt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -400,21 +473,52 @@
                     android:onClick="my_register"
                     android:text="\t\tAbout Developers\t\t"
                     android:textColor="#49274a"
-                    android:background="@drawable/bt_bg"/>
+                    android:background="@drawable/bt_bg"/>-->
 
                 <Button
                     android:layout_gravity="right"
                     android:id="@+id/logout"
+                    android:background="@drawable/draw_ripple_bordered"
+
                     android:layout_width="@dimen/_60sdp"
                     android:layout_height="wrap_content"
                     android:text="logout"
                     android:onClick="logout"
                     android:layout_marginTop="0dp"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:background="@drawable/bt_cont"
+
                     tools:ignore="HardcodedText" />
 
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MaisammaGuda, DhulaPally Post, Secunderabad, Telangana State-500001"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_email_black_24dp"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textSize="@dimen/_13sdp"
+                        android:text="Email:principal@mrce.in\n\t\t\t\tWebsite:www.mrce.in "
+                        />
+
+                </LinearLayout>
+
             </LinearLayout>
+
+
+
         </ScrollView>
 
     </LinearLayout>

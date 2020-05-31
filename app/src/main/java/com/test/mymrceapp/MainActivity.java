@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         gridLayout= findViewById(R.id.gridLayout5);
-       button = findViewById(R.id.my_abt);
+       /*button = findViewById(R.id.my_abt);*/
        logout1 = findViewById(R.id.logout1);
        my_login=findViewById(R.id.my_login);
 
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
 
-            }
+            }grtthis
 
             @Override
             public void onPageScrollStateChanged(int state) {
@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         //viewflipper
-        int images []={R.drawable.mrce1,R.drawable.mrce2,R.drawable.person,R.drawable.mrce};
+        int images []={R.drawable.mrce1,R.drawable.ss_mrce,R.drawable.ss_all_sit};
         v_flipper=findViewById(R.id.v_flipper);
                for (int image:images){
                    flipperImages(image);
