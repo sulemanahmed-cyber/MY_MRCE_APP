@@ -83,7 +83,7 @@
 
         </activity>
 
-        <service android:name="FirebaseMessagingService"/>
+        <service android:name=".FirebaseMessagingService"/>
 
         <meta-data
             android:name="preloaded_fonts"

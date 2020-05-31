@@ -298,6 +298,9 @@ public class MainActivity extends AppCompatActivity {
                       startActivity(intent13);
                       break;
 
+                  case R.id.nav_login:
+                      startActivity(new Intent(getApplicationContext(),my_loginn.class));
+
 
               }
 

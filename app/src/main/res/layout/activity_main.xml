@@ -405,11 +405,12 @@
                 <Button
                     android:layout_gravity="right"
                     android:id="@+id/logout"
-                    android:layout_width="100dp"
+                    android:layout_width="@dimen/_60sdp"
                     android:layout_height="wrap_content"
                     android:text="logout"
                     android:onClick="logout"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:background="@drawable/bt_cont"
                     tools:ignore="HardcodedText" />
 

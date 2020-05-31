@@ -32,7 +32,8 @@ if(restorePrefData()){
       /*  dotsLayout = findViewById(R.id.dots);
         addDots(0);
         viewPager.addOnPageChangeListener(changeListener);*/
-
+      savePrefData();
+      //finish();
 
     }
 

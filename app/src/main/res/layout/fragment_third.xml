@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_170sdp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:src="@drawable/mrce" />
 
     <TextView
@@ -20,53 +20,53 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/_35sdp"
         android:fontFamily="@font/cousine_bold"
         android:text="@string/title3"
         android:textColor="@color/colorAccent"
-        android:textSize="26sp" />
+        android:textSize="@dimen/_22ssp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:text="@string/Description"
         android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/brown"
-        android:textSize="18sp" />
+        android:textSize="@dimen/_18ssp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_150sdp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/slidethreeback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|start"
             android:layout_weight="1"
             android:clickable="true"
             android:fontFamily="@font/cousine_bold"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
             android:focusable="true"
-            android:gravity="bottom|start"
             android:text="@string/back"
-            android:textSize="20sp" />
+            android:textSize="@dimen/_20ssp" />
 
         <TextView
             android:id="@+id/slidethreenext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
+            android:textAlignment="center"
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
-            android:gravity="bottom|end"
             android:text="@string/done"
             android:fontFamily="@font/cousine_bold"
             android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            android:textSize="@dimen/_20ssp" />
     </LinearLayout>
 
 </LinearLayout>
