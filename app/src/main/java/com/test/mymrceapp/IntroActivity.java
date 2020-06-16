@@ -44,7 +44,7 @@ if(restorePrefData()){
         Boolean isIntroActivityOpenedBefore = pref.getBoolean("isIntroOpened",false);
         return isIntroActivityOpenedBefore;
     }
-    public void savePrefData(){
+    private void savePrefData(){
         SharedPreferences pref =getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.putBoolean("isIntroOpened",true);

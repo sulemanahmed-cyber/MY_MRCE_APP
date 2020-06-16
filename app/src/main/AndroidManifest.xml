@@ -13,6 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Score"></activity>
+        <activity android:name=".QuestionActivity" />
+        <activity
+            android:name=".Sets_Activity"
+            android:parentActivityName=".Online_Test" />
+        <activity
+            android:name=".Online_Test"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,12 +75,7 @@
         <activity
             android:name=".syllabus"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
-
-
-
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,10 +83,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
-        <service android:name=".FirebaseMessagingService"/>
+        <service android:name=".FirebaseMessagingService" />
 
         <meta-data
             android:name="preloaded_fonts"

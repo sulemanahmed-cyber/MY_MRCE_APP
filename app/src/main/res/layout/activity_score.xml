@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Score">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:paddingBottom="32dp"
+        android:background="@color/navy_black"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:text="SCORE"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:outlineAmbientShadowColor="@color/reply_orange"
+            android:background="?android:attr/listDivider" />
+
+
+
+
+        <TextView
+            android:id="@+id/sa_score"
+            android:layout_margin="20dp"
+            android:textSize="32sp"
+            android:gravity="center"
+
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="5/10" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+
+android:layout_gravity="center"
+        android:text="DONE"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:id="@+id/sa_done"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/round_corner"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

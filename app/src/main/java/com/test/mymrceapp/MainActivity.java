@@ -356,8 +356,8 @@ private void setToggleEvent(GridLayout gridLayout){
                     }
                     if(finalI == 7)
                     {
-                        Intent intent = new Intent(MainActivity.this,dummy_1.class);
-                        startActivity(intent);
+                       /* Intent intent = new Intent(MainActivity.this,dummy_1.class);
+                        startActivity(intent);*/
                     }
                     if(finalI == 8)
                     {
