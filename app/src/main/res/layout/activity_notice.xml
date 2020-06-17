@@ -28,11 +28,7 @@
             android:layout_height="wrap_content"
             android:text="my notice" />
 
-        <Button
-            android:id="@+id/quiz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Go" />
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

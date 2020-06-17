@@ -15,7 +15,7 @@ public class notice extends AppCompatActivity {
     Toolbar toolbar;
     NavigationView navigationView;
     DrawerLayout drawerLayout;
-    Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +23,7 @@ public class notice extends AppCompatActivity {
         navigationView=findViewById(R.id.navigation_menu);
         toolbar=findViewById(R.id.toolbar);
         drawerLayout=findViewById(R.id.drawer_layout);
-        button  = findViewById(R.id.quiz);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Online_Test.class));
-            }
-        });
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
