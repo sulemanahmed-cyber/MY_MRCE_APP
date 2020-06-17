@@ -64,7 +64,7 @@ public class Sets_Activity extends AppCompatActivity {
 
     public void loadSets() {
         catList.clear();
-        firestore.collection("Online_Test").document("CAT" + String.valueOf(category_id))
+        firestore.collection("Online_Test").document("CAT " + String.valueOf(category_id))
                 .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -72,7 +72,7 @@ public class Sets_Activity extends AppCompatActivity {
                     DocumentSnapshot doc = task.getResult();
                     //the code in if statement is not executing
                     if (doc.exists()) {
-                        long sets = (long) doc.get("SETS");
+                        long sets = (int) doc.get("SETS");
 
                         Sets_Adapter adapter = new Sets_Adapter((int) sets);
                         setgrid.setAdapter(adapter);

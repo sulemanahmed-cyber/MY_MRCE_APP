@@ -79,7 +79,7 @@ public class Splash extends AppCompatActivity {
 
                             catList.add(new CategoryModel(catID,catName));*/
 
-                           String catName = doc.getString("CAT" + String.valueOf(i) );
+                           String catName = doc.getString("CAT"+String.valueOf(i));
 
                            catList.add(catName);
                         }

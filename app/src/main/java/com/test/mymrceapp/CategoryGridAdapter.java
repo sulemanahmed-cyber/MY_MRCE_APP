@@ -53,7 +53,7 @@ public class CategoryGridAdapter extends BaseAdapter {
                 Intent i = new Intent(parent.getContext(),Sets_Activity.class);
                 i.putExtra("CATEGORY",catList.get(position));
 
-               i.putExtra("CATEGORY_ID",position + 1);
+               i.putExtra("CATEGORY_ID",position+1);
                 parent.getContext().startActivity(i);
             }
         });
