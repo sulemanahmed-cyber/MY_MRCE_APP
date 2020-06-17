@@ -59,6 +59,11 @@
             android:icon="@drawable/ic_notificationsmmmmm_none_black_24dp"
             android:title="Notification"/>
         <item
+            android:id="@+id/nav_quiz"
+            android:icon="@drawable/ic_cell_black_24dp"
+            android:title="Quiz"
+            />
+        <item
             android:id="@+id/nav_canteen"
             android:title="Canteen"
         android:icon="@drawable/ic_add_shopping_cartt_black_24dp"/>

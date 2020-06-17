@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quiz"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/macondo_swash_caps"
+        android:gravity="center"
+        android:paddingTop="@dimen/_40sdp"
+        android:paddingBottom="@dimen/_60sdp"
+        android:text="Quiz"
+        android:textSize="@dimen/_35ssp" />
+
+    <Button
+        android:id="@+id/start_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingTop="@dimen/_10sdp"
+        android:textSize="@dimen/_30ssp"
+        android:background="#00acc1"
+        android:text="Start Quiz" />
+
+
+</LinearLayout>
