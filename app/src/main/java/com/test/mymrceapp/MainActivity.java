@@ -263,8 +263,14 @@ public class MainActivity extends AppCompatActivity {
                       Intent intent10 = new Intent(getApplicationContext(),notification.class);
                       startActivity(intent10);
                       break;
-                  case R.id.nav_quiz:
-                      Intent intent15 = new Intent(getApplicationContext(),quiz.class);
+                  case R.id.nav_assignment:
+                      Intent intent16 = new Intent(getApplicationContext(),assignments.class);
+                      startActivity(intent16);
+                      break;
+
+
+                      case R.id.nav_quiz:
+                          Intent intent15 = new Intent(getApplicationContext(),quiz.class);
                       startActivity(intent15);
                       break;
 

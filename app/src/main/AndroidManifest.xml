@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".quiz"></activity>
+        <activity android:name=".assignments"></activity>
+        <activity android:name=".quiz" />
         <activity android:name=".Score" />
         <activity android:name=".QuestionActivity" />
         <activity
@@ -26,7 +27,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -80,12 +80,15 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".IntroActivity">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
 
         <service android:name=".FirebaseMessagingService" />
