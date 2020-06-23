@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
        logout1 = findViewById(R.id.logout1);
        my_login=findViewById(R.id.my_login);
 
-
+        
 
        my_login.setOnClickListener(new View.OnClickListener() {
            @Override
