@@ -13,7 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
         <Button
             android:id="@+id/buttonChoose"
             android:layout_width="wrap_content"
@@ -23,19 +28,33 @@
             android:text="Choose" />
 
 
+
         <Button
             android:id="@+id/buttonUpload"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Upload" />
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/textFile"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
 
+        <Button
+            android:id="@+id/buttonDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Download" />
 
     <Button
         android:id="@+id/button1"
