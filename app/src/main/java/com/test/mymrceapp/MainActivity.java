@@ -26,7 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 /*
-import com.google.android.gms.ads.AdRequest;
+  import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     List<Model> models;
     Integer[] colors=null;
     ArgbEvaluator argbEvaluator= new ArgbEvaluator();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
