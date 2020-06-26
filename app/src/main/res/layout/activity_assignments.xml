@@ -13,7 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
         <Button
             android:id="@+id/buttonChoose"
             android:layout_width="wrap_content"
@@ -23,32 +28,33 @@
             android:text="Choose" />
 
 
+
         <Button
             android:id="@+id/buttonUpload"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Upload" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter PDF File Name"
-            android:id="@+id/txt_pdfName"
-            android:textSize="22sp"/>
-        <Button
-            android:id="@+id/view"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:onClick="btn_action"
-            android:text="view" />
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/textFile"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
 
+        <Button
+            android:id="@+id/buttonDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Download" />
 
     <Button
         android:id="@+id/button1"
@@ -56,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText1"
         android:layout_centerHorizontal="true"
-        android:text="Add Values to listView" />-->
+        android:text="Add Values to listView" />
 
     <EditText
         android:id="@+id/editText1"
@@ -66,7 +72,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
         android:ems="10"
-        android:hint="Add elements listView" />-->
+        android:hint="Add elements listView" />
 
     <ListView
         android:id="@+id/listView1"

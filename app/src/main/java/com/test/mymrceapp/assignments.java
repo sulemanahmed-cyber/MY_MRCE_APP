@@ -23,9 +23,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -42,8 +39,6 @@ public class assignments extends AppCompatActivity  {
 
     private static final int PICK_IMAGE_REQUEST = 234;
     ListView listview;
-    EditText editPDFName;
-    DatabaseReference databaseReference;
     Button addButton;
     private ImageView imageView;
     private Button buttonChoose, buttonUpload;
@@ -60,15 +55,12 @@ public class assignments extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignments);
-        editPDFName = findViewById(R.id.txt_pdfName);
 
         imageView=(ImageView) findViewById(R.id.imageView);
         buttonChoose=(Button) findViewById(R.id.buttonChoose);
         buttonUpload=(Button) findViewById(R.id.buttonUpload);
 
          storageReference=FirebaseStorage.getInstance().getReference();
-        databaseReference = FirebaseDatabase.getInstance().getReference("images");
-
         listview = findViewById(R.id.listView1);
         addButton = findViewById(R.id.button1);
         GetValue = findViewById(R.id.editText1);
@@ -114,13 +106,13 @@ public class assignments extends AppCompatActivity  {
             }
         });
 
-       /* addButton.setOnClickListener(new View.OnClickListener() {
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ListElementsArrayList.add(GetValue.getText().toString());
                 adapter.notifyDataSetChanged();
             }
-        });*/
+        });
         buttonChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,8 +129,6 @@ public class assignments extends AppCompatActivity  {
     }
 
 
-
-
     private void showFileChooser(){
        Intent intent= new Intent();
        intent.setType("image/*");
@@ -146,9 +136,6 @@ public class assignments extends AppCompatActivity  {
        startActivityForResult(Intent.createChooser(intent,"select an image"), PICK_IMAGE_REQUEST);
 
     }
-
-
-
 
     /*@Override
     public void onClick(View v) {
@@ -163,15 +150,14 @@ public class assignments extends AppCompatActivity  {
     }*/
 
 
-   @Override
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
 
         if (requestCode==PICK_IMAGE_REQUEST && resultCode==RESULT_OK && data != null && data.getData()!=null)
         {
-            uploadPDFFile(data.getData());
-              //  filepath=data.getData();
+                filepath=data.getData();
 
             try {
                 Bitmap bitmap= MediaStore.Images.Media.getBitmap(getContentResolver(),filepath);
@@ -183,34 +169,6 @@ public class assignments extends AppCompatActivity  {
         }
 
     }
-
-    private void uploadPDFFile(final Uri data) {
-        final ProgressDialog progressDialog= new ProgressDialog(this);
-        progressDialog.setTitle("Uploading..");
-        progressDialog.show();
-
-       StorageReference reference = storageReference.child("images/"+System.currentTimeMillis()+".pdf");
-       reference.putFile(data)
-               .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                   @Override
-                   public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                       Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
-                       while (!uri.isComplete());
-                       Uri url = uri.getResult();
-                       uploadPDF uploadPDF = new uploadPDF(editPDFName.getText().toString(),url.toString());
-                       databaseReference.child(databaseReference.push().getKey()).setValue(uploadPDF);
-                       Toast.makeText(assignments.this, "file uploaded", Toast.LENGTH_SHORT).show();
-                       progressDialog.dismiss();
-                   }
-               }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-           @Override
-           public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
-               double progress = (100.0*taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
-               progressDialog.setMessage("uploaded"+(int)progress+"%");
-           }
-       });
-    }
-
 
     private void uploadFile(){
 
@@ -249,7 +207,4 @@ public class assignments extends AppCompatActivity  {
         }
     }
 
-    public void btn_action(View view) {
-       startActivity(new Intent(getApplicationContext(),Main2Activity.class));
-    }
 }
