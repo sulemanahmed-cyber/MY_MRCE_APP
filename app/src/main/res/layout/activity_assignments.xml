@@ -1,27 +1,24 @@
 <?dxml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".assignments"
     >
 
-    <LinearLayout
-        android:id="@+id/LinearLayout"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:paddingTop="10dp">
         <Button
             android:id="@+id/buttonChoose"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/editText1"
             android:layout_centerHorizontal="true"
@@ -31,10 +28,25 @@
 
         <Button
             android:id="@+id/buttonUpload"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Upload" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter PDF File Name"
+                android:id="@+id/txt_pdfName"
+                android:textSize="22sp"/>
+            <Button
+                android:id="@+id/view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:onClick="btn_action"
+                android:text="view Assignments" />
+
+
         </LinearLayout>
 
         <ImageView
@@ -80,7 +92,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true" >
-    </ListView>
-</LinearLayout>
 
-</ScrollView>
+    </ListView>
+
+
+
+</LinearLayout>
