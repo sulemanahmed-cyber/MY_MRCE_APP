@@ -41,20 +41,16 @@ import java.util.UUID;
 public class assignments extends AppCompatActivity  {
 
     private static final int PICK_IMAGE_REQUEST = 234;
-    ListView listview;
+
     EditText editPDFName;
-    Button addButton;
+
     private ImageView imageView;
     private Button buttonChoose, buttonUpload;
     private Uri filepath;
     private StorageReference storageReference;
     DatabaseReference databaseReference;
     EditText GetValue;
-    String[] ListElements = new String[] {
-            "Android",
-            "PHP",
-            "Python",
-    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,14 +58,12 @@ public class assignments extends AppCompatActivity  {
         setContentView(R.layout.activity_assignments);
 
         imageView=(ImageView) findViewById(R.id.imageView);
-        buttonChoose=(Button) findViewById(R.id.buttonChoose);
-        buttonUpload=(Button) findViewById(R.id.buttonUpload);
+         buttonUpload=(Button) findViewById(R.id.buttonUpload);
         editPDFName = (EditText)findViewById(R.id.txt_pdfName);
 
          storageReference=FirebaseStorage.getInstance().getReference();
          databaseReference = FirebaseDatabase.getInstance().getReference("images");
-        listview = findViewById(R.id.listView1);
-        addButton = findViewById(R.id.button1);
+
         GetValue = findViewById(R.id.editText1);
 
            /*buttonChoose.setOnClickListener(this);
@@ -78,54 +72,8 @@ public class assignments extends AppCompatActivity  {
 
 
 
-        final List<String> ListElementsArrayList = new ArrayList<>(Arrays.asList(ListElements));
-        final ArrayAdapter<String> adapter = new ArrayAdapter<>
-                (assignments.this, android.R.layout.simple_list_item_1, ListElementsArrayList);
-        listview.setAdapter(adapter);
 
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-                switch (position){
-                    case 0:
-                        Toast.makeText(assignments.this, "01", Toast.LENGTH_SHORT).show();
-                       break;
-                    case 1:
-                        Toast.makeText(assignments.this, "02", Toast.LENGTH_SHORT).show();
-                        break;
-                    case 2:
-                        Toast.makeText(assignments.this, "03", Toast.LENGTH_SHORT).show();
-                        break;
-                    case 3:
-                        Toast.makeText(assignments.this, "04", Toast.LENGTH_SHORT).show();
-                        break;
-                    case 4:
-                        Toast.makeText(assignments.this, ++position, Toast.LENGTH_SHORT).show();
-                        break;
-
-
-
-
-                }
-            }
-        });
-
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ListElementsArrayList.add(GetValue.getText().toString());
-                adapter.notifyDataSetChanged();
-            }
-        });
-       /* buttonChoose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //showFileChooser();
-            }
-        });*/
 
         buttonUpload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,32 +85,40 @@ public class assignments extends AppCompatActivity  {
     }
 
     private void selectPDFFile() {
-        Intent intent = new Intent();
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+/*
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+*/
+
+        Uri fileuri =  Uri.parse("URL of file on storage") ;
+        intent.setDataAndType(fileuri,"*/*");
+        /*intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);*/
+        Intent in = Intent.createChooser(intent,"open file");
+       /* in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);*/
+
+        startActivity(in);
+
+
+
+        /*Intent intent = new Intent();
         intent.setType("application/pdf");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"Select PDF File"),1);
+        startActivityForResult(Intent.createChooser(intent,"Select PDF File"),1);*/
     }
 
+/*
 
     private void showFileChooser(){
-       Intent intent= new Intent();
+       Intent intent= new Intent(Intent.ACTION_VIEW);
        intent.setType("image/*");
        intent.setAction(Intent.ACTION_GET_CONTENT);
        startActivityForResult(Intent.createChooser(intent,"select an image"), PICK_IMAGE_REQUEST);
 
     }
+*/
 
-    /*@Override
-    public void onClick(View v) {
-        if (view == buttonChoose){
-            //open chooser
-            showFileChooser();
-            }
-        else if (view == buttonUpload){
-            //upload to firebase storage
-        }
 
-    }*/
 
 
     @Override
@@ -172,7 +128,13 @@ public class assignments extends AppCompatActivity  {
 
         if (requestCode==1 && resultCode==RESULT_OK && data != null && data.getData()!=null)
         {
+            if (data.getData()!=null){
            uploadPDFFile(data.getData());
+            }
+
+            else{
+                Toast.makeText(this, "NO FILE CHOOSEN", Toast.LENGTH_SHORT).show();
+            }
                 //filepath=data.getData();
 
             /*try {
@@ -211,7 +173,14 @@ public class assignments extends AppCompatActivity  {
                 progressDialog.setMessage(((int)progress)+"% Uploaded..");
 
             }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
         });
+
 
     }
 
