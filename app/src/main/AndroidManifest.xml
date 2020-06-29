@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
@@ -14,8 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".assignments"></activity>
-        <activity android:name=".Main2Activity"/>
+        <activity android:name=".cse_asnmnt"></activity>
+        <activity android:name=".assignments" />
+        <activity android:name=".Main2Activity" />
         <activity android:name=".quiz" />
         <activity android:name=".Score" />
         <activity android:name=".QuestionActivity" />

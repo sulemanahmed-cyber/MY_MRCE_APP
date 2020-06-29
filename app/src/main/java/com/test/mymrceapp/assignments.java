@@ -40,16 +40,18 @@ import java.util.UUID;
 
 public class assignments extends AppCompatActivity  {
 
+/*
     private static final int PICK_IMAGE_REQUEST = 234;
+*/
 
-    EditText editPDFName;
+    EditText editPDFName, txt_pdfName_cse;
 
-    private ImageView imageView;
-    private Button buttonChoose, buttonUpload;
+
+    private Button buttonUpload, buttonUpload_cse;
     private Uri filepath;
     private StorageReference storageReference;
     DatabaseReference databaseReference;
-    EditText GetValue;
+
 
 
     @Override
@@ -57,66 +59,62 @@ public class assignments extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignments);
 
-        imageView=(ImageView) findViewById(R.id.imageView);
+
          buttonUpload=(Button) findViewById(R.id.buttonUpload);
+        buttonUpload_cse = (Button) findViewById(R.id.buttonUpload_cse);
+
         editPDFName = (EditText)findViewById(R.id.txt_pdfName);
+        editPDFName = (EditText) findViewById(R.id.txt_pdfName_cse);
 
          storageReference=FirebaseStorage.getInstance().getReference();
          databaseReference = FirebaseDatabase.getInstance().getReference("images");
+        databaseReference = FirebaseDatabase.getInstance().getReference("cse");
 
-        GetValue = findViewById(R.id.editText1);
+
 
            /*buttonChoose.setOnClickListener(this);
            buttonUpload.setOnClickListener(this);*/
 
 
-
-
-
-
-
         buttonUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               selectPDFFile();
+                selectPDFFile_imgs();
 
             }
         });
-    }
+        buttonUpload_cse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectPDFFile_cse();
 
-    private void selectPDFFile() {
-
-        /*Intent intent = new Intent(Intent.ACTION_VIEW);
-
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
-
-        Uri fileuri =  Uri.parse("URL of file on storage") ;
-        intent.setDataAndType(fileuri,"application/pdf");
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Intent in = Intent.createChooser(intent,"open file");
-       in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        startActivity(in);*/
+                Toast.makeText(assignments.this, "CSE WORKING", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }/////////////////////////////////////////////////////////// ON CREATE ENDS ////////////////////////////////////////////////////////////
 
 
-
+    private void selectPDFFile_imgs() {
         Intent intent = new Intent();
         intent.setType("*/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent,"Select PDF File"),1);
     }
 
-/*
+    private void selectPDFFile_cse() {
+        Intent intent = new Intent();
+        intent.setType("*/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select PDF File"), 2);
 
-    private void showFileChooser(){
+    }
+
+
+/*private void showFileChooser(){
        Intent intent= new Intent(Intent.ACTION_VIEW);
        intent.setType("image/*");
        intent.setAction(Intent.ACTION_GET_CONTENT);
-       startActivityForResult(Intent.createChooser(intent,"select an image"), PICK_IMAGE_REQUEST);
-
-    }
-*/
+       startActivityForResult(Intent.createChooser(intent,"select an image"), PICK_IMAGE_REQUEST);}*/
 
 
 
@@ -135,20 +133,54 @@ public class assignments extends AppCompatActivity  {
             else{
                 Toast.makeText(this, "NO FILE CHOOSEN", Toast.LENGTH_SHORT).show();
             }
-                //filepath=data.getData();
-
-            /*try {
-                Bitmap bitmap= MediaStore.Images.Media.getBitmap(getContentResolver(),filepath);
-                imageView.setImageBitmap(bitmap);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }*/
+        } else if (requestCode == 2 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            if (data.getData() != null) {
+                uploadPDFFile_cse(data.getData());
+            } else {
+                Toast.makeText(this, "NO FILE CHOOSEN", Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
 
-    private void uploadPDFFile(Uri data) {
+    private void uploadPDFFile_cse(Uri data) {
+
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Uploading..");
+        progressDialog.show();
+        StorageReference reference = storageReference.child("cse/" + System.currentTimeMillis() + ".pdf");
+        reference.putFile(data)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                        while (!uri.isComplete()) ;
+                        Uri url = uri.getResult();
+
+                        uploadPDF uploadPDF = new uploadPDF(editPDFName.getText().toString(), url.toString());
+                        databaseReference.child(databaseReference.push().getKey()).setValue(uploadPDF);
+                        Toast.makeText(assignments.this, "uploaded", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                    }
+                }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
+                double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+                progressDialog.setMessage(((int) progress) + "% Uploaded..");
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+    }
+
+    private void uploadPDFFile(Uri data) {// imgs//
         final ProgressDialog progressDialog= new ProgressDialog(this);
         progressDialog.setTitle("Uploading..");
         progressDialog.show();
@@ -184,7 +216,7 @@ public class assignments extends AppCompatActivity  {
 
     }
 
-    private void uploadFile(){
+  /*  private void uploadFile(){
 
         if (filepath!=null){
 
@@ -219,9 +251,13 @@ public class assignments extends AppCompatActivity  {
         else{
 
         }
-    }
+    }*/
 
     public void btn_action(View view) {
         startActivity(new Intent(getApplicationContext(),Main2Activity.class));
+    }
+
+    public void btn_action_cse(View view) {
+        startActivity(new Intent(getApplicationContext(), cse_asnmnt.class));
     }
 }

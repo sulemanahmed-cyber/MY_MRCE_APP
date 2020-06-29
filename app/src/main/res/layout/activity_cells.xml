@@ -28,6 +28,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="cells" />
+
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColorHint="#0B1C23" />
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

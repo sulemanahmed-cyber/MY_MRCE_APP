@@ -63,6 +63,9 @@ dependencies {
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
+    implementation 'com.android.support:appcompat-v7:24.0.0'
 
+    implementation 'com.weiwangcn.betterspinner:library-material:1.1.0'
 
+    implementation 'com.android.support:design:24.0.0'
 }
