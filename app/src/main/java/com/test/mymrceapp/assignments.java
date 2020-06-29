@@ -86,25 +86,25 @@ public class assignments extends AppCompatActivity  {
 
     private void selectPDFFile() {
 
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-/*
+        /*Intent intent = new Intent(Intent.ACTION_VIEW);
+
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-*/
+
 
         Uri fileuri =  Uri.parse("URL of file on storage") ;
-        intent.setDataAndType(fileuri,"*/*");
-        /*intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);*/
+        intent.setDataAndType(fileuri,"application/pdf");
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Intent in = Intent.createChooser(intent,"open file");
-       /* in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);*/
+       in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        startActivity(in);
+        startActivity(in);*/
 
 
 
-        /*Intent intent = new Intent();
-        intent.setType("application/pdf");
+        Intent intent = new Intent();
+        intent.setType("*/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"Select PDF File"),1);*/
+        startActivityForResult(Intent.createChooser(intent,"Select PDF File"),1);
     }
 
 /*
