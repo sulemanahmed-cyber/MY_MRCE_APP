@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.transition.AutoTransition;
 import androidx.transition.TransitionManager;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -21,11 +22,9 @@ import android.widget.QuickContactBadge;
 import com.google.android.material.navigation.NavigationView;
 
 public class cources extends AppCompatActivity {
+
     DrawerLayout drawerLayout;
     Toolbar toolbar;
-/*
-    ActionBarDrawerToggle actionBarDrawerToggle;
-*/
     NavigationView navigationView;
     LinearLayout expandableView_Hs, expandableView_Cse, expandableView_Ece, expandableView_It, expandableView_Mec, expandableView_Ite;
     Button arrowBtn_Hs, arrowBtn_Cse, arrowBtn_Ece, arrowBtn_It, arrowBtn_Mec, arrowBtn_Ite;
@@ -35,6 +34,8 @@ public class cources extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cources);
+
+
         navigationView = findViewById(R.id.navigation_menu);
         drawerLayout = findViewById(R.id.drawer_layout);
         toolbar = findViewById(R.id.toolbar);
@@ -84,6 +85,8 @@ public class cources extends AppCompatActivity {
 
 
         //CsE onclickkkkk
+
+
         arrowBtn_Cse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

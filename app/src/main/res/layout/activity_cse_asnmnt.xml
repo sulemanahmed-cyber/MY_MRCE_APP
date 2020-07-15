@@ -9,6 +9,7 @@
     tools:context=".cse_asnmnt">
 
     <ListView
+        android:background="#B2EBF2"
         android:id="@+id/pdflist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

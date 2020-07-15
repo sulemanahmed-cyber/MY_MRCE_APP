@@ -13,7 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -31,8 +34,8 @@ public class syllabus extends AppCompatActivity {
     List<String> listGroup;
     HashMap<String,List<String>> listItem;
     MainAdapter adapter;
-
-
+    public Spinner spin;
+    int positionToShowToSpinner;
     //EXPNDBL URLS
 
     //1year h&s url;
@@ -76,10 +79,64 @@ i.setData(Uri.parse(url));
         setContentView(R.layout.activity_syllabus);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        spin = (Spinner) findViewById(R.id.spin);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle("Syllabus");
         navigationView= findViewById(R.id.navigation_menu);
+
+        Intent intent = getIntent();
+
+
+        List<String> categories = new ArrayList<String>();
+        categories.add("Automobile");
+        categories.add("Business Services");
+        categories.add("Computers");
+        categories.add("Education");
+        categories.add("Personal");
+        categories.add("Travel");
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, categories);
+
+        spin.setAdapter(adapter1);
+
+        final int positionToShowToSpinner = intent.getIntExtra("position", -1);
+        spin.setSelection(positionToShowToSpinner);
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        Toast.makeText(syllabus.this, "0 selection", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
+                        Toast.makeText(syllabus.this, "1 selection", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        Toast.makeText(syllabus.this, "2 selection", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 3:
+                        Toast.makeText(syllabus.this, "3 selection", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 4:
+                        Toast.makeText(syllabus.this, "4 selection", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 5:
+                        Toast.makeText(syllabus.this, "5 selection", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+
+            }
+        });
+
+
         //expandable view code <exstarts>
         expandableListView=findViewById(R.id.expandable_listview);
         listGroup= new ArrayList<>();
@@ -283,7 +340,7 @@ i.setData(Uri.parse(url));
                     case R.id.nav_home:
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
-                        *//*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*//*
+                            Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*//*
                         break;
                     case R.id.nav_cources:
                         Intent intent1 = new Intent(getApplicationContext(), cources.class);
@@ -362,6 +419,13 @@ i.setData(Uri.parse(url));
     public void onBackPressed() {
         finish();
     }*/
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        spin.setSelection(positionToShowToSpinner);
+        Intent intent = getIntent();
+    }
 
     //expndbl method <starts>
     private void initListData() {

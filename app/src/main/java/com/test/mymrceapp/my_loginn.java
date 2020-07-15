@@ -10,8 +10,11 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,8 +32,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class my_loginn extends AppCompatActivity {
+    public Spinner spin;
 private EditText mEmailField,email;
 private EditText mPasswordField,password;
 private Button mLoginBtn,button2;
@@ -42,7 +49,7 @@ int RC_SIGN_IN = 0;
 public static int flag;
 private FirebaseAuth.AuthStateListener mAuthListener;
 private static final String TAG ="my_loginn";
-
+    int positionOfSelectedDataFromSpinner;
 
     @Override
     protected void onStart() {
@@ -66,6 +73,63 @@ private static final String TAG ="my_loginn";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_loginn);
+        spin = (Spinner) findViewById(R.id.spin);
+
+        List<String> categories = new ArrayList<String>();
+        categories.add("Automobile");
+        categories.add("Business Services");
+        categories.add("Computers");
+        categories.add("Education");
+        categories.add("Personal");
+        categories.add("Travel");
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, categories);
+
+        spin.setAdapter(adapter);
+        spin.setSelection(3);
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                positionOfSelectedDataFromSpinner = position;
+                switch (position) {
+                    case 0:
+                        Toast.makeText(my_loginn.this, "0 selection", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 1:
+                        Toast.makeText(my_loginn.this, "1 selection", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 2:
+                        Toast.makeText(my_loginn.this, "2 selection", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 3:
+                        Toast.makeText(my_loginn.this, "3 selection", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 4:
+                        Toast.makeText(my_loginn.this, "4 selection", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 5:
+                        Toast.makeText(my_loginn.this, "5 selection", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        Intent i = new Intent(this, syllabus.class);
+        i.putExtra("position", positionOfSelectedDataFromSpinner);
+        startActivity(i);
+
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -183,6 +247,15 @@ private static final String TAG ="my_loginn";
         });
     }
 
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        spin.setSelection(3);
+        Intent i = new Intent(this, syllabus.class);
+        i.putExtra("position", positionOfSelectedDataFromSpinner);
+        startActivity(i);
+    }
+
     private void SignIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -241,15 +314,6 @@ private static final String TAG ="my_loginn";
                 }
             });
         }
-/*mforgot.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        startActivity(new Intent(getApplicationContext(),Password_Activity.class));
-    }
-});*/
-    /*
-*/
-
 
 
     }

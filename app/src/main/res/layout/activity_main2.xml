@@ -8,7 +8,7 @@
 
     <ListView
         android:layout_width="match_parent"
-
+        android:background="#B2EBF2"
         android:id="@+id/pdflist"
         android:layout_height="match_parent"/>
 
