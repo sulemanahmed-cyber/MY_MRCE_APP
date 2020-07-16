@@ -6,13 +6,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.bumptech.glide.annotation.GlideModule;
+import com.bumptech.glide.module.AppGlideModule;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.storage.StorageReference;
 
 public class gallery extends AppCompatActivity {
 
@@ -22,8 +29,8 @@ public class gallery extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
     KenBurnsView kenBurnsView;
-    Button pause, resume;
 
+    ImageView im_fb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +41,17 @@ public class gallery extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle("Gallery");
+        StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://firstapp-ca69e.appspot.com/myfb");
+
+
+        im_fb = (ImageView) findViewById(R.id.im_fb);
+        GlideApp.with(this)
+                .load(storageReference)
+                .into(im_fb);
         //ken burns view
-        kenBurnsView=findViewById(R.id.kensburnview);
-        pause=(Button)findViewById(R.id.pause) ;
-        pause=(Button)findViewById(R.id.resume) ;
-        navigationView= (NavigationView)findViewById(R.id.navigation_menu);
+        kenBurnsView = findViewById(R.id.kensburnview);
+
+        navigationView = (NavigationView) findViewById(R.id.navigation_menu);
 /*        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
