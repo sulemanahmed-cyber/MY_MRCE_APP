@@ -133,10 +133,15 @@
 
                     android:clipToPadding="false"
 
-                    android:overScrollMode="always"
-                    >
+                    android:overScrollMode="always">
 
                 </androidx.viewpager.widget.ViewPager>
+
+                <Button
+                    android:id="@+id/gallery_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GALLERY ADMIN" />
 
                 <GridLayout
 

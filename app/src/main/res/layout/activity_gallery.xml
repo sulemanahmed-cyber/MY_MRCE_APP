@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,34 +11,42 @@
 
     tools:context=".gallery">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#B2EBF2">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#0097A7"
-            app:title="gallery"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
+            android:layout_height="match_parent"
+            android:background="#B2EBF2"
+            android:orientation="vertical">
 
-        <com.flaviofaria.kenburnsview.KenBurnsView
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:src="@drawable/nss_1"
-            android:id="@+id/kensburnview" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0097A7"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="gallery"></androidx.appcompat.widget.Toolbar>
 
-        <ImageView
-            android:id="@+id/im_fb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/kensburnview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/nss_1" />
 
+            <ProgressBar
+                android:id="@+id/progress_circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
+        </LinearLayout>
+    </ScrollView>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_menu"

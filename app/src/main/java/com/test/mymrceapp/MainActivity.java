@@ -55,37 +55,47 @@ public class MainActivity extends AppCompatActivity {
     AlertDialog alertDialog;
     ViewFlipper v_flipper;
     GridLayout gridLayout;
-    ViewPager  viewPager;
+    ViewPager viewPager;
     Adapter adapter;
-    Button button,logout1,my_login;
+    Button button, logout1, my_login, gallery_admin;
     FirebaseAuth fAuth;
     List<Model> models;
-    Integer[] colors=null;
-    ArgbEvaluator argbEvaluator= new ArgbEvaluator();
+    Integer[] colors = null;
+    ArgbEvaluator argbEvaluator = new ArgbEvaluator();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        gridLayout= findViewById(R.id.gridLayout5);
-       /*button = findViewById(R.id.my_abt);*/
-       logout1 = findViewById(R.id.logout1);
-       my_login=findViewById(R.id.my_login);
+        gridLayout = findViewById(R.id.gridLayout5);
+        /*button = findViewById(R.id.my_abt);*/
+        logout1 = findViewById(R.id.logout1);
+        my_login = findViewById(R.id.my_login);
 
-        
+        gallery_admin = findViewById(R.id.gallery_admin);
 
-       my_login.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent=new Intent(getApplicationContext(),my_loginn.class);
-               startActivity(intent);
+        gallery_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.test.mymrceapp.gallery_admin.class);
+                startActivity(intent);
 
-           }
-       });
+
+            }
+        });
+
+        my_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), my_loginn.class);
+                startActivity(intent);
+
+            }
+        });
       /* button.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {ikirthis
