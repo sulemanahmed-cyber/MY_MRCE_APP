@@ -46,8 +46,30 @@
         android:drawableLeft="@drawable/ic_mail_black_24dp"
         android:drawablePadding="6dp"
 
-          />
+        />
     </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/et_rect"
+            android:drawableLeft="@drawable/ic_create_black_24dp"
+            android:drawablePadding="6dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_2"
@@ -55,9 +77,9 @@
         android:paddingBottom="10dp"
         android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:ems="10"

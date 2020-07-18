@@ -45,6 +45,7 @@ public class gallery_admin extends AppCompatActivity {
     private StorageReference mStorageRef;
     private DatabaseReference mDatabaseRef;
     private StorageTask mUploadTask;
+    private String TAG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,6 +124,32 @@ public class gallery_admin extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Uri> task) {
                     if (task.isSuccessful()) {
                         Uri downloadUri = task.getResult();
+                        Log.e(TAG, "then: " + downloadUri.toString());
+
+                        Toast.makeText(gallery_admin.this, "Upload Success", Toast.LENGTH_SHORT).show();
+                        Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
+                                downloadUri.toString());
+
+                        mDatabaseRef.push().setValue(upload);
+                    } else {
+                        Toast.makeText(gallery_admin.this, "upload failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+            /*coommenteed, used by self;
+            mStorageRef.putFile(mImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                @Override
+                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                    if (!task.isSuccessful()) {
+                        throw task.getException();
+                    }
+                    return mStorageRef.getDownloadUrl();
+                }
+            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                @Override
+                public void onComplete(@NonNull Task<Uri> task) {
+                    if (task.isSuccessful()) {
+                        Uri downloadUri = task.getResult();
                         Log.e("TAG", "then: " + downloadUri.toString());
 
 
@@ -134,7 +161,11 @@ public class gallery_admin extends AppCompatActivity {
                         Toast.makeText(gallery_admin.this, "upload failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
-            });
+            });*/
+
+
+
+
 
             /*StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()
                     + "." + getFileExtension(mImageUri));

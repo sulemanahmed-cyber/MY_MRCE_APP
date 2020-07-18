@@ -22,17 +22,11 @@
             android:background="#0097A7"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:title="Syllabus"></androidx.appcompat.widget.Toolbar>
-
-        <Spinner
-            android:id="@+id/spin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <ExpandableListView
-            android:id="@+id/expandable_listview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:divider="#098"/>
+   <ExpandableListView
+       android:id="@+id/expandable_listview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:divider="#098" />
 
 
     </LinearLayout>

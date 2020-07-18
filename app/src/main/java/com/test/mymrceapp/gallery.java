@@ -41,7 +41,6 @@ public class gallery extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private Image_Adapter mAdapter;
-    private ProgressBar mProgressCircle;
     private DatabaseReference mDatabaseRef;
     private List<Upload> mUploads;
 
@@ -58,7 +57,7 @@ public class gallery extends AppCompatActivity {
         toolbar.setTitle("Gallery");
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(gallery.this));
 
         mUploads = new ArrayList<>();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");

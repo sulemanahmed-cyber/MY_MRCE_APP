@@ -79,62 +79,15 @@ i.setData(Uri.parse(url));
         setContentView(R.layout.activity_syllabus);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        spin = (Spinner) findViewById(R.id.spin);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle("Syllabus");
         navigationView= findViewById(R.id.navigation_menu);
 
-        Intent intent = getIntent();
 
 
-        List<String> categories = new ArrayList<String>();
-        categories.add("Automobile");
-        categories.add("Business Services");
-        categories.add("Computers");
-        categories.add("Education");
-        categories.add("Personal");
-        categories.add("Travel");
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, categories);
 
-        spin.setAdapter(adapter1);
-
-        final int positionToShowToSpinner = intent.getIntExtra("position", -1);
-        spin.setSelection(positionToShowToSpinner);
-        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case 0:
-                        Toast.makeText(syllabus.this, "0 selection", Toast.LENGTH_SHORT).show();
-                        break;
-                    case 1:
-                        Toast.makeText(syllabus.this, "1 selection", Toast.LENGTH_SHORT).show();
-                        break;
-                    case 2:
-                        Toast.makeText(syllabus.this, "2 selection", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case 3:
-                        Toast.makeText(syllabus.this, "3 selection", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case 4:
-                        Toast.makeText(syllabus.this, "4 selection", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case 5:
-                        Toast.makeText(syllabus.this, "5 selection", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-
-            }
-        });
 
 
         //expandable view code <exstarts>
@@ -144,82 +97,8 @@ i.setData(Uri.parse(url));
         adapter=new MainAdapter(this,listGroup,listItem);
         expandableListView.setAdapter(adapter);
 
-        //<EXPNDBLSTRTS>/
-/*
-        //H
-        //S
-        //Intents
 
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-               if (groupPosition==0 && childPosition==0){
-                 Intent ihs1=new Intent(Intent.ACTION_VIEW);
-                 ihs1.setData(Uri.parse(hcsurl));
-                 startActivity(ihs1); }
-               return false; }});
-
-
-
-        expandableListView.setAdapter(adapter);
-        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                if (groupPosition==0 && childPosition==1){
-                    Intent ihs2=new Intent(Intent.ACTION_VIEW);
-                    ihs2.setData(Uri.parse(hecurl));
-                    startActivity(ihs2); }
-                return false; }});
-
-        expandableListView.setAdapter(adapter);
-        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                if (groupPosition==0 && childPosition==2){
-                    Intent ihs3=new Intent(Intent.ACTION_VIEW);
-                    ihs3.setData(Uri.parse(hmeurl));
-                    startActivity(ihs3); }
-                return false; }});
-
-
-        //C
-        //S
-        //E
-        //url intents
-
-        expandableListView.setAdapter(adapter);
-        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                if (groupPosition==1 && childPosition==0){
-                    Intent ics1=new Intent(Intent.ACTION_VIEW);
-                    ics1.setData(Uri.parse(cse2url));
-                    startActivity(ics1); }
-                return false; }});
-
-        expandableListView.setAdapter(adapter);
-        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                if (groupPosition==1 && childPosition==1) {
-                    Intent ics2 = new Intent(Intent.ACTION_VIEW);
-                    ics2.setData(Uri.parse(cse3url));
-                    startActivity(ics2);
-                }return false; }});
-
-        expandableListView.setAdapter(adapter);
-        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                if (groupPosition==1 && childPosition==2){
-                    Intent ics3=new Intent(Intent.ACTION_VIEW);
-                    ics3.setData(Uri.parse(cse4url));
-                    startActivity(ics3); }
-                return false; }});initListData();
-*/
-
-
-            expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
                 @Override
                 public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
@@ -345,7 +224,7 @@ i.setData(Uri.parse(url));
                     case R.id.nav_cources:
                         Intent intent1 = new Intent(getApplicationContext(), cources.class);
                         startActivity(intent1);
-                        *//* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*//*
+                          Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*//*
                         break;
 
                     case R.id.nav_gallery:
@@ -420,12 +299,6 @@ i.setData(Uri.parse(url));
         finish();
     }*/
 
-    @Override
-    protected void onPostResume() {
-        super.onPostResume();
-        spin.setSelection(positionToShowToSpinner);
-        Intent intent = getIntent();
-    }
 
     //expndbl method <starts>
     private void initListData() {
