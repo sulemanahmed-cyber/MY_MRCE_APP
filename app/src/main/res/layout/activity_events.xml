@@ -1,47 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    tools:context=".events"
-    android:id="@+id/drawer_layout"
-    tools:openDrawer="end"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#B2EBF2"
     android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0097a7"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="events"></androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="Enter Keyword" />
+
+    <EditText
+        android:id="@+id/et_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Link" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#B2EBF2">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#0097a7"
-            app:title="events"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></androidx.appcompat.widget.Toolbar>
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="events"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/bt"
-            android:layout_width="match_parent"
+            android:id="@+id/bt_upload"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Upload" />
+
+        <Button
+            android:id="@+id/bt_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move" />
     </LinearLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_menu"
+    <ListView
+        android:id="@+id/pdflist"
+        android:background="#B2EBF2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/header"
+        android:padding="10dp" />
 
-        app:menu="@menu/drawer_menu"></com.google.android.material.navigation.NavigationView>
-</androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
+

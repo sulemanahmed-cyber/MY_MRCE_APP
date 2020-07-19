@@ -110,7 +110,6 @@ public class gallery_admin extends AppCompatActivity {
     private void uploadFile() {
         if (mImageUri != null) {
 
-
             mStorageRef.putFile(mImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                 @Override
                 public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
@@ -136,77 +135,13 @@ public class gallery_admin extends AppCompatActivity {
                     }
                 }
             });
-            /*coommenteed, used by self;
-            mStorageRef.putFile(mImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                @Override
-                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                    if (!task.isSuccessful()) {
-                        throw task.getException();
-                    }
-                    return mStorageRef.getDownloadUrl();
-                }
-            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                @Override
-                public void onComplete(@NonNull Task<Uri> task) {
-                    if (task.isSuccessful()) {
-                        Uri downloadUri = task.getResult();
-                        Log.e("TAG", "then: " + downloadUri.toString());
-
-
-                        Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
-                                downloadUri.toString());
-
-                        mDatabaseRef.push().setValue(upload);
-                    } else {
-                        Toast.makeText(gallery_admin.this, "upload failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });*/
 
 
 
 
 
-            /*StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()
-                    + "." + getFileExtension(mImageUri));
-            mUploadTask = fileReference.putFile(mImageUri)
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    mProgressBar.setProgress(0);
-                                }
-                            }, 500);
-                            Toast.makeText(gallery_admin.this, "Upload successful", Toast.LENGTH_LONG).show();
-                               Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
-                                    // taskSnapshot.getDownloadUrl().toString());
-                                    uri.toString());
 
-                            String uploadId = mDatabaseRef.push().getKey();
-                            mDatabaseRef.child(uploadId).setValue(upload);
-                            *//*Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
-                                    mStorageRef.getDownloadUrl().toString());
-                            String uploadId = mDatabaseRef.push().getKey();
-                            mDatabaseRef.child(uploadId).setValue(upload);*//*
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(gallery_admin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    })
-                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                            double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
-                            mProgressBar.setProgress((int) progress);
-                        }
-                    });
-*/
+
         } else {
             Toast.makeText(this, "No file selected", Toast.LENGTH_SHORT).show();
         }
