@@ -3,6 +3,7 @@ package com.test.mymrceapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -39,6 +40,7 @@ import java.util.List;
 public class my_loginn extends AppCompatActivity {
 
     private EditText mEmailField,email;
+    Toolbar toolbar;
 private EditText mPasswordField,password;
 private Button mLoginBtn,button2;
 TextView mregister,mforgot;
@@ -73,6 +75,10 @@ private static final String TAG ="my_loginn";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_loginn);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitle("login");
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

@@ -41,7 +41,7 @@ public class cources extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setTitle("Cources");
+        toolbar.setTitle("Courses");
 
         expandableView_Hs = findViewById(R.id.expandableView_Hs);
         expandableView_Cse = findViewById(R.id.expandableView_Cse);

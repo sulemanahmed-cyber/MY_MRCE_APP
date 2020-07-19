@@ -27,7 +27,7 @@ public class Splash extends AppCompatActivity {
     private FirebaseFirestore firestore;
    // public static int selected_cat_index = 0;
 
-    private static  int SPLASH_SCREEN = 5000;
+    private static  int SPLASH_SCREEN = 1000;
     Animation topanimaton,bottomanimation;
      ImageView image;
      TextView logo,slogan;

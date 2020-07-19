@@ -3,6 +3,7 @@ package com.test.mymrceapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class Activity_Register extends AppCompatActivity {
     EditText mEmail, mPassword, mName, mRollnumber;
     Button mRegister;
     private FirebaseAuth fAuth;
+    Toolbar toolbar;
     TextView mlogin;
     ProgressBar progressBar;
 
@@ -35,6 +37,10 @@ public class Activity_Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__register);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitle("Register");
 
         mEmail = findViewById(R.id.editText4);
         mPassword = findViewById(R.id.editText3);

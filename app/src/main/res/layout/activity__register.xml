@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Register">
+
+<LinearLayout
+
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity_Register"
     android:background="#b2ebf2"
     android:orientation="vertical"
     >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0097A7"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Register"></androidx.appcompat.widget.Toolbar>
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -113,39 +131,43 @@
         android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:paddingRight="44dp"
+        android:orientation="horizontal"
         android:paddingTop="14dp">
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:fontFamily="@font/montserrat_bold"
-        android:layout_gravity="right"
-        android:paddingRight="10dp"
-        android:background="@drawable/bt_bg"
-        /></LinearLayout>
+        <Button
+            android:id="@+id/login_here"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_cont"
+            android:text="already a user ? \nlogin here"
+            />
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:paddingLeft="44dp"
-    android:paddingTop="20dp">
-    <Button
-        android:id="@+id/login_here"
-        android:layout_width="200dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bt_cont"
-        android:text="already a user ? \nlogin here"
-       /></LinearLayout>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bt_bg"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Register" />
+
+    </LinearLayout>
+
+
+
 
 
 
 
 
 </LinearLayout>
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 

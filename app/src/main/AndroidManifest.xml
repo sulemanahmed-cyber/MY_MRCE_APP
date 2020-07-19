@@ -35,8 +35,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Register" />
-        <activity android:name=".my_loginn" />
+        <activity android:name=".Activity_Register"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".my_loginn"
+            android:parentActivityName=".MainActivity"/>
         <!--
  <activity
             android:name=".ui.login.my_loginActivity"
