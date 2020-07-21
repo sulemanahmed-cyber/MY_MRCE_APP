@@ -42,8 +42,8 @@ import com.google.firebase.iid.InstanceIdResult;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.test.mymrceapp.my_loginn.flag;
+/*
+import static com.test.mymrceapp.my_loginn.flag;*/
 
 
 public class MainActivity extends AppCompatActivity {
@@ -310,13 +310,12 @@ public class MainActivity extends AppCompatActivity {
                           startActivity(new Intent(getApplicationContext(),Activity_Register.class));
                       }*/
 
-                     if(flag==1){
+                     //if(/*flag==1*/){
                          Intent intent12 = new Intent(getApplicationContext(),contact.class);
                          startActivity(intent12);
-                     }else {
-                         Intent intent12 = new Intent(getApplicationContext(),Activity_Register.class);
-                         startActivity(intent12);
-                     }
+                     /*}else {*/
+
+                     //}
                       break;
                  /* case R.id.nav_dum_1:
 
@@ -390,13 +389,12 @@ private void setToggleEvent(GridLayout gridLayout){
                     {
                        /* Intent intent = new Intent(MainActivity.this,contact.class);
                         startActivity(intent);*/
-                        if(flag==1){
+                   /*     if(flag==1){*/
                             Intent intent12 = new Intent(getApplicationContext(),contact.class);
                             startActivity(intent12);
-                        }else {
-                            Intent intent12 = new Intent(getApplicationContext(),Activity_Register.class);
-                            startActivity(intent12);
-                        }
+                        //}else {
+
+                        //}
                       /*  fAuth = FirebaseAuth.getInstance();
                         FirebaseUser user = fAuth.getCurrentUser();
                         if(user.isEmailVerified()){

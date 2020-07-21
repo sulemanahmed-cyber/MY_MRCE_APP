@@ -9,9 +9,11 @@
     android:layout_height="match_parent"
     tools:context=".Activity_Register">
 
-<LinearLayout
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity_Register"
@@ -44,6 +46,11 @@
         android:text="Register"
         android:textColor="#212121"
         android:textSize="40sp" />
+<Spinner
+    android:id="@+id/spin_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_1"
@@ -167,7 +174,7 @@
 
 </LinearLayout>
 
-
+    </ScrollView>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

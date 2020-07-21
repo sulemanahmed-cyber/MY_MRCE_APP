@@ -8,7 +8,7 @@
 
     android:background="@color/navy_black"
     android:orientation="horizontal"
-
+      tools:context=".header"
     >
 
 
@@ -28,6 +28,7 @@
             >
 
             <TextView
+                android:id="@+id/user_type"
                 android:layout_width="118dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/side_chipp"
@@ -39,7 +40,7 @@
 
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/name"
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/email_tv"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
