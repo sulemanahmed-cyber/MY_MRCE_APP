@@ -243,10 +243,19 @@ private static final String TAG ="my_loginn";
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
-                        /*flag=1;*/
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                    } else
+                        if (mAuth.getCurrentUser().isEmailVerified()){
+
+                            startActivity(new Intent(my_loginn.this,MainActivity.class));
+                            Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(my_loginn.this, "please verify your email address", Toast.LENGTH_SHORT).show();
+                        }
+
+                      /*  Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
+                        *//*flag=1;*//*
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));*/
+                    }
+                    else
                     {
                         Toast.makeText(my_loginn.this, "error", Toast.LENGTH_SHORT).show();
                     }

@@ -76,6 +76,11 @@
             android:paddingTop="10dp"
             tools:layout_editor_absoluteY="178dp" />
     </com.google.android.material.textfield.TextInputLayout>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:id="@+id/remember"
+        android:text="Remember Me"
+        android:layout_height="wrap_content"/>
 
 
     <Button
@@ -115,7 +120,7 @@
         android:layout_marginTop="30dp"
         android:clickable="true"
         android:fontFamily="@font/montserrat_bold"
-        android:paddingTop="14dp"
+        android:paddingTop="10dp"
         android:text="Forgot Password ?"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"

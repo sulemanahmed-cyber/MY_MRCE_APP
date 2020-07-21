@@ -14,6 +14,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     GridLayout gridLayout;
     ViewPager viewPager;
     Adapter adapter;
-    Button button, logout1, my_login, gallery_admin;
+    Button button, logout1, my_login, gallery_admin,logout;
     FirebaseAuth fAuth;
     List<Model> models;
     Integer[] colors = null;
@@ -75,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
         /*button = findViewById(R.id.my_abt);*/
         logout1 = findViewById(R.id.logout1);
         my_login = findViewById(R.id.my_login);
+        logout = findViewById(R.id.logout);
+
 
         gallery_admin = findViewById(R.id.gallery_admin);
 
@@ -493,10 +496,16 @@ private void setToggleEvent(GridLayout gridLayout){
 
     }
 
+
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(),MainActivity.class));
         finish();
+        /*SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("remember","false");
+        editor.apply();
+        finish();*/
 
 
     }

@@ -484,11 +484,12 @@
                     android:layout_gravity="right"
                     android:id="@+id/logout"
                     android:background="@drawable/draw_ripple_bordered"
+                    android:onClick="logout"
 
                     android:layout_width="@dimen/_60sdp"
                     android:layout_height="wrap_content"
                     android:text="logout"
-                    android:onClick="logout"
+
                     android:layout_marginTop="0dp"
                     android:layout_marginBottom="@dimen/_10sdp"
 
