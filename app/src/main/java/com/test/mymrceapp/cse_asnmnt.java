@@ -54,11 +54,11 @@ public class cse_asnmnt extends AppCompatActivity {
                     uploadPDF uploadPDF = postSnapshot.getValue(com.test.mymrceapp.uploadPDF.class);
                     uploadPDFS.add(uploadPDF);
                 }
-                String[] images = new String[uploadPDFS.size()];
-                for (int i = 0; i < images.length; i++) {
-                    images[i] = uploadPDFS.get(i).getName();
+                String[] cse1 = new String[uploadPDFS.size()];
+                for (int i = 0; i < cse1.length; i++) {
+                    cse1[i] = uploadPDFS.get(i).getName();
                 }
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, images) {
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, cse1) {
                   /*  @NonNull
                     @Override
                     public View getView(int position, View convertView,  ViewGroup parent) {
