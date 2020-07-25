@@ -60,7 +60,7 @@ private static final String TAG ="my_loginn";
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 */
 
-        FirebaseUser currentUser=mAuth.getCurrentUser();
+       /* FirebaseUser currentUser=mAuth.getCurrentUser();
         if (currentUser==null){
 
         }
@@ -68,7 +68,7 @@ private static final String TAG ="my_loginn";
         else{
             Intent intent= new Intent(getApplicationContext(),cources.class);
             startActivity(intent);
-        }
+        }*/
     }
 
     @Override
@@ -136,8 +136,13 @@ private static final String TAG ="my_loginn";
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startSignin();
 
+                String email = mEmailField.getText().toString();
+                Intent intent = new Intent(my_loginn.this, profile.class);
+                intent.putExtra("email", email);
+                startActivity(intent);
             }
         });
 

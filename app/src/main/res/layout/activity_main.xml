@@ -52,37 +52,37 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingTop="@dimen/_12sdp"
-                    android:paddingBottom="@dimen/_12sdp"
-                    >
+                    android:paddingBottom="@dimen/_12sdp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_gravity="center_vertical"
                             android:layout_width="@dimen/_90sdp"
                             android:layout_height="@dimen/_90sdp"
-                            android:src="@drawable/mrce"/>
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/mrce" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:orientation="vertical"
-
-                            android:layout_height="wrap_content">
-                        <TextView
-                            android:paddingTop="@dimen/_13sdp"
-                            android:id="@+id/textView3"
-                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:fontFamily="@font/montserrat_bold"
-                            android:text="@string/Description"
-                            android:textAlignment="center"
-                            android:layout_gravity="center_vertical"
-                            android:textColor="@color/brown"
-                            android:textSize="@dimen/_12ssp"
-                            />
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:paddingTop="@dimen/_13sdp"
+                                android:text="@string/Description"
+                                android:textAlignment="center"
+                                android:textColor="@color/brown"
+                                android:textSize="@dimen/_12ssp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -118,13 +118,38 @@
                     </LinearLayout>-->
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/log"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Logged in"
+                        android:textSize="@dimen/_25ssp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/unlog"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="NOT Logged in"
+                        android:textSize="@dimen/_20ssp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
 
                 <ViewFlipper
                     android:id="@+id/v_flipper"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:background="@drawable/borderrss" />
+                    android:background="@drawable/borderrss"
+                    android:paddingTop="@dimen/_10sdp" />
 
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/viewPager"
@@ -219,8 +244,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Cources"
                                 android:fontFamily="@font/raleway_semibold"
+                                android:text="Cources"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -252,8 +277,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Bus \nRoutes"
                                 android:fontFamily="@font/raleway_semibold"
+                                android:text="Bus \nRoutes"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -283,8 +308,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Events"
                                 android:fontFamily="@font/raleway_semibold"
+                                android:text="Events"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -310,13 +335,13 @@
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_supervisor_account_black_24dp"/>
+                                android:src="@drawable/ic_supervisor_account_black_24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Faculty"
                                 android:fontFamily="@font/raleway_semibold"
+                                android:text="Faculty"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10dp" />
@@ -347,9 +372,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway_semibold"
                                 android:text=" Student \nChapters"
                                 android:textAlignment="center"
-                                android:fontFamily="@font/raleway_semibold"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
                         </LinearLayout>
@@ -379,8 +404,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Canteen"
                                 android:fontFamily="@font/raleway_semibold"
+                                android:text="Canteen"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -411,10 +436,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/raleway_semibold"
                                 android:text="About clg"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
-                                android:fontFamily="@font/raleway_semibold"
                                 android:textSize="10sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -444,12 +469,11 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Contact"
-                                android:textSize="9sp"
                                 android:fontFamily="@font/raleway_semibold"
+                                android:text="Contact"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
-                                  />
+                                android:textSize="9sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -466,32 +490,31 @@
                     android:id="@+id/my_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="login"
                     android:background="@drawable/draw_ripple_bordered"
-                    />
+                    android:text="login" />
 
-             <!--   <Button
-                    android:id="@+id/my_abt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:onClick="my_register"
-                    android:text="\t\tAbout Developers\t\t"
-                    android:textColor="#49274a"
-                    android:background="@drawable/bt_bg"/>-->
+                <!--   <Button
+                       android:id="@+id/my_abt"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:onClick="my_register"
+                       android:text="\t\tAbout Developers\t\t"
+                       android:textColor="#49274a"
+                       android:background="@drawable/bt_bg"/>-->
 
                 <Button
-                    android:layout_gravity="right"
                     android:id="@+id/logout"
-                    android:background="@drawable/draw_ripple_bordered"
-                    android:onClick="logout"
-
                     android:layout_width="@dimen/_60sdp"
                     android:layout_height="wrap_content"
-                    android:text="logout"
+                    android:layout_gravity="right"
 
                     android:layout_marginTop="0dp"
                     android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/draw_ripple_bordered"
+
+                    android:onClick="logout"
+                    android:text="logout"
 
                     tools:ignore="HardcodedText" />
 
@@ -503,9 +526,9 @@
                     android:textAlignment="center" />
 
                 <LinearLayout
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_10sdp">
 
@@ -515,15 +538,13 @@
                         android:drawableLeft="@drawable/ic_email_black_24dp"
                         android:drawablePadding="@dimen/_4sdp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:textSize="@dimen/_13sdp"
                         android:text="Email:principal@mrce.in\n\t\t\t\tWebsite:www.mrce.in "
-                        />
+                        android:textSize="@dimen/_13sdp" />
 
                 </LinearLayout>
 
 
             </LinearLayout>
-
 
 
         </ScrollView>
@@ -536,11 +557,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/header"
-        app:itemTextColor="@color/reply_orange"
-        app:itemIconTint="@color/reply_orange"
         android:background="@color/navy"
-         app:menu="@menu/drawer_menu">
+        app:headerLayout="@layout/header"
+        app:itemIconTint="@color/reply_orange"
+        app:itemTextColor="@color/reply_orange"
+        app:menu="@menu/drawer_menu">
 
     </com.google.android.material.navigation.NavigationView>
 

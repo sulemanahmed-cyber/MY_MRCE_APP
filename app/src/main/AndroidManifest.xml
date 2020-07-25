@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".college_admin"></activity>
+        <activity android:name=".profile"></activity>
+        <activity android:name=".college_admin" />
         <activity android:name=".gallery_admin" />
         <activity android:name=".cse_asnmnt" />
         <activity android:name=".assignments" />

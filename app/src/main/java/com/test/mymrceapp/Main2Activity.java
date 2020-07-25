@@ -47,14 +47,15 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
-    }/////////////////////////////////////////////////////////// ON CREATE ENDS ////////////////////////////////////////////////////////////
+    }
+    /////////////////////////////////////////////////////////// ON CREATE ENDS ////////////////////////////////////////////////////////////
 
     private void viewAllFiles() {
         databaseReference = FirebaseDatabase.getInstance().getReference("images");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot postSnapshot: snapshot.getChildren()){
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     uploadPDF uploadPDF = postSnapshot.getValue(com.test.mymrceapp.uploadPDF.class);
                     uploadPDFS.add(uploadPDF);
                 }
