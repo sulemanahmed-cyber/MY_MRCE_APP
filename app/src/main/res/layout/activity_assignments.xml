@@ -16,39 +16,40 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:gravity="center"
-            android:textColor="#37474f"
-            android:text="IMAGES ASSIGNMENTS"
-            android:textSize="@dimen/_25ssp" />
+        <!--//old upload_images-->
+        <!-- <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:fontFamily="monospace"
+             android:gravity="center"
+             android:textColor="#37474f"
+             android:text="IMAGES ASSIGNMENTS"
+             android:textSize="@dimen/_25ssp" />
 
-        <Button
+         <Button
 
-            android:id="@+id/buttonUpload"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Upload  (images/)" />
+             android:id="@+id/buttonUpload"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:text="Upload  (images/)" />
 
-        <EditText
-            android:id="@+id/txt_pdfName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#37474f"
-            android:hint="Enter PDF File Name  (images/)"
-            android:textSize="22sp" />
+         <EditText
+             android:id="@+id/txt_pdfName"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textColor="#37474f"
+             android:hint="Enter PDF File Name  (images/)"
+             android:textSize="22sp" />
 
-        <Button
-            android:id="@+id/view"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:onClick="btn_action"
-            android:text="view Assignments (images/)" />
-
+         <Button
+             android:id="@+id/view"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:onClick="btn_action"
+             android:text="view Assignments (images/)" />
+ -->
 
         <TextView
             android:layout_width="match_parent"

@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     Adapter adapter;
     Button button, logout1, my_login, gallery_admin, logout;
     FirebaseAuth fAuth;
-    private TextView log, unlog;
+    private TextView log;
     List<Model> models;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
@@ -73,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         //  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         log = findViewById(R.id.log);
-        unlog = findViewById(R.id.unlog);
 
 
         gridLayout = findViewById(R.id.gridLayout5);
@@ -84,6 +84,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         gallery_admin = findViewById(R.id.gallery_admin);
+
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String name = prefs.getString("name", "");
+
+        log.setText(name);
+
 
         gallery_admin.setOnClickListener(new View.OnClickListener() {
             @Override

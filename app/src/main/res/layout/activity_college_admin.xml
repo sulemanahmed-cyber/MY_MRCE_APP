@@ -8,7 +8,7 @@
     tools:context=".college_admin">
 
 
-    <TextView
+   <!-- <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:onClick="btn_action"
-        android:text="view Assignments (images/)" />
+        android:text="view Assignments (images/)" />-->
 
 
     <TextView
@@ -74,6 +74,16 @@
         android:layout_centerHorizontal="true"
         android:onClick="btn_action_cse"
         android:text="view Assignments (cse_asnmnt/)" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="GALLERY ADMIN"
+        android:textColor="#37474f"
+        android:textSize="@dimen/_30ssp" />
 
     <Button
         android:id="@+id/gallery_admin"

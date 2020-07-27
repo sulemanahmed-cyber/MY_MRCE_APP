@@ -40,9 +40,7 @@ import java.util.UUID;
 
 public class assignments extends AppCompatActivity  {
 
-/*
-    private static final int PICK_IMAGE_REQUEST = 234;
-*/
+/* private static final int PICK_IMAGE_REQUEST = 234; */
 
     EditText editPDFName, txt_pdfName_cse;
 
@@ -59,15 +57,19 @@ public class assignments extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignments);
 
-
-         buttonUpload=(Button) findViewById(R.id.buttonUpload);
+//old upload_images
+        /*buttonUpload=(Button) findViewById(R.id.buttonUpload);*/
         buttonUpload_cse = (Button) findViewById(R.id.buttonUpload_cse);
 
-        editPDFName = (EditText)findViewById(R.id.txt_pdfName);
+
+        //old upload_images
+        /* editPDFName = (EditText)findViewById(R.id.txt_pdfName);*/
         editPDFName = (EditText) findViewById(R.id.txt_pdfName_cse);
 
-         storageReference=FirebaseStorage.getInstance().getReference();
-         databaseReference = FirebaseDatabase.getInstance().getReference("images");
+        storageReference = FirebaseStorage.getInstance().getReference();
+
+        //old upload_images
+        /* databaseReference = FirebaseDatabase.getInstance().getReference("images");*/
         databaseReference = FirebaseDatabase.getInstance().getReference("cse");
 
 
@@ -75,31 +77,45 @@ public class assignments extends AppCompatActivity  {
            /*buttonChoose.setOnClickListener(this);
            buttonUpload.setOnClickListener(this);*/
 
-
-        buttonUpload.setOnClickListener(new View.OnClickListener() {
+        //old upload_images
+       /* buttonUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 selectPDFFile_imgs();
 
             }
-        });
+        });*/
+
+
         buttonUpload_cse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectPDFFile_cse();
 
-                Toast.makeText(assignments.this, "CSE WORKING", Toast.LENGTH_SHORT).show();
+                if (editPDFName.getText().toString().isEmpty()) {
+                    editPDFName.setError("Please Enter The Name");
+                } else {
+                    selectPDFFile_cse();
+                }
+
+
             }
         });
     }/////////////////////////////////////////////////////////// ON CREATE ENDS ////////////////////////////////////////////////////////////
 
-
-    private void selectPDFFile_imgs() {
-        Intent intent = new Intent();
-        intent.setType("*/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"Select PDF File"),1);
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        editPDFName.setText("");
     }
+
+
+//old upload_images
+    ///private void selectPDFFile_imgs() {
+    //     Intent intent = new Intent();
+    //   intent.setType("*/*");
+    // intent.setAction(Intent.ACTION_GET_CONTENT);
+    //startActivityForResult(Intent.createChooser(intent,"Select PDF File"),1);
+    //}*//
 
     private void selectPDFFile_cse() {
         Intent intent = new Intent();
@@ -110,12 +126,6 @@ public class assignments extends AppCompatActivity  {
     }
 
 
-/*private void showFileChooser(){
-       Intent intent= new Intent(Intent.ACTION_VIEW);
-       intent.setType("image/*");
-       intent.setAction(Intent.ACTION_GET_CONTENT);
-       startActivityForResult(Intent.createChooser(intent,"select an image"), PICK_IMAGE_REQUEST);}*/
-
 
 
 
@@ -123,8 +133,8 @@ public class assignments extends AppCompatActivity  {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-
-        if (requestCode==1 && resultCode==RESULT_OK && data != null && data.getData()!=null)
+        //old upload_images
+        /*if (requestCode==1 && resultCode==RESULT_OK && data != null && data.getData()!=null)
         {
             if (data.getData()!=null){
            uploadPDFFile(data.getData());
@@ -133,7 +143,8 @@ public class assignments extends AppCompatActivity  {
             else{
                 Toast.makeText(this, "NO FILE CHOOSEN", Toast.LENGTH_SHORT).show();
             }
-        } else if (requestCode == 2 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+        }*/
+        if (requestCode == 2 && resultCode == RESULT_OK && data != null && data.getData() != null) {
             if (data.getData() != null) {
                 uploadPDFFile_cse(data.getData());
             } else {
@@ -180,7 +191,9 @@ public class assignments extends AppCompatActivity  {
 
     }
 
-    private void uploadPDFFile(Uri data) {// imgs//
+
+    //old upload_images
+    /*private void uploadPDFFile(Uri data) {// imgs//
         final ProgressDialog progressDialog= new ProgressDialog(this);
         progressDialog.setTitle("Uploading..");
         progressDialog.show();
@@ -214,7 +227,10 @@ public class assignments extends AppCompatActivity  {
         });
 
 
-    }
+    }*/
+
+
+
 
   /*  private void uploadFile(){
 
@@ -253,9 +269,11 @@ public class assignments extends AppCompatActivity  {
         }
     }*/
 
-    public void btn_action(View view) {
+
+    //old upload_images
+    /*public void btn_action(View view) {
         startActivity(new Intent(getApplicationContext(),Main2Activity.class));
-    }
+    }*/
 
     public void btn_action_cse(View view) {
         startActivity(new Intent(getApplicationContext(), cse_asnmnt.class));

@@ -5,8 +5,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -60,6 +64,7 @@ private static final String TAG ="my_loginn";
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 */
 
+
        /* FirebaseUser currentUser=mAuth.getCurrentUser();
         if (currentUser==null){
 
@@ -81,20 +86,24 @@ private static final String TAG ="my_loginn";
         toolbar.setTitle("login");
 
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        Context context = this;
+        if (InternetConnection.checkConnection(context)) {
+            // Its Available...
 
-        google_button = findViewById(R.id.google_button);
-        mAuth=FirebaseAuth.getInstance();
-        mregister = findViewById(R.id.register_here);
-        mregister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Activity_Register.class));
-            }
-        });
+            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestEmail()
+                    .build();
+            mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+            google_button = findViewById(R.id.google_button);
+            mAuth = FirebaseAuth.getInstance();
+            mregister = findViewById(R.id.register_here);
+            mregister.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(getApplicationContext(),Activity_Register.class));
+                }
+            });
 
         /*mregister = findViewById(R.id.register_here);
         mregister.setOnClickListener(new View.OnClickListener() {
@@ -106,21 +115,28 @@ private static final String TAG ="my_loginn";
 /*
         button2=(Button) findViewById(R.id.button2);
 */
-        mEmailField=(EditText) findViewById(R.id.email_et);
-        mPasswordField=(EditText)findViewById(R.id.password_et);
-        mLoginBtn=(Button) findViewById(R.id.login_btn);
-        mforgot = findViewById(R.id.forgotpassword);
-        google_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switch(view.getId()){
-                    case R.id.google_button:
-                    SignIn();
-                    break;
-                }
+            mEmailField = (EditText) findViewById(R.id.email_et);
+            mPasswordField = (EditText) findViewById(R.id.password_et);
+            mLoginBtn = (Button) findViewById(R.id.login_btn);
+            mforgot = findViewById(R.id.forgotpassword);
 
-            }
-        });
+            String userName = mEmailField.getText().toString();
+            SharedPreferences prefs = this.getSharedPreferences(
+                    "com.example.app", Context.MODE_PRIVATE);
+            prefs.edit().putString("name", userName).apply();
+
+
+            google_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    switch (view.getId()) {
+                        case R.id.google_button:
+                            SignIn();
+                            break;
+                    }
+
+                }
+            });
         /*mAuthListener=new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -133,81 +149,109 @@ private static final String TAG ="my_loginn";
         };*/
 
 
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            mLoginBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-                startSignin();
-
-                String email = mEmailField.getText().toString();
-                Intent intent = new Intent(my_loginn.this, profile.class);
-                intent.putExtra("email", email);
-                startActivity(intent);
-            }
-        });
+                    startSignin();
 
 
-        mforgot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final EditText resetmail = new EditText(v.getContext());
-                final AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
-                passwordResetDialog.setTitle("reset password");
-                passwordResetDialog.setMessage("enter your email");
-                passwordResetDialog.setView(resetmail);
-
-                passwordResetDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(final DialogInterface dialog, int which) {
-
-                        String email = resetmail.getText().toString();
-                        if (TextUtils.isEmpty(email)) {
-                          //  resetmail.setError("Please Provide valid mail !!");
-
-                            Toast.makeText(my_loginn.this, "please provide mail !!", Toast.LENGTH_SHORT).show();
-                        } else {
+                }
+            });
 
 
+            mforgot.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final EditText resetmail = new EditText(v.getContext());
+                    final AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
+                    passwordResetDialog.setTitle("reset password");
+                    passwordResetDialog.setMessage("enter your email");
+                    passwordResetDialog.setView(resetmail);
 
-                            final String mail = resetmail.getText().toString().trim();
+                    passwordResetDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(final DialogInterface dialog, int which) {
+
+                            String email = resetmail.getText().toString();
+                            if (TextUtils.isEmpty(email)) {
+                                //  resetmail.setError("Please Provide valid mail !!");
+
+                                Toast.makeText(my_loginn.this, "please provide mail !!", Toast.LENGTH_SHORT).show();
+                            } else {
+
+
+                                final String mail = resetmail.getText().toString().trim();
                            /* if (mail.equals("null")) {
                                 resetmail.setError("please provide mail !");
                                // Toast.makeText(my_loginn.this, "enter your email ", Toast.LENGTH_SHORT).show();
                             }*/
 
-                            mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
+                                mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
 
 
-                                    Toast.makeText(my_loginn.this, "reset link sent to your mail", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(my_loginn.this, "reset link sent to your mail", Toast.LENGTH_SHORT).show();
 
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(my_loginn.this, "Error ! reset link failed", Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(my_loginn.this, "Error ! reset link failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
                         }
-                    }
-                });
-                passwordResetDialog.setNegativeButton("no", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    });
+                    passwordResetDialog.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
 
-                    }
-                });
-                passwordResetDialog.create().show();
-            }
-        });
+                        }
+                    });
+                    passwordResetDialog.create().show();
+                }
+            });
+
+
+            //Internet Checking
+        } else {
+            Toast.makeText(this, "Please Connect To Internet", Toast.LENGTH_SHORT).show();
+            // Not Available...
+
+
+            AlertDialog alertDialog1 = new AlertDialog.Builder(
+                    my_loginn.this).create();
+
+            // Setting Dialog Title
+            alertDialog1.setTitle("Not Connected to INTERNET");
+
+            // Setting Dialog Message
+            alertDialog1.setMessage("Please Connect To Internet");
+
+            // Setting Icon to Dialog
+            alertDialog1.setIcon(R.drawable.mrce);
+
+            // Setting OK Button
+
+            alertDialog1.setCancelable(false);
+            // Showing Alert Message
+            alertDialog1.show();
+        }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
     private void SignIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -252,6 +296,8 @@ private static final String TAG ="my_loginn";
 
                             startActivity(new Intent(my_loginn.this,MainActivity.class));
                             Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
+
+
                         } else {
                             Toast.makeText(my_loginn.this, "please verify your email address", Toast.LENGTH_SHORT).show();
                         }
@@ -274,7 +320,6 @@ private static final String TAG ="my_loginn";
 
 
     }
-
 
 
 }
