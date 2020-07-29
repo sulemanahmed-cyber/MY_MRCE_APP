@@ -59,12 +59,15 @@ public class assignments extends AppCompatActivity  {
 
 //old upload_images
         /*buttonUpload=(Button) findViewById(R.id.buttonUpload);*/
-        buttonUpload_cse = (Button) findViewById(R.id.buttonUpload_cse);
+
+
+        //commented so as to disable uploading
+        /*  buttonUpload_cse = (Button) findViewById(R.id.buttonUpload_cse);*/
 
 
         //old upload_images
         /* editPDFName = (EditText)findViewById(R.id.txt_pdfName);*/
-        editPDFName = (EditText) findViewById(R.id.txt_pdfName_cse);
+        /*editPDFName = (EditText) findViewById(R.id.txt_pdfName_cse);*/
 
         storageReference = FirebaseStorage.getInstance().getReference();
 
@@ -87,7 +90,7 @@ public class assignments extends AppCompatActivity  {
         });*/
 
 
-        buttonUpload_cse.setOnClickListener(new View.OnClickListener() {
+      /*  buttonUpload_cse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -99,14 +102,8 @@ public class assignments extends AppCompatActivity  {
 
 
             }
-        });
+        });*/
     }/////////////////////////////////////////////////////////// ON CREATE ENDS ////////////////////////////////////////////////////////////
-
-    @Override
-    protected void onPostResume() {
-        super.onPostResume();
-        editPDFName.setText("");
-    }
 
 
 //old upload_images
@@ -117,24 +114,27 @@ public class assignments extends AppCompatActivity  {
     //startActivityForResult(Intent.createChooser(intent,"Select PDF File"),1);
     //}*//
 
-    private void selectPDFFile_cse() {
-        Intent intent = new Intent();
-        intent.setType("*/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select PDF File"), 2);
+    //private void selectPDFFile_cse() {
+    //Intent intent = new Intent();
+    //intent.setType("*/*");
+    //intent.setAction(Intent.ACTION_GET_CONTENT);
+    //  startActivityForResult(Intent.createChooser(intent, "Select PDF File"), 2);
 
-    }
-
-
+    //}
 
 
+
+
+/*
+    //commented so as to disable uploading
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         //old upload_images
-        /*if (requestCode==1 && resultCode==RESULT_OK && data != null && data.getData()!=null)
+        */
+/*if (requestCode==1 && resultCode==RESULT_OK && data != null && data.getData()!=null)
         {
             if (data.getData()!=null){
            uploadPDFFile(data.getData());
@@ -143,7 +143,8 @@ public class assignments extends AppCompatActivity  {
             else{
                 Toast.makeText(this, "NO FILE CHOOSEN", Toast.LENGTH_SHORT).show();
             }
-        }*/
+        }*//*
+
         if (requestCode == 2 && resultCode == RESULT_OK && data != null && data.getData() != null) {
             if (data.getData() != null) {
                 uploadPDFFile_cse(data.getData());
@@ -153,8 +154,11 @@ public class assignments extends AppCompatActivity  {
         }
 
     }
+*/
 
-    private void uploadPDFFile_cse(Uri data) {
+
+    //commented so as to disable uploading
+   /* private void uploadPDFFile_cse(Uri data) {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Uploading..");
@@ -189,7 +193,7 @@ public class assignments extends AppCompatActivity  {
         });
 
 
-    }
+    }*/
 
 
     //old upload_images

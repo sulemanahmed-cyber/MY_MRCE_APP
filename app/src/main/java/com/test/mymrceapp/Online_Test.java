@@ -10,10 +10,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.GridView;
 
+import static com.test.mymrceapp.Splash.catList;
+
+/*
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.test.mymrceapp.Splash.catList;
+import static com.test.mymrceapp.Splash.catList;*/
 
 public class Online_Test extends AppCompatActivity {
     private GridView catgrid;
@@ -39,6 +42,7 @@ public class Online_Test extends AppCompatActivity {
         catList.add("cat4");
         catList.add("cat5");
         catList.add("cat6");*/
+
         CategoryGridAdapter adapter = new CategoryGridAdapter(catList);
         catgrid.setAdapter(adapter);
 

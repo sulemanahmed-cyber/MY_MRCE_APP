@@ -62,17 +62,16 @@ public class Splash extends AppCompatActivity {
 
     }
 
-   private void loadData() {
-        catList.clear();
-        firestore.collection("Online_Test").document("Categories")
-                .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if(task.isSuccessful())
-                {
-                    DocumentSnapshot doc= task.getResult();
-                    if (doc.exists()){
-                        long count = (long)doc.get("COUNT");
+  private void loadData() {
+      catList.clear();
+      firestore.collection("Online_Test").document("Categories")
+              .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+          @Override
+          public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+              if (task.isSuccessful()) {
+                  DocumentSnapshot doc = task.getResult();
+                  if (doc.exists()) {
+                      long count = (long) doc.get("COUNT");
                         for(int i=1 ; i<= count ; i++){
                             /*String catName = doc.getString("CAT" + String.valueOf(i) + "_NAME");
                             String catID = doc.getString("CAT" + String.valueOf(i) + "_ID");

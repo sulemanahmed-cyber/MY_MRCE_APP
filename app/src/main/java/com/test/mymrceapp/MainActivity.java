@@ -41,6 +41,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        log = findViewById(R.id.log);
 
 
         gridLayout = findViewById(R.id.gridLayout5);
@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String name = prefs.getString("name", "");
 
-        log.setText(name);
 
 
         gallery_admin.setOnClickListener(new View.OnClickListener() {
@@ -120,24 +119,22 @@ public class MainActivity extends AppCompatActivity {
 */
 
 
-
-
-
         setToggleEvent(gridLayout);
-        models=new ArrayList<>();
-        models.add(new Model(R.drawable.the_nn,"Sri. Ch. Malla Reddy","Founder Chairman, MRGI"));
-        models.add(new Model(R.drawable.pres_bhadra,"Dr. Ch. Bhadra Reddy","(President, MRGI)"));
-        models.add(new Model(R.drawable.nss_1,"nss","this is Nss"));
-        models.add(new Model(R.drawable.nss_1,"nss_1","this is nss_1"));
+        models = new ArrayList<>();
+        models.add(new Model(R.drawable.the_nn, "Sri. Ch. Malla Reddy", "Founder Chairman, MRGI"));
+        models.add(new Model(R.drawable.pres_bhadra, "Dr. Ch. Bhadra Reddy", "President, MRGI"));
+        models.add(new Model(R.drawable.mahender, "Dr. Ch. Mahender Reddy", "Secretary,MRGI"));
+        models.add(new Model(R.drawable.john_paul, "Dr.P. John Paul ", "Principal,MRCE"));
+        models.add(new Model(R.drawable.tv_reddy, "Dr.T.V. Reddy ", "Vice-Principal,MRCE"));
 
-        adapter=new Adapter(models,this);
+        adapter = new Adapter(models, this);
 
-        viewPager=findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
-        viewPager.setPadding(10,0,130,0);
-         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-             @Override
-             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        viewPager.setPadding(10, 0, 130, 0);
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
              }
 
@@ -206,27 +203,13 @@ public class MainActivity extends AppCompatActivity {
         });*/
 
 
-
-
-        //firebase
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                        if (task.isSuccessful()){
-                            String token = task.getResult().getToken();
-                            String message = getString(R.string.fcm_token,token);
-                        }
-
-                    }
-                });
-
         //viewflipper
-        int images []={R.drawable.mrce1,R.drawable.ss_mrce,R.drawable.ss_all_sit};
-        v_flipper=findViewById(R.id.v_flipper);
-               for (int image:images){
-                   flipperImages(image);
-               }
+        int images[] = {R.drawable.mrce_main,/*R.drawable.mrce_broch,*/R.drawable.ss_mrce, R.drawable.mrce_hecd, R.drawable.mrdd, R.drawable.mrce_cancer
+        };
+        v_flipper = findViewById(R.id.v_flipper);
+        for (int image : images) {
+            flipperImages(image);
+        }
 
     /*   v_flipper.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -235,15 +218,30 @@ public class MainActivity extends AppCompatActivity {
                startActivity(intent);
            }
        });*/
+
+        //firebase
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        if (task.isSuccessful()) {
+                            String token = task.getResult().getToken();
+                            String message = getString(R.string.fcm_token, token);
+                        }
+
+                    }
+                });
+
+
         //toolbar and navigation code <navstarts>
         setUpToolbar();
-        navigationView= (NavigationView)findViewById(R.id.navigation_menu);
+        navigationView = (NavigationView) findViewById(R.id.navigation_menu);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-              switch(menuItem.getItemId()) {
-                  case R.id.nav_home:
-                      Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                switch (menuItem.getItemId()) {
+                    case R.id.nav_home:
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                       startActivity(intent);
                       /*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*/
                       break;
@@ -338,11 +336,15 @@ public class MainActivity extends AppCompatActivity {
                       startActivity(intent13);
                       break;*/
 
-                  case R.id.nav_login:
-                      startActivity(new Intent(getApplicationContext(),my_loginn.class));
+                    case R.id.nav_login:
+                        startActivity(new Intent(getApplicationContext(), my_loginn.class));
+                        break;
+                    case R.id.nav_placements:
+                        startActivity(new Intent(getApplicationContext(), placements.class));
+                        break;
 
 
-              }
+                }
 
                 return false;
             }

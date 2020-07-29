@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#B2EBF2"
+    android:orientation="vertical"
     tools:context=".assignments">
 
 
@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_40sdp">
 
         <!--//old upload_images-->
         <!-- <TextView
@@ -50,43 +51,44 @@
              android:onClick="btn_action"
              android:text="view Assignments (images/)" />
  -->
+        <!--
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:gravity="center"
-            android:text="CSE ASSIGNMENTS"
-            android:textColor="#37474f"
-            android:textSize="@dimen/_30ssp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="CSE ASSIGNMENTS"
+                    android:textColor="#37474f"
+                    android:textSize="@dimen/_30ssp" />
 
-        <Button
+                <Button
 
-            android:id="@+id/buttonUpload_cse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Upload  (cse_asnmnt/)" />
+                    android:id="@+id/buttonUpload_cse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Upload  (cse_asnmnt/)" />
 
-        <EditText
-            android:id="@+id/txt_pdfName_cse"
-            android:layout_width="match_parent"
-            android:textColor="#37474f"
-            android:layout_height="wrap_content"
-            android:hint="Enter PDF File Name  (cse_asnmnt/)"
-            android:textSize="22sp" />
+                <EditText
+                    android:id="@+id/txt_pdfName_cse"
+                    android:layout_width="match_parent"
+                    android:textColor="#37474f"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter PDF File Name  (cse_asnmnt/)"
+                    android:textSize="22sp" />
+        -->
 
         <Button
             android:id="@+id/view_cse"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/draw_ripple_bordered"
             android:onClick="btn_action_cse"
-            android:text="view Assignments (cse_asnmnt/)" />
+            android:text="view Assignments\t\n (CSE)" />
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

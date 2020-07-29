@@ -13,7 +13,7 @@
         android:layout_height="@dimen/_240sdp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_15sdp"
-        android:src="@drawable/mrce1" />
+        android:src="@drawable/mrce_main" />
 
 
     <LinearLayout

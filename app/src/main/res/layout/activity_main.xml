@@ -118,25 +118,12 @@
                     </LinearLayout>-->
                 </LinearLayout>
 
-
-                <TextView
-                    android:id="@+id/log"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Logged in"
-                    android:textSize="@dimen/_25ssp"
-                    android:visibility="visible" />
-
-
-
                 <ViewFlipper
                     android:id="@+id/v_flipper"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:background="@drawable/borderrss"
                     android:paddingTop="@dimen/_10sdp" />
-
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/viewPager"
                     android:layout_width="match_parent"
@@ -146,12 +133,15 @@
 
                     android:overScrollMode="always">
 
+
                 </androidx.viewpager.widget.ViewPager>
 
                 <Button
                     android:id="@+id/gallery_admin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/draw_ripple_bordered"
+
                     android:text="GALLERY ADMIN" />
 
                 <GridLayout
@@ -472,37 +462,37 @@
 
                     />
 
-                <Button
-                    android:id="@+id/my_login"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/draw_ripple_bordered"
-                    android:text="login" />
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp">
 
-                <!--   <Button
-                       android:id="@+id/my_abt"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_gravity="center_vertical"
-                       android:onClick="my_register"
-                       android:text="\t\tAbout Developers\t\t"
-                       android:textColor="#49274a"
-                       android:background="@drawable/bt_bg"/>-->
+                    <Button
 
-                <Button
-                    android:id="@+id/logout"
-                    android:layout_width="@dimen/_60sdp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
+                        android:id="@+id/my_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/draw_ripple_bordered"
+                        android:text="login" />
 
-                    android:layout_marginTop="0dp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:background="@drawable/draw_ripple_bordered"
 
-                    android:onClick="logout"
-                    android:text="logout"
+                    <Button
+                        android:id="@+id/logout"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
 
-                    tools:ignore="HardcodedText" />
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/draw_ripple_bordered"
+
+                        android:onClick="logout"
+                        android:text="logout"
+
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
 
 
                 <TextView

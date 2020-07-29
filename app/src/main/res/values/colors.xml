@@ -23,8 +23,10 @@
     <color name="brown">#442c2e</color>
     <color name="light_green">#b9e4c9</color>
     <color name="dark_green">#37966f</color>
-       <color name="light_purple">#e1bee7</color>
+    <color name="light_purple">#e1bee7</color>
     <color name="primary">#109689</color>
     <color name="Dark">#00797f</color>
     <color name="d">#b5e577</color>
+    <color name="dark_button">#37474f</color>
+    <color name="toolbar">#0097A7</color>
 </resources>

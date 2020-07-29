@@ -2,9 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 
     >
-    
-    <group
-        android:checkableBehavior="single">
+
+    <group android:checkableBehavior="single">
         <item
 
             android:id="@+id/nav_home"
@@ -13,85 +12,82 @@
             android:title="HOME" />
         <item
             android:id="@+id/nav_syllabus"
-            android:title="Syllabus"
-            android:icon="@drawable/ic_library_books_black_24dp"/>
+            android:icon="@drawable/ic_library_books_black_24dp"
+            android:title="Syllabus" />
         <item
             android:id="@+id/nav_cources"
-            android:title="Courses"
-            android:icon="@drawable/ic_view_module_black_24dp"/>
+            android:icon="@drawable/ic_view_module_black_24dp"
+            android:title="Courses" />
         <item
             android:id="@+id/nav_gallery"
-            android:title="Gallery"
             android:icon="@drawable/ic_image_black_24dp"
+            android:title="Gallery"
 
             />
         <item
             android:id="@+id/nav_bus_routes"
             android:icon="@drawable/ic_directions_bus_black_24dp"
-            android:title="Bus routes"/>
-        <item
-            android:id="@+id/nav_notice"
-            android:title="Notice"
-        android:icon="@drawable/ic_comment_black_24dp"
-        />
-
-        <item
-            android:id="@+id/nav_faculty"
-            android:title="Faculty"
-            android:icon="@drawable/ic_supervisor_account_cyan_24dp"
-            />
-        <item
-            android:id="@+id/nav_events"
-            android:title="Events"
-        android:icon="@drawable/ic_event_black_24dp"
-        />
-        <item
-            android:id="@+id/nav_studentc"
-            android:title="Student chapters"
-            android:icon="@drawable/ic_streetview_black_24dp"
-            />
-        <item
-            android:id="@+id/nav_cells"
-            android:title="Cells"
-        android:icon="@drawable/ic_cell_black_24dp"/>
-        <item
-            android:id="@+id/nav_notification"
-            android:icon="@drawable/ic_notificationsmmmmm_none_black_24dp"
-            android:title="Notification"/>
-
-
+            android:title="Bus routes" />
         <item
             android:id="@+id/nav_assignment"
             android:icon="@drawable/ic_cell_black_24dp"
-            android:title="Assignment"
-            />
+            android:title="Assignment" />
 
 
         <item
             android:id="@+id/nav_quiz"
             android:icon="@drawable/ic_cell_black_24dp"
-            android:title="Quiz"
-            />
+            android:title="Quiz" />
+        <item
+            android:id="@+id/nav_notice"
+            android:icon="@drawable/ic_comment_black_24dp"
+            android:title="Notice" />
+
+        <item
+            android:id="@+id/nav_faculty"
+            android:icon="@drawable/ic_supervisor_account_cyan_24dp"
+            android:title="Faculty" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Events" />
+        <item
+            android:id="@+id/nav_studentc"
+            android:icon="@drawable/ic_streetview_black_24dp"
+            android:title="Student chapters" />
+        <item
+            android:id="@+id/nav_cells"
+            android:icon="@drawable/ic_cell_black_24dp"
+            android:title="Cells" />
+
+        <item
+            android:id="@+id/nav_placements"
+            android:icon="@drawable/ic_baseline_supervised_user_circle_24"
+            android:title="Placements" />
+
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_baseline_card_membership_24"
+            android:title="Admin" />
+
+
         <item
             android:id="@+id/nav_canteen"
-            android:title="Canteen"
-        android:icon="@drawable/ic_add_shopping_cartt_black_24dp"/>
+            android:icon="@drawable/ic_add_shopping_cartt_black_24dp"
+            android:title="Canteen" />
         <item
             android:id="@+id/nav_contact"
-            android:title="Contact"
             android:icon="@drawable/ic_call_blackk_24dp"
-            />
-       <!-- <item
-            android:id="@+id/nav_dum_1"
-            android:title="Dummy_1"
-            android:icon="@drawable/ic_add_black_24dp"/>-->
+            android:title="Contact" />
+        <!-- <item
+             android:id="@+id/nav_dum_1"
+             android:title="Dummy_1"
+             android:icon="@drawable/ic_add_black_24dp"/>-->
         <item
             android:id="@+id/nav_login"
             android:title="login"
-            
-            />
-
-
+            android:icon="@drawable/ic_baseline_call_made_24" />
 
 
     </group>
