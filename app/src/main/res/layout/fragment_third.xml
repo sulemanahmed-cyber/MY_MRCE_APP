@@ -10,9 +10,9 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_240sdp"
+        android:layout_height="@dimen/_213sdp"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_15sdp"
+
         android:src="@drawable/mrce_main" />
 
 
@@ -46,10 +46,10 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="128dp"
             android:fontFamily="@font/raleway_semibold"
             android:gravity="top"
-            android:paddingBottom="@dimen/_20sdp"
+
             android:text="Approved By AICTE-NewDelhi \n Affiliated To JNTUH\nAccredited by NBA and NAAC\n ISO 9001:2015 Certifies Institution\nRecognition of College Under Section 2(f) and 12(b) of UGC Act,1956\nAccredited By ISO-USA"
             android:textAlignment="center" />
 
@@ -81,18 +81,27 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/_20ssp" />
 
-            <TextView
-                android:id="@+id/slidethreenext"
+
+            <LinearLayout
+                android:id="@+id/done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_80sdp">
 
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/cousine_bold"
-                android:paddingLeft="@dimen/_80sdp"
-                android:text="@string/done"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/_20ssp" />
+                <TextView
+                    android:id="@+id/slidethreenext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/cousine_bold"
+
+                    android:text="@string/done"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_20ssp" />
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 

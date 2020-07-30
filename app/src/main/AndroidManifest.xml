@@ -52,7 +52,6 @@
             android:name=".ui.login.my_loginActivity"
             android:label="@string/title_activity_my_login" />
         -->
-        <activity android:name=".pdfviewer" />
         <activity
             android:name=".bus_routes"
             android:parentActivityName=".MainActivity" />

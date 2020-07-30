@@ -3,56 +3,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3140C4FF"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#3140C4FF"
     tools:context=".SecondFragment">
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/_170sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_15sdp"
         android:src="@drawable/mrce" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title2"
-        android:textSize="@dimen/_22ssp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
         android:fontFamily="@font/cousine_bold"
-        android:layout_marginTop="@dimen/_35sdp"
+        android:text="Vision"
         android:textColor="@color/colorAccent"
-        android:layout_gravity="center"/>
+        android:textSize="@dimen/_17ssp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_60sdp"
         android:fontFamily="@font/montserrat_bold"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:text="@string/Description"
+        android:scrollbars="vertical"
         android:textColor="@color/brown"
-        android:textSize="@dimen/_18ssp"/>
+        android:text="To emerge as a Center of Excellence for producing professionals who shall be the leaders in technology innovation, entrepreneurship,management and in turn contribute for advancement of society and human kind."
+        android:textSize="@dimen/_12ssp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:fontFamily="@font/cousine_bold"
+        android:text="Mission"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_17ssp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:scrollbars="vertical"
+        android:text="M1. To provide an environment of learning in emerging technologies.
+M2. To nurture a state of art teaching learning process and RD culture.
+M3. To foster networking with Alumni, Industry, Institutes of repute and other stakeholders for effective interaction.
+M4. To practice and promote high standards of ethical values through societal commitment."
+        android:textColor="@color/brown"
+        android:textSize="@dimen/_12ssp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/_150sdp"
+
+        android:paddingTop="@dimen/_10sdp"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/slidetwoback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
-            android:id="@+id/slidetwoback"
-            android:textAlignment="center"
             android:focusable="true"
-            android:textColor="@color/colorAccent"
-
-            android:text="@string/back"
             android:fontFamily="@font/cousine_bold"
+            android:text="@string/back"
+
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
             android:textSize="@dimen/_20ssp" />
 
         <TextView
