@@ -265,10 +265,10 @@ public class MainActivity extends AppCompatActivity {
                       Intent intent4 = new Intent(getApplicationContext(), bus_routes.class);
                       startActivity(intent4);
                       break;
-                  case R.id.nav_notice:
+                /*  case R.id.nav_notice:
                       Intent intent5 = new Intent(getApplicationContext(),notice.class);
                       startActivity(intent5);
-                      break;
+                      break;*/
 
                   case R.id.nav_faculty:
                       Intent intent6 = new Intent(getApplicationContext(),faculty.class);

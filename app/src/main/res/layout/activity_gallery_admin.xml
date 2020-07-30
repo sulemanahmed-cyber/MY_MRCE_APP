@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B2EBF2"
     android:padding="16dp"
     tools:context=".gallery_admin">
 
@@ -11,6 +12,7 @@
         android:id="@+id/button_choose_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/light_green"
         android:text="Choose file" />
 
     <EditText
@@ -42,6 +44,7 @@
         android:id="@+id/button_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/light_green"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Upload" />
@@ -55,6 +58,7 @@
         android:layout_marginStart="25dp"
         android:layout_toEndOf="@+id/button_upload"
         android:gravity="center"
+
         android:text="Show Uploads"
         android:textSize="16sp" />
 

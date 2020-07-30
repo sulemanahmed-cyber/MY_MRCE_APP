@@ -3,6 +3,8 @@ package com.test.mymrceapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -26,15 +28,23 @@ import com.google.firebase.storage.UploadTask;
 public class college_admin extends AppCompatActivity {
 
     EditText editPDFName, editPDFName_cse;
+    DrawerLayout drawerLayout;
     DatabaseReference databaseReference;
     private Button buttonUpload, buttonUpload_cse;
     private Uri filepath;
     private StorageReference storageReference;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_college_admin);
+        toolbar = findViewById(R.id.toolbar_admin);
+        drawerLayout = findViewById(R.id.drawer_admin);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         /*buttonUpload = (Button) findViewById(R.id.buttonUpload);*/
         buttonUpload_cse = (Button) findViewById(R.id.buttonUpload_cse);
 //old upload_images

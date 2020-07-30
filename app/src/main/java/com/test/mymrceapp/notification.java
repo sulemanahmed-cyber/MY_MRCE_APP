@@ -37,8 +37,8 @@ public class notification extends AppCompatActivity {
                     startActivity(intent);
                 }
 
-                if (password.getText().toString().equals("9966")) {
-                    Toast.makeText(notification.this, "PASSWORD WORKING", Toast.LENGTH_SHORT).show();
+                if (password.getText().toString().equals("8899")) {
+                    Toast.makeText(notification.this, "CORRECT PASSWORD", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(notification.this, "WRONG PASSWORD", Toast.LENGTH_SHORT).show();
 

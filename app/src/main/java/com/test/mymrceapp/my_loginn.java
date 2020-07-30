@@ -285,6 +285,8 @@ private static final String TAG ="my_loginn";
         String password = mPasswordField.getText().toString();
 
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            mEmailField.setError("Enter your email id");
+            mPasswordField.setError("enter your password");
             Toast.makeText(this, "empty details", Toast.LENGTH_SHORT).show();
         } else {
 

@@ -50,14 +50,16 @@
 
     <Button
         android:layout_width="match_parent"
+        android:id="@+id/sa_done"
+        android:text="DONE"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
 
-android:layout_gravity="center"
-        android:text="DONE"
+        android:layout_gravity="center"
+
         android:textSize="32sp"
         android:textStyle="bold"
-        android:id="@+id/sa_done"
+
         android:layout_marginTop="250dp"
         android:background="@drawable/round_corner"
         android:layout_height="wrap_content" />
