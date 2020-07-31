@@ -1,21 +1,44 @@
 <?dxml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_Assign"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B2EBF2"
-    android:orientation="vertical"
     tools:context=".assignments">
 
-
-    <LinearLayout
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Assign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/_40sdp">
+        android:background="#0097A7"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Assignments"></androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/view_cse"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_35sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/lavender"
+        android:background="@drawable/draw_ripple_bordered"
+        android:textSize="@dimen/_22sdp"
+        android:onClick="btn_action_cse"
+        android:text="view Assignments\t\n (CSE)" />
+
+
+
+
+
+</LinearLayout>
+
 
         <!--//old upload_images-->
         <!-- <TextView
@@ -79,16 +102,7 @@
                     android:textSize="22sp" />
         -->
 
-        <Button
-            android:id="@+id/view_cse"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/draw_ripple_bordered"
-            android:onClick="btn_action_cse"
-            android:text="view Assignments\t\n (CSE)" />
-
-    </LinearLayout>
 
 
-</LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

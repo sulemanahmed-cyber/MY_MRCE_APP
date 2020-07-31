@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.test.mymrceapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,7 +23,9 @@
             />
         <activity android:name=".gallery_admin" />
         <activity android:name=".cse_asnmnt" />
-        <activity android:name=".assignments" />
+        <activity android:name=".assignments"
+            android:parentActivityName=".MainActivity"
+            />
         <activity android:name=".Main2Activity" />
         <activity android:name=".quiz" />
         <activity android:name=".Score" />

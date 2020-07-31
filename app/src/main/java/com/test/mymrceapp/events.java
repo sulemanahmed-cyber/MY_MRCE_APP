@@ -39,16 +39,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class events extends AppCompatActivity implements ValueEventListener {
+    Toolbar toolbar;
     TextView tv1, tv2, tv3;
     private FirebaseDatabase firebaseDatabase =FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     private DatabaseReference cseDatabase=databaseReference.child("notice/heading");
     private DatabaseReference itDatabase=databaseReference.child("notice/detail");
+    DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
+        drawerLayout = findViewById(R.id.drawer_events);
+        toolbar = findViewById(R.id.toolbar_events);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("Events");
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar = findViewById(R.id.toolbar_events);
         tv1 = (TextView) findViewById(R.id.tv1);
         tv2 = (TextView) findViewById(R.id.tv2);
         tv3 = (TextView) findViewById(R.id.tv3);

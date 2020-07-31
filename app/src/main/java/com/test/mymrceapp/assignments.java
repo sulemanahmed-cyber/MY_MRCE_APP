@@ -3,6 +3,8 @@ package com.test.mymrceapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -49,6 +51,8 @@ public class assignments extends AppCompatActivity  {
     private Uri filepath;
     private StorageReference storageReference;
     DatabaseReference databaseReference;
+    Toolbar toolbar;
+    DrawerLayout drawerLayout;
 
 
 
@@ -56,6 +60,11 @@ public class assignments extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignments);
+        toolbar = findViewById(R.id.toolbar_Assign);
+        drawerLayout = findViewById(R.id.drawer_Assign);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 //old upload_images
         /*buttonUpload=(Button) findViewById(R.id.buttonUpload);*/
