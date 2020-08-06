@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".canteen"
-    >
+    tools:context=".canteen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,34 +17,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#0097a7"
-            app:title="Canteen"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Canteen">
 
         </androidx.appcompat.widget.Toolbar>
 
-       <SearchView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:queryHint="search here"
-           android:background="#80cbc4"
-           android:iconifiedByDefault="false"
-           android:id="@+id/search">
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#80cbc4"
+            android:iconifiedByDefault="false"
+            android:queryHint="search here">
 
-       </SearchView>
-
-<ListView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#b2fef7"
-    android:elevation="8dp"
-    android:id="@+id/list">
-
-</ListView>
+        </SearchView>
 
 
+        <ImageView
+            android:id="@+id/coca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b2fef7"
+            android:elevation="8dp">
 
+        </ListView>
 
 
     </LinearLayout>

@@ -31,7 +31,7 @@ public class cse_asnmnt extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cse_asnmnt);
-        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        /*search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
@@ -41,7 +41,7 @@ public class cse_asnmnt extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
                 return false;
             }
-        });
+        });*/
 
         myPDFListView = (ListView) findViewById(R.id.pdflist);
         uploadPDFS = new ArrayList<>();

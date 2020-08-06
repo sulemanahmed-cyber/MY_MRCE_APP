@@ -18,14 +18,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".placements"></activity>
         <activity android:name=".profile" />
-        <activity android:name=".college_admin"
-            android:parentActivityName=".MainActivity"
-            />
+        <activity
+            android:name=".college_admin"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".gallery_admin" />
         <activity android:name=".cse_asnmnt" />
-        <activity android:name=".assignments"
-            android:parentActivityName=".MainActivity"
-            />
+        <activity
+            android:name=".assignments"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".quiz" />
         <activity android:name=".Score" />
@@ -46,8 +46,10 @@
         </activity>
         <activity
             android:name=".Activity_Register"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".my_loginn"
             android:parentActivityName=".MainActivity" />
         <!--
@@ -57,44 +59,59 @@
         -->
         <activity
             android:name=".bus_routes"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".dummy_1"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".contact"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".canteen"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".notification"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".cells"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".student_chapters"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".events"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".faculty"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".notice"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" /> <!-- <activity android:name=".bus_routes" /> -->
         <activity
             android:name=".cources"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".gallery"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".syllabus"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".IntroActivity">
 
             <!--

@@ -55,10 +55,11 @@
             android:id="@+id/nav_studentc"
             android:icon="@drawable/ic_streetview_black_24dp"
             android:title="Student chapters" />
-        <item
+
+        <!--<item
             android:id="@+id/nav_cells"
             android:icon="@drawable/ic_cell_black_24dp"
-            android:title="Cells" />
+            android:title="Cells" />-->
 
         <item
             android:id="@+id/nav_placements"

@@ -57,14 +57,17 @@ public class gallery_admin extends AppCompatActivity {
         mEditTextFileName = findViewById(R.id.edit_text_file_name);
         mImageView = findViewById(R.id.image_view);
         mProgressBar = findViewById(R.id.progress_bar);
-        mStorageRef = FirebaseStorage.getInstance().getReference("uploads");
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
+        mStorageRef = FirebaseStorage.getInstance().getReference("uploads/");
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads/");
+
+
         mButtonChooseImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFileChooser();
             }
         });
+
         mButtonUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +86,7 @@ public class gallery_admin extends AppCompatActivity {
             }
         });
     }
+
 
     private void openFileChooser() {
         Intent intent = new Intent();
@@ -137,13 +141,15 @@ public class gallery_admin extends AppCompatActivity {
             });
 
 
-
-
-
-
-
         } else {
             Toast.makeText(this, "No file selected", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+
+        mEditTextFileName.setText("");
     }
 }

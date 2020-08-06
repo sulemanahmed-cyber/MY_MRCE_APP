@@ -283,10 +283,10 @@ public class MainActivity extends AppCompatActivity {
                       Intent intent8 = new Intent(getApplicationContext(),student_chapters.class);
                       startActivity(intent8);
                       break;
-                  case R.id.nav_cells:
+                  /*case R.id.nav_cells:
                       Intent intent9 = new Intent(getApplicationContext(),cells.class);
                       startActivity(intent9);
-                      break;
+                      break;*/
                   case R.id.nav_notification:
                       Intent intent10 = new Intent(getApplicationContext(), notification.class);
                       startActivity(intent10);
