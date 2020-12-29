@@ -52,15 +52,6 @@ public class Adapter extends PagerAdapter {
         title.setText(models.get(position).getTitle());
         desc.setText(models.get(position).getDesc());
 
-    /*    view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("param", models.get(position).getTitle());
-                context.startActivity(intent);
-                // finish();
-            }
-        });*/
 
         container.addView(view, 0);
         return view;

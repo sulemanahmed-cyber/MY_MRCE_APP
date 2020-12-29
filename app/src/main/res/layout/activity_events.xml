@@ -1,80 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:id="@+id/drawer_events"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_events"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#B2EBF2"
 
 
-   >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    >
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_events"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#0097a7"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="events"></androidx.appcompat.widget.Toolbar>
+        android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/_10sdp"
-        android:text="Text VIew 1" />
-   <TextView
-        android:id="@+id/tv2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/_10sdp"
-        android:text="Text view 2" />
-   <TextView
-        android:id="@+id/tv3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/_10sdp"
-        android:text="Text View 3" />
-
-    <EditText
-        android:id="@+id/et_link"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Link" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/bt_upload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Upload" />
-
-        <Button
-            android:id="@+id/bt_move"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Move" />
-        <ListView
-            android:id="@+id/pdflist"
-            android:background="#B2EBF2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp" />
-    </LinearLayout>
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0097a7"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="events"></androidx.appcompat.widget.Toolbar>
 
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/concert_one"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="Event Heading"
+                android:textAlignment="center"
+                android:textColor="#212121"
+                android:textSize="@dimen/_33ssp" />
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line_divider" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/crimson_text_semibold"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="Event Details"
+                android:textColor="#484848"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/crimson_text_semibold"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:text="Event Reference"
+                android:textAlignment="textEnd"
+                android:textColor="#484848"
+                android:textSize="@dimen/_16ssp" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>
 

@@ -76,11 +76,11 @@
             android:paddingTop="@dimen/_10sdp"
             tools:layout_editor_absoluteY="178dp" />
     </com.google.android.material.textfield.TextInputLayout>
-    <CheckBox
+    <!--<CheckBox
         android:layout_width="match_parent"
         android:id="@+id/remember"
         android:text="Remember Me"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"/>-->
 
 
     <Button

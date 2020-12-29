@@ -32,47 +32,10 @@ public class student_chapters extends AppCompatActivity {
 
 
 
-    /*    spinner_1.setOnItemSelectedListener(
-                new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        Toast.makeText(student_chapters.this, "Test_1", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-                }
-
-        );*/
 
 
-        navigationView=findViewById(R.id.navigation_menu);
-        toolbar=findViewById(R.id.toolbar);
-        drawerLayout=findViewById(R.id.drawer_layout);
-        expndbl_csi=findViewById(R.id.expndbl_csi);
-        arrowBtn_Csi=findViewById(R.id.arrowBtn_csi);
-        par_csi=findViewById(R.id.par_csi);
-        grp_csi=findViewById(R.id.grp_csi);
-        grp_csi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (expndbl_csi.getVisibility() == View.GONE) {
-                    TransitionManager.beginDelayedTransition(par_csi, new AutoTransition());
-                    expndbl_csi.setVisibility(View.VISIBLE);
-                    arrowBtn_Csi.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
-                } else {
-                    TransitionManager.beginDelayedTransition(par_csi, new AutoTransition());
-                    expndbl_csi.setVisibility(View.GONE);
-                    arrowBtn_Csi.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
-                }
-            }
-        });
 
 
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     @Override
     public void onBackPressed() {

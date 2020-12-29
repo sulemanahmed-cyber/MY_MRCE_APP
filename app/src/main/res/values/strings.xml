@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MY MRCE APP</string>
+    <string name="app_name"> MRCE </string>
     <string name="play">play</string>
     <string name="fcm_token">FCM Token: %s</string>
     <string name="title1">Welcome</string>

@@ -43,15 +43,15 @@ import java.util.List;
 
 public class my_loginn extends AppCompatActivity {
 
-    private EditText mEmailField,email;
+    private EditText mEmailField, email;
     Toolbar toolbar;
-private EditText mPasswordField,password;
-private Button mLoginBtn,button2;
-TextView mregister,mforgot;
-SignInButton google_button;
-private FirebaseAuth mAuth;
-GoogleSignInClient mGoogleSignInClient;
-int RC_SIGN_IN = 0;
+    private EditText mPasswordField, password;
+    private Button mLoginBtn, button2;
+    TextView mregister, mforgot;
+    SignInButton google_button;
+    private FirebaseAuth mAuth;
+    GoogleSignInClient mGoogleSignInClient;
+    int RC_SIGN_IN = 0;
 /*public static int flag;*/
 private FirebaseAuth.AuthStateListener mAuthListener;
 private static final String TAG ="my_loginn";
@@ -284,19 +284,21 @@ private static final String TAG ="my_loginn";
         String email = mEmailField.getText().toString();
         String password = mPasswordField.getText().toString();
 
-        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(email)) {
             mEmailField.setError("Enter your email id");
+            Toast.makeText(this, "empty Email", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(password)) {
             mPasswordField.setError("enter your password");
-            Toast.makeText(this, "empty details", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "empty Password", Toast.LENGTH_SHORT).show();
         } else {
 
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        if (mAuth.getCurrentUser().isEmailVerified()){
+                    if (task.isSuccessful()) {
+                        if (mAuth.getCurrentUser().isEmailVerified()) {
 
-                            startActivity(new Intent(my_loginn.this,MainActivity.class));
+                            startActivity(new Intent(my_loginn.this, MainActivity.class));
                             Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
 
 
@@ -304,12 +306,10 @@ private static final String TAG ="my_loginn";
                             Toast.makeText(my_loginn.this, "please verify your email address", Toast.LENGTH_SHORT).show();
                         }
 
-                      /*  Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
-                        *//*flag=1;*//*
+                        /*  Toast.makeText(my_loginn.this, "login successfull", Toast.LENGTH_SHORT).show();
+                         *//*flag=1;*//*
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));*/
-                    }
-                    else
-                    {
+                    } else {
                         Toast.makeText(my_loginn.this, "error", Toast.LENGTH_SHORT).show();
                     }
                     /*if (!task.isSuccessful()) {

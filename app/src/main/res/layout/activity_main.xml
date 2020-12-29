@@ -124,6 +124,7 @@
                     android:layout_height="300dp"
                     android:background="@drawable/borderrss"
                     android:paddingTop="@dimen/_10sdp" />
+
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/viewPager"
                     android:layout_width="match_parent"
@@ -136,14 +137,7 @@
 
                 </androidx.viewpager.widget.ViewPager>
 
-                <Button
-                    android:id="@+id/gallery_admin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/draw_ripple_bordered"
-                    android:visibility="invisible"
 
-                    android:text="GALLERY ADMIN" />
 
                 <GridLayout
 
@@ -312,13 +306,13 @@
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_supervisor_account_black_24dp" />
+                                android:src="@drawable/ic_baseline_card_membership_grid" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway_semibold"
-                                android:text="Faculty"
+                                android:text="Admin"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10dp" />
@@ -407,14 +401,14 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
-                                android:src="@drawable/ic_account_balance_black_24dp" />
+                                android:src="@drawable/ic_baseline_check_circle_24" />
 
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway_semibold"
-                                android:text="About clg"
+                                android:text="Quiz"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10sp" />
@@ -476,7 +470,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/draw_ripple_bordered"
-                        android:text="login" />
+                        android:text="Register" />
 
 
                     <Button
@@ -491,7 +485,7 @@
 
                         android:onClick="logout"
                         android:text="logout"
-
+                        android:visibility="invisible"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
 

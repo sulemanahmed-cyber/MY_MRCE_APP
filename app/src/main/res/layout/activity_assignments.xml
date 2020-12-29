@@ -27,8 +27,7 @@
         android:layout_margin="@dimen/_35sdp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/lavender"
-        android:background="@drawable/draw_ripple_bordered"
+        android:backgroundTint="#78909c"
         android:textSize="@dimen/_22sdp"
         android:onClick="btn_action_cse"
         android:text="view Assignments\t\n (CSE)" />

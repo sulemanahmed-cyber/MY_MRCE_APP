@@ -41,10 +41,11 @@ import java.util.List;
 public class events extends AppCompatActivity implements ValueEventListener {
     Toolbar toolbar;
     TextView tv1, tv2, tv3;
-    private FirebaseDatabase firebaseDatabase =FirebaseDatabase.getInstance();
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-    private DatabaseReference cseDatabase=databaseReference.child("notice/heading");
-    private DatabaseReference itDatabase=databaseReference.child("notice/detail");
+    private DatabaseReference db_heading = databaseReference.child("notice/heading");
+    private DatabaseReference db_detail = databaseReference.child("notice/detail");
+    private DatabaseReference db_reference = databaseReference.child("notice/reference");
     DrawerLayout drawerLayout;
 
     @Override
@@ -61,19 +62,24 @@ public class events extends AppCompatActivity implements ValueEventListener {
         tv1 = (TextView) findViewById(R.id.tv1);
         tv2 = (TextView) findViewById(R.id.tv2);
         tv3 = (TextView) findViewById(R.id.tv3);
+
     }
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot){
-   if (dataSnapshot.getValue(String.class)!=null){
+   if (dataSnapshot.getValue(String.class)!=null) {
        String key = dataSnapshot.getKey();
-       if (key.equals("heading")){
-           String cse= (String) dataSnapshot.getValue(String.class);
-           tv1.setText(cse);
+       if (key.equals("heading")) {
+           String heading = (String) dataSnapshot.getValue(String.class);
+           tv1.setText(heading);
        }
-       if (key.equals("detail   ")){
-           String it= (String) dataSnapshot.getValue(String.class);
-           tv2.setText(it);
+       if (key.equals("detail")) {
+           String detail = (String) dataSnapshot.getValue(String.class);
+           tv2.setText(detail);
+       }
+       if (key.equals("reference")) {
+           String reference = (String) dataSnapshot.getValue(String.class);
+           tv3.setText(reference);
        }
    }
 
@@ -88,7 +94,8 @@ public class events extends AppCompatActivity implements ValueEventListener {
     @Override
     protected void onStart() {
         super.onStart();
-        cseDatabase.addValueEventListener(this);
-        itDatabase.addValueEventListener(this);
+        db_heading.addValueEventListener(this);
+        db_detail.addValueEventListener(this);
+        db_reference.addValueEventListener(this);
     }
 }

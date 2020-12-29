@@ -31,17 +31,7 @@ public class cse_asnmnt extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cse_asnmnt);
-        /*search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });*/
 
         myPDFListView = (ListView) findViewById(R.id.pdflist);
         uploadPDFS = new ArrayList<>();
@@ -73,14 +63,7 @@ public class cse_asnmnt extends AppCompatActivity {
                     cse1[i] = uploadPDFS.get(i).getName();
                 }
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, cse1) {
-                  /*  @NonNull
-                    @Override
-                    public View getView(int position, View convertView,  ViewGroup parent) {
-                        View view = super.getView(position, convertView, parent);
-                        TextView myText = (TextView) view.findViewById(android.R.id.text1);
-                        myText.setTextColor(Color.BLACK);
-                        return view;
-                    }*/
+
                 };
 
                 myPDFListView.setAdapter(adapter);

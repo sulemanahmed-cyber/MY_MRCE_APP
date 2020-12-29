@@ -2,6 +2,7 @@
 package com.test.mymrceapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -32,14 +33,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Activity_Register extends AppCompatActivity {
-    EditText mEmail, mPassword, mName, mRollnumber;
+    public EditText mEmail, mPassword, mName, mRollnumber;
     Button mRegister;
     private FirebaseAuth fAuth;
     Toolbar toolbar;
     TextView mlogin;
     Spinner spin_user;
+
     ProgressBar progressBar;
-ArrayAdapter m_users;
+    ArrayAdapter m_users;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,6 +109,8 @@ ArrayAdapter m_users;
             finish();
 
         }
+
+
     }
 
     private void adminLogin() {
@@ -154,6 +159,10 @@ ArrayAdapter m_users;
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(Activity_Register.this, "REGISTRATION SUCCESFUL", Toast.LENGTH_SHORT).show();
+                                        mEmail.setText("");
+                                        mName.setText("");
+                                        mPassword.setText("");
+                                        mRollnumber.setText("");
                                     } else {
                                         Toast.makeText(Activity_Register.this, "An Error occured", Toast.LENGTH_SHORT).show();
 
@@ -187,8 +196,31 @@ ArrayAdapter m_users;
 
 
                 });
+                FirebaseAuth.getInstance().signOut();
+                AlertDialog alertDialog1 = new AlertDialog.Builder(
+                        Activity_Register.this).create();
+
+                // Setting Dialog Title
+                alertDialog1.setTitle("Email Verification");
+
+                // Setting Dialog Message
+                alertDialog1.setMessage("Please Verify Your Email & Login Again\nPlease Check Your Email For Verification");
+
+                // Setting Icon to Dialog
+                alertDialog1.setIcon(R.drawable.mrce);
+
+                // Setting OK Button
+
+                alertDialog1.setCancelable(true);
+                // Showing Alert Message
+                alertDialog1.show();
             }
-        });}
+
+
+        });
+
+
+    }
 
 
     public void studentLogin() {
@@ -237,6 +269,10 @@ ArrayAdapter m_users;
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(Activity_Register.this, "REGISTRATION SUCCESFUL", Toast.LENGTH_SHORT).show();
+                                        mEmail.setText("");
+                                        mName.setText("");
+                                        mPassword.setText("");
+                                        mRollnumber.setText("");
                                     } else {
                                         Toast.makeText(Activity_Register.this, "An Error occured", Toast.LENGTH_SHORT).show();
 
@@ -271,8 +307,29 @@ ArrayAdapter m_users;
 
 
                 });
+                FirebaseAuth.getInstance().signOut();
+                AlertDialog alertDialog1 = new AlertDialog.Builder(
+                        Activity_Register.this).create();
+
+                // Setting Dialog Title
+                alertDialog1.setTitle("Email Verification");
+
+                // Setting Dialog Message
+                alertDialog1.setMessage("Please Verify Your Email & Login Again\nPlease Check Your Email For Verification");
+
+                // Setting Icon to Dialog
+                alertDialog1.setIcon(R.drawable.mrce);
+
+                // Setting OK Button
+
+                alertDialog1.setCancelable(true);
+                // Showing Alert Message
+                alertDialog1.show();
             }
-        });}
+        });
+
+
+    }
 
 }
 

@@ -80,6 +80,8 @@ public class MainAdapter extends BaseExpandableListAdapter {
         {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView=layoutInflater.inflate(R.layout.list_item,null);
+
+
         }
         TextView textView=convertView.findViewById(R.id.list_child);
         textView.setText(child);
@@ -90,3 +92,10 @@ public class MainAdapter extends BaseExpandableListAdapter {
         return true;
     }
 }
+
+
+
+
+
+
+

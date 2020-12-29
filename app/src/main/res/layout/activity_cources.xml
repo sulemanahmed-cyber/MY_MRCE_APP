@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
@@ -57,7 +56,7 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/hs"
+
                             app:layout_constraintDimensionRatio="H,16:9"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -79,8 +78,7 @@
                                 android:id="@+id/circleImage_Hs"
                                 android:layout_width="@dimen/_50sdp"
                                 android:layout_height="@dimen/_50sdp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/hs" />
+                                android:scaleType="centerCrop" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -220,9 +218,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:padding="@dimen/_20sdp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
+                    android:padding="@dimen/_20sdp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -237,7 +235,7 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/computers"
+
                             app:layout_constraintDimensionRatio="H,16:9"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -258,8 +256,7 @@
                                 android:id="@+id/circleImage_Cse"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/computers" />
+                                android:scaleType="centerCrop" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -417,7 +414,7 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/it"
+
                             app:layout_constraintDimensionRatio="H,16:9"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -438,8 +435,7 @@
                                 android:id="@+id/circleImage_It"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/it" />
+                                android:scaleType="centerCrop" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -582,7 +578,7 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/ece"
+
                             app:layout_constraintDimensionRatio="H,16:9"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -603,8 +599,7 @@
                                 android:id="@+id/circleImage_Ece"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/ece" />
+                                android:scaleType="centerCrop" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -747,7 +742,7 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mec"
+
                             app:layout_constraintDimensionRatio="H,16:9"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -768,8 +763,7 @@
                                 android:id="@+id/circleImage_Mec"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/mec" />
+                                android:scaleType="centerCrop" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -913,7 +907,7 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/ite"
+
                             app:layout_constraintDimensionRatio="H,16:9"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -934,8 +928,7 @@
                                 android:id="@+id/circleImage_Ite"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/ite" />
+                                android:scaleType="centerCrop" />
 
                         </androidx.cardview.widget.CardView>
 

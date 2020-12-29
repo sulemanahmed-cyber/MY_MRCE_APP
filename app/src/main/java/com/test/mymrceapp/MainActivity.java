@@ -15,9 +15,12 @@ import android.app.NotificationManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -33,6 +36,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;*/
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.internal.NavigationMenu;
@@ -43,6 +47,8 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 /*
@@ -75,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
         //  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-
         gridLayout = findViewById(R.id.gridLayout5);
         /*button = findViewById(R.id.my_abt);*/
         logout1 = findViewById(R.id.logout1);
@@ -83,28 +88,17 @@ public class MainActivity extends AppCompatActivity {
         logout = findViewById(R.id.logout);
 
 
-        gallery_admin = findViewById(R.id.gallery_admin);
+        fAuth = FirebaseAuth.getInstance();
+        if (fAuth.getCurrentUser() != null) {
+            my_login.setVisibility(View.INVISIBLE);
+            logout.setVisibility(View.VISIBLE);
+        }
 
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String name = prefs.getString("name", "");
-
-
-
-        gallery_admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, com.test.mymrceapp.gallery_admin.class);
-                startActivity(intent);
-
-
-            }
-        });
 
         my_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), my_loginn.class);
+                Intent intent = new Intent(getApplicationContext(), Activity_Register.class);
                 startActivity(intent);
 
             }
@@ -129,78 +123,11 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new Adapter(models, this);
 
+
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
         viewPager.setPadding(10, 0, 130, 0);
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-             }
-
-             @Override
-             public void onPageSelected(int position) {
-
-                /* switch (position){
-                     case 0:
-                         drawerLayout.setBackgroundResource(R.color.cpl);
-                         Toast.makeText(MainActivity.this, "1st page", Toast.LENGTH_SHORT).show();
-                         break;
-
-
-                     case 1:
-
-                         drawerLayout.setBackgroundResource(R.color.brown);
-                         Toast.makeText(MainActivity.this, "second page", Toast.LENGTH_SHORT).show();
-                         break;
-
-                     case 2:
-
-                         drawerLayout.setBackgroundResource(R.color.cpd);
-                         Toast.makeText(MainActivity.this, "third  page", Toast.LENGTH_SHORT).show();
-                         break;
-
-
-                 }*/
-             }
-
-             @Override
-             public void onPageScrollStateChanged(int state) {
-
-             }
-         });
-        Integer[] colors_temp={getResources().getColor(R.color.cpl),
-                getResources().getColor(R.color.cp),
-                getResources().getColor(R.color.cpd),
-                getResources().getColor(R.color.lavender)};
-
-       /* viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (position<(adapter.getCount()-1)&&position<(colors.length-1)){
-                    viewPager.setBackgroundColor(
-                            (Integer) argbEvaluator.evaluate(
-                            positionOffset,
-                            colors[position],
-                            colors[position+1]));
-                }
-                else{
-                    viewPager.setBackgroundColor(colors[colors.length-1]);
-                }
-
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-            }grtthis
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });*/
 
 
         //viewflipper
@@ -231,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-
 
         //toolbar and navigation code <navstarts>
         setUpToolbar();
@@ -270,10 +196,10 @@ public class MainActivity extends AppCompatActivity {
                       startActivity(intent5);
                       break;*/
 
-                  case R.id.nav_faculty:
+                /*  case R.id.nav_faculty:
                       Intent intent6 = new Intent(getApplicationContext(),faculty.class);
                       startActivity(intent6);
-                      break;
+                      break;*/
                   case R.id.nav_events:
                       Intent intent7 = new Intent(getApplicationContext(),events.class);
                       startActivity(intent7);
@@ -325,9 +251,7 @@ public class MainActivity extends AppCompatActivity {
                       //if(/*flag==1*/){
                       Intent intent12 = new Intent(getApplicationContext(), contact.class);
                       startActivity(intent12);
-                      /*}else {*/
 
-                      //}
                       break;
                  /* case R.id.nav_dum_1:
 
@@ -337,7 +261,13 @@ public class MainActivity extends AppCompatActivity {
                       break;*/
 
                     case R.id.nav_login:
-                        startActivity(new Intent(getApplicationContext(), my_loginn.class));
+                        if (fAuth.getCurrentUser() != null) {
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            finish();
+
+                        } else {
+                            startActivity(new Intent(getApplicationContext(), my_loginn.class));
+                        }
                         break;
                     case R.id.nav_placements:
                         startActivity(new Intent(getApplicationContext(), placements.class));
@@ -351,6 +281,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //<navends/>
+
+
     }
 
 
@@ -383,7 +315,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     if(finalI == 4)
                     {
-                        Intent intent = new Intent(MainActivity.this,faculty.class);
+                        Intent intent = new Intent(MainActivity.this, notification.class);
                         startActivity(intent);
                     }
                     if(finalI == 5)
@@ -396,10 +328,9 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this,canteen.class);
                         startActivity(intent);
                     }
-                    if(finalI == 7)
-                    {
-                       /* Intent intent = new Intent(MainActivity.this,dummy_1.class);
-                        startActivity(intent);*/
+                    if(finalI == 7) {
+                        Intent intent = new Intent(MainActivity.this, quiz.class);
+                        startActivity(intent);
                     }
                     if(finalI == 8)
                     {
