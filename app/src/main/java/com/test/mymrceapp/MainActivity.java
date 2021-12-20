@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         models.add(new Model(R.drawable.the_nn, "Sri. Ch. Malla Reddy", "Founder Chairman, MRGI"));
         models.add(new Model(R.drawable.pres_bhadra, "Dr. Ch. Bhadra Reddy", "President, MRGI"));
         models.add(new Model(R.drawable.mahender, "Dr. Ch. Mahender Reddy", "Secretary,MRGI"));
-        models.add(new Model(R.drawable.john_paul, "Dr.P. John Paul ", "Principal,MRCE"));
+        models.add(new Model(R.drawable.principal, "Dr.M Sreedhar Reddy ", "Principal,MRCE"));
         models.add(new Model(R.drawable.tv_reddy, "Dr.T.V. Reddy ", "Vice-Principal,MRCE"));
 
         adapter = new Adapter(models, this);

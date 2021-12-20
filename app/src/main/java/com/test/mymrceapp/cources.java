@@ -29,11 +29,11 @@ public class cources extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
-    LinearLayout expandableView_Hs, expandableView_Cse, expandableView_Ece, expandableView_It, expandableView_Mec, expandableView_Ite;
-    Button arrowBtn_Hs, arrowBtn_Cse, arrowBtn_Ece, arrowBtn_It, arrowBtn_Mec, arrowBtn_Ite;
-    CardView cardView_Hs, cardView_Cse, cardview_Ece, cardview_It, cardview_Mec, cardview_Ite;
+    LinearLayout expandableView_Hs, expandableView_Cse, expandableView_Ece, expandableView_It, expandableView_Mec, expandableView_Ite, expandableView_Csaiml;
+    Button arrowBtn_Hs, arrowBtn_Cse, arrowBtn_Ece, arrowBtn_It, arrowBtn_Mec, arrowBtn_Ite, arrowBtn_Csaiml;
+    CardView cardView_Hs, cardView_Cse, cardview_Ece, cardview_It, cardview_Mec, cardview_Ite, cardview_Csaiml;
     public static Context context;
-    ImageView im_hs, im_it, im_cse, im_ece, im_mec, im_ite, c_im_hs, c_im_it, c_im_cse, c_im_ece, c_im_mec, c_im_ite;
+    ImageView im_hs, im_it, im_cse, im_ece, im_mec, im_ite, im_csaiml, c_im_hs, c_im_it, c_im_cse, c_im_ece, c_im_mec, c_im_ite, c_im_csaiml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class cources extends AppCompatActivity {
         im_mec = (ImageView) findViewById(R.id.imageView_Mec);
         im_ece = (ImageView) findViewById(R.id.imageView_Ece);
         im_ite = (ImageView) findViewById(R.id.imageView_Ite);
+        im_csaiml = (ImageView) findViewById(R.id.imageView_Csaiml);
 
         c_im_hs = (ImageView) findViewById(R.id.circleImage_Hs);
         c_im_cse = (ImageView) findViewById(R.id.circleImage_Cse);
@@ -61,6 +62,7 @@ public class cources extends AppCompatActivity {
         c_im_mec = (ImageView) findViewById(R.id.circleImage_Mec);
         c_im_ece = (ImageView) findViewById(R.id.circleImage_Ece);
         c_im_ite = (ImageView) findViewById(R.id.circleImage_Ite);
+        c_im_csaiml = (ImageView) findViewById(R.id.circleImage_Csaiml);
 
 
         expandableView_Hs = findViewById(R.id.expandableView_Hs);
@@ -69,6 +71,7 @@ public class cources extends AppCompatActivity {
         expandableView_It = findViewById(R.id.expandableView_It);
         expandableView_Mec = findViewById(R.id.expandableView_Mec);
         expandableView_Ite = findViewById(R.id.expandableView_Ite);
+        expandableView_Csaiml = findViewById(R.id.expandableView_Csaiml);
 
 
         arrowBtn_Hs = findViewById(R.id.arrowBtn_Hs);
@@ -77,6 +80,7 @@ public class cources extends AppCompatActivity {
         arrowBtn_It = findViewById(R.id.arrowBtn_It);
         arrowBtn_Mec = findViewById(R.id.arrowBtn_Mec);
         arrowBtn_Ite = findViewById(R.id.arrowBtn_Ite);
+        arrowBtn_Csaiml = findViewById(R.id.arrowBtn_Csaiml);
 
 
         cardView_Hs = findViewById(R.id.cardView_Hs);
@@ -85,6 +89,7 @@ public class cources extends AppCompatActivity {
         cardview_It = findViewById(R.id.cardView_It);
         cardview_Mec = findViewById(R.id.cardView_Mec);
         cardview_Ite = findViewById(R.id.cardView_Ite);
+        cardview_Csaiml = findViewById(R.id.cardView_Csaiml);
 
         context = getApplicationContext();
 
@@ -93,7 +98,8 @@ public class cources extends AppCompatActivity {
         Glide.with(cources.context).load("https://i.ytimg.com/vi/SzJ46YA_RaA/maxresdefault.jpg").into(im_cse);
         Glide.with(cources.context).load("https://assets.skyfilabs.com/images/blog/eceminiproject.jpg").into(im_ece);
         Glide.with(cources.context).load("https://c8.alamy.com/comp/HRP8HD/word-cloud-with-terms-about-information-technology-flat-style-HRP8HD.jpg").into(im_it);
-        Glide.with(cources.context).load("https://excellentacademyofengineering.com/images/project/it-engg.jpg").into(im_ite);
+        Glide.with(cources.context).load("https://www.indiaeducation.net/imagesvr_ce/5631/170203034608_information-technology-header-new.jpg").into(im_ite);
+        Glide.with(cources.context).load("https://www.carbonite.com/globalassets/images/sections/blog/blog-thumbnails/social/ai-ml.png").into(im_csaiml);
         Glide.with(cources.context).load("https://indoreinstitute.com/wp-content/uploads/2019/12/me.jpg").into(im_mec);
 
         ///GLIDES_C_IM
@@ -101,7 +107,8 @@ public class cources extends AppCompatActivity {
         Glide.with(cources.context).load("https://i.ytimg.com/vi/SzJ46YA_RaA/maxresdefault.jpg").into(c_im_cse);
         Glide.with(cources.context).load("https://assets.skyfilabs.com/images/blog/eceminiproject.jpg").into(c_im_ece);
         Glide.with(cources.context).load("https://c8.alamy.com/comp/HRP8HD/word-cloud-with-terms-about-information-technology-flat-style-HRP8HD.jpg").into(c_im_it);
-        Glide.with(cources.context).load("https://excellentacademyofengineering.com/images/project/it-engg.jpg").into(c_im_ite);
+        Glide.with(cources.context).load("https://www.indiaeducation.net/imagesvr_ce/5631/170203034608_information-technology-header-new.jpg").into(c_im_ite);
+        Glide.with(cources.context).load("https://www.carbonite.com/globalassets/images/sections/blog/blog-thumbnails/social/ai-ml.png").into(c_im_csaiml);
         Glide.with(cources.context).load("https://indoreinstitute.com/wp-content/uploads/2019/12/me.jpg").into(c_im_mec);
 
 
@@ -206,7 +213,21 @@ public class cources extends AppCompatActivity {
             }
         });
 
+        arrowBtn_Csaiml.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (expandableView_Csaiml.getVisibility() == View.GONE) {
+                    TransitionManager.beginDelayedTransition(cardview_Csaiml, new AutoTransition());
+                    expandableView_Csaiml.setVisibility(View.VISIBLE);
+                    arrowBtn_Csaiml.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
+                } else {
+                    TransitionManager.beginDelayedTransition(cardview_Csaiml, new AutoTransition());
+                    expandableView_Csaiml.setVisibility(View.GONE);
+                    arrowBtn_Csaiml.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                }
 
+            }
+        });
     }
 
 
