@@ -8,7 +8,7 @@
 
     android:orientation="vertical"
     tools:context=".student_chapters"
-    tools:openDrawer="end">
+    >
 
 
     <LinearLayout
@@ -38,7 +38,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1 ) Computer Society Of India"
+                    android:text="1) CSI"
                     android:textAlignment="center"
                     android:textSize="40sp"
                     android:textStyle="bold" />
@@ -55,14 +55,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginTop="10dp"
-                    android:text="Discription"
+                    android:text="The Computer Society of India is a non-profit professional meet to exchange views and information to learn and share ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences."
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:text="chair person :"
                     android:textSize="20sp" />
 
@@ -72,7 +72,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="No of Students :"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                     android:layout_marginBottom="@dimen/_5sdp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2ssp"
+                    android:background="@android:color/black" />
 
                 <LinearLayout
                     android:id="@+id/par_csi"
@@ -80,14 +85,48 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/tv_csi"
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
-                            android:text="CSI"
-                            android:textSize="40dp"
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2) IETE"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
-                            app:layout_constraintStart_toStartOf="parent" />
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/mrce" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:text="The Institution of Electronics and Telecommunication Engineers (IETE) is an Indian professional society devoted to the advancement of science, technology, electronics, telecommunication and information technology."
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="chair person :"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:text="No of Students :"
+                        android:textSize="20sp" />
 
                     <!--   <LinearLayout
                            android:visibility="gone"
@@ -115,6 +154,69 @@
                            android:src="@drawable/mrce" />
                        </LinearLayout>-->
                 </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2ssp"
+                    android:background="@android:color/black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2) ISTE"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/mrce" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:text="The Indian Society for Technical Education is a national, professional, non-profit Society registered under the Indian Societies Registration Act of 1860. "
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:text="chair person :"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="No of Students :"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2ssp"
+                    android:background="@android:color/black" />
+
+
+
+
 
             </LinearLayout>
         </ScrollView>

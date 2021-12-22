@@ -46,14 +46,34 @@ public class canteen extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         searchView = findViewById(R.id.search);
 
-        list1.add("veg rice ");
-        list1.add("veg biryani");
-        list1.add("veg manchurya");
-        list1.add("idli");
-        list1.add("puri");
-        list1.add("chicken rice");
-        list1.add("chicken manchurya");
-        list1.add("chapati");
+        list1.add("Corn Flakes   35");
+        list1.add("Chocos                              40");
+        list1.add("Sweet Corn                          25");
+        list1.add("Plain Maggie                        20");
+        list1.add("Veg Maggie                          25");
+        list1.add("Egg Maggie                          30");
+        list1.add("Cheese Maggie                       30");
+        list1.add("Veg Deluxe Pizza                   80");
+        list1.add("Panner Pizza                        80");
+        list1.add("Chicken Pizza                       90");
+        list1.add("Plain Corn                          25");
+        list1.add("Butter Corn                         30");
+        list1.add("Juice                               30");
+        list1.add("Milk Shakes                         45");
+        list1.add("Lemon Tea                           15");
+        list1.add("Ginger Tea                          15");
+        list1.add("Coffee                              20");
+        list1.add("Plain Tea                           15");
+        list1.add("Chicken Manchuria                   120");
+        list1.add("Chicken 65                          120");
+        list1.add("Veg Manchuria                       80");
+        list1.add("veg Noodles                           85");
+        list1.add("Veg Fried Rice                               85");
+        list1.add("Mini Meals                                    70");
+        list1.add("Chicken Fried Rice                          120");
+        list1.add("Chicken Noodles                             120");
+
+
         arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,list1);
         listView.setAdapter(arrayAdapter);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
