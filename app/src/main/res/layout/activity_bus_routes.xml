@@ -92,6 +92,7 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
 
+
                                 android:fontFamily="@font/amiko_semibold"
                                 android:text="Bus Number:6133"
                                 android:textSize="19dp" />
@@ -103,13 +104,15 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Route :Mehdipatnam \n via Begumpet"
                                 android:textColor="#000000"
-                                android:textSize="19dp" />
+                                android:textSize="17dp" />
 
                             <TextView
                                 android:layout_width="250dp"
                                 android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:text="Ph No:9542235621 "
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
@@ -182,6 +185,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:8186999014 "
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -261,6 +266,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9704611704 "
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -340,6 +347,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:7674983988 "
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -410,6 +419,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9908583551 "
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -489,6 +500,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:8639636223"
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -559,6 +572,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:6303795301 "
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -632,6 +647,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9390172555 "
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -704,6 +721,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:7032084669 "
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -776,6 +795,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:8639942842"
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -848,6 +869,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9618477971"
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -921,6 +944,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9618670937 "
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -993,6 +1018,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9553743536"
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
@@ -1065,6 +1092,8 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9398841985"
                                 android:textColor="#000000"
+                                android:autoLink="phone"
+                                android:linksClickable="true"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
