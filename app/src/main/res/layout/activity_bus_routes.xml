@@ -47,10 +47,10 @@
                 android:rowOrderPreserved="true">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/games11"
+                    android:id="@+id/games33"
 
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="140dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -68,7 +68,8 @@
                             android:layout_width="94dp"
                             android:layout_height="match_parent"
                             android:layout_weight="50"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -82,7 +83,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
+                                android:text="Driver Name :Syed Jahangir"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -92,15 +93,15 @@
                                 android:layout_weight="1"
 
                                 android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
+                                android:text="Bus Number:6133"
                                 android:textSize="19dp" />
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Route :"
+                                android:text="Route :Mehdipatnam \n via Begumpet"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -109,304 +110,17 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
+                                android:text="Ph No:9542235621 "
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/games1"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-
-                    android:layout_margin="6dp"
-                    android:layout_weight="1"
-                    android:contentDescription="todo"
-                    app:cardBackgroundColor="#81B9BF"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:id="@+id/LL22"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:weightSum="100">
-
-
-                        <ImageView
-                            android:layout_width="94dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="50"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-
-                                android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/games3"
-                    android:layout_width="match_parent"
-
-                    android:layout_height="130dp"
-
-                    android:layout_margin="6dp"
-                    android:layout_weight="1"
-                    android:contentDescription="todo"
-                    app:cardBackgroundColor="#81B9BF"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:id="@+id/LL33"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:weightSum="100">
-
-
-                        <ImageView
-                            android:layout_width="94dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="50"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/games4"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:layout_margin="6dp"
-                    android:layout_weight="1"
-                    android:contentDescription="todo"
-                    app:cardBackgroundColor="#81B9BF"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:weightSum="100">
-
-
-                        <ImageView
-                            android:layout_width="94dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="50"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="50"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/games"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:layout_margin="6dp"
-                    android:layout_weight="1"
-                    android:contentDescription="todo"
-                    app:cardBackgroundColor="#81B9BF"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:weightSum="100">
-
-
-                        <ImageView
-                            android:layout_width="94dp"
-                            android:layout_height="140dp"
-                            android:layout_weight="50"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="50"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
                     android:id="@+id/games12"
+
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="140dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -422,9 +136,10 @@
 
                         <ImageView
                             android:layout_width="94dp"
-                            android:layout_height="94dp"
-                            android:layout_weight="70"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -435,10 +150,10 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
+                                android:text="Driver Name :Syed Hussain"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -446,8 +161,17 @@
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
+
                                 android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
+                                android:text="Bus Number:6181"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :LB Nagar \n via Koti"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -456,27 +180,17 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
+                                android:text="Ph No:8186999014 "
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+                    android:id="@+id/games14"
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/games111"
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="140dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -492,9 +206,10 @@
 
                         <ImageView
                             android:layout_width="94dp"
-                            android:layout_height="94dp"
-                            android:layout_weight="70"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -505,10 +220,10 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
+                                android:text="Driver Name :B. Ravi"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -516,8 +231,17 @@
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
+
                                 android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
+                                android:text="Bus Number:5570"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :Boduppal \n via Seethaphal mandi"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -526,28 +250,17 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
+                                android:text="Ph No:9704611704 "
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
                     android:id="@+id/games15"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
 
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -555,7 +268,6 @@
                     app:cardCornerRadius="8dp">
 
                     <LinearLayout
-                        android:id="@+id/LL2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -564,9 +276,10 @@
 
                         <ImageView
                             android:layout_width="94dp"
-                            android:layout_height="94dp"
-                            android:layout_weight="70"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -577,10 +290,10 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
+                                android:text="Driver Name :CH Lingam"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -588,8 +301,17 @@
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
+
                                 android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
+                                android:text="Bus Number:5079"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :ECIL \n via Risala Bazar"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -598,7 +320,68 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Route :"
+                                android:text="Ph No:7674983988 "
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+                    android:id="@+id/games16"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:contentDescription="todo"
+                    app:cardBackgroundColor="#81B9BF"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+                        <ImageView
+                            android:layout_width="94dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Driver Name :Syed Ghouse"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:5369"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :Madhapur \n via Mothinagar"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -607,7 +390,147 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
+                                android:text="Ph No:9908583551 "
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+                    android:id="@+id/games17"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:contentDescription="todo"
+                    app:cardBackgroundColor="#81B9BF"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+                        <ImageView
+                            android:layout_width="94dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Driver Name :G Narsingh Rao"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:2547"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :Kondapur\n via Nizampet"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Ph No:8639636223"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+                    android:id="@+id/games18"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:contentDescription="todo"
+                    app:cardBackgroundColor="#81B9BF"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+                        <ImageView
+                            android:layout_width="94dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Driver Name :K.Bhaskar Rao"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:0547"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :PTC \n via Bachupally"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Ph No:6303795301 "
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -616,11 +539,10 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/games31"
+                    android:id="@+id/games19"
+
                     android:layout_width="match_parent"
-
-                    android:layout_height="130dp"
-
+                    android:layout_height="140dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -628,7 +550,6 @@
                     app:cardCornerRadius="8dp">
 
                     <LinearLayout
-                        android:id="@+id/LL3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -637,9 +558,10 @@
 
                         <ImageView
                             android:layout_width="94dp"
-                            android:layout_height="94dp"
-                            android:layout_weight="70"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -650,10 +572,10 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
+                                android:text="Driver Name :G Veera bhadaiah"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -661,8 +583,17 @@
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
+
                                 android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
+                                android:text="Bus Number:2475"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :KPHB \n via Pragathi Nagar"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -671,16 +602,7 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
+                                android:text="Ph No:9390172555 "
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -689,9 +611,10 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/games41"
+                    android:id="@+id/games20"
+
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="140dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -707,9 +630,10 @@
 
                         <ImageView
                             android:layout_width="94dp"
-                            android:layout_height="94dp"
-                            android:layout_weight="70"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -720,10 +644,10 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
+                                android:text="Driver Name :Y Ratnam"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -731,8 +655,17 @@
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
+
                                 android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
+                                android:text="Bus Number:2126"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :BHEL \n via Bachupally"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -741,16 +674,7 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
+                                android:text="Ph No:7032084669 "
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -759,9 +683,10 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/games123"
+                    android:id="@+id/games21"
+
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="140dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -777,9 +702,10 @@
 
                         <ImageView
                             android:layout_width="94dp"
-                            android:layout_height="94dp"
-                            android:layout_weight="70"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -790,10 +716,10 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
+                                android:text="Driver Name :M Krishna"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -801,8 +727,17 @@
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
+
                                 android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
+                                android:text="Bus Number:3249"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :MLKG \n via Alwal"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -811,16 +746,7 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
+                                android:text="Ph No:8639942842"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -829,9 +755,10 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/games121"
+                    android:id="@+id/games22"
+
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="140dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -847,9 +774,10 @@
 
                         <ImageView
                             android:layout_width="94dp"
-                            android:layout_height="94dp"
-                            android:layout_weight="70"
-                            android:src="@drawable/ic_baseline_directions_bus_24" />
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -860,10 +788,10 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Driver Name :"
+                                android:text="Driver Name :R M Naresh"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -871,8 +799,17 @@
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
+
                                 android:fontFamily="@font/amiko_semibold"
-                                android:text="Bus Number:"
+                                android:text="Bus Number:5077"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :J.Gutta\n via IDPL clny"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
@@ -881,22 +818,310 @@
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
-                                android:text="Route :"
-                                android:textColor="#000000"
-                                android:textSize="19dp" />
-
-                            <TextView
-                                android:layout_width="250dp"
-                                android:layout_height="30dp"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/montserrat"
-                                android:text="Ph No : "
+                                android:text="Ph No:9618477971"
                                 android:textColor="#000000"
                                 android:textSize="19dp" />
 
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/games23"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:contentDescription="todo"
+                    app:cardBackgroundColor="#81B9BF"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+                        <ImageView
+                            android:layout_width="94dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Driver Name :Hassan Miya"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:0548"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="55dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :6 No. \n via Indira ngr, diary farm"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Ph No:9618670937 "
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/games24"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:contentDescription="todo"
+                    app:cardBackgroundColor="#81B9BF"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+                        <ImageView
+                            android:layout_width="94dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Driver Name :Lakshmi Narayana"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:2239"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :LB Nagar \n via Naagole"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Ph No:9553743536"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/games25"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:contentDescription="todo"
+                    app:cardBackgroundColor="#81B9BF"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+                        <ImageView
+                            android:layout_width="94dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Driver Name :Mallesh"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:5679"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :Nagaram \n via Yapral"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Ph No:9398841985"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--<androidx.cardview.widget.CardView
+                    android:id="@+id/games27"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:contentDescription="todo"
+                    app:cardBackgroundColor="#81B9BF"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+                        <ImageView
+                            android:layout_width="94dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:src="@drawable/transport"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Driver Name :Y Ratnam"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:2126"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Route :BHEL \n via Bachupally"
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Ph No:7032084669 "
+                                android:textColor="#000000"
+                                android:textSize="19dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>-->
+
+
+
+
+
+
+
 
             </GridLayout>
 
