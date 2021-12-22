@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     GridLayout gridLayout;
     ViewPager viewPager;
     Adapter adapter;
-    Button button, logout1, my_login, gallery_admin, logout;
+    Button button, logout1, my_login, gallery_admin, logout,about_us;
     FirebaseAuth fAuth;
     private TextView log;
     List<Model> models;
@@ -86,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
         logout1 = findViewById(R.id.logout1);
         my_login = findViewById(R.id.my_login);
         logout = findViewById(R.id.logout);
+        about_us=findViewById(R.id.about_us);
+        about_us.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),abtdev.class));
+
+            }
+        });
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -453,4 +461,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

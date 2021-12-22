@@ -80,7 +80,8 @@
                                 android:fontFamily="@font/montserrat_bold"
                                 android:paddingTop="@dimen/_13sdp"
                                 android:text="@string/Description"
-                                android:textAlignment="center"
+
+
                                 android:textColor="@color/brown"
                                 android:textSize="@dimen/_12ssp" />
 
@@ -488,6 +489,12 @@
                         android:visibility="invisible"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
+               <Button
+                   android:layout_width="wrap_content"
+                   android:id="@+id/about_us"
+                   android:layout_height="@dimen/_45sdp"
+                   android:layout_marginLeft="@dimen/_120sdp"
+                   android:text="About \nDevelopers"/>
 
 
                 <TextView

@@ -55,6 +55,7 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_44sdp"
                     android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:src="@drawable/ic_baseline_home_work_24" />
 
                 <TextView
@@ -77,6 +78,7 @@ Secunderabad-500100,"
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_44sdp"
                     android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
 
                     android:src="@drawable/ic_call_blackk_24dp" />
 
@@ -99,6 +101,7 @@ Secunderabad-500100,"
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_44sdp"
                     android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
 
                     android:src="@drawable/ic_mail_black_24dp" />
 
@@ -120,6 +123,7 @@ Secunderabad-500100,"
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_44sdp"
                     android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
 
                     android:src="@drawable/ic_mail_black_24dp" />
 
@@ -163,6 +167,7 @@ Secunderabad-500100,"
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_44sdp"
                     android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
 
                     android:src="@drawable/ic_baseline_table_chart_24" />
 
@@ -173,6 +178,30 @@ Secunderabad-500100,"
                     android:paddingTop="@dimen/_16sdp"
                     android:text="Exam Branch : Phone:7207032248, Email:mrce2005@gmail.com"
                     android:textSize="@dimen/_15ssp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_44sdp"
+                    android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+
+                    android:src="@drawable/ic_baseline_table_chart_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_16sdp"
+
+                    android:text="Accounts/Scholarships : Phone:7842034236, Email:scholarships@mrce.in"
+                    android:textSize="@dimen/_15ssp" />
+
             </LinearLayout>
 
 
