@@ -107,7 +107,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9542235621 "
@@ -117,7 +117,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
-                    android:id="@+id/games12"
+                    android:id="@+id/games122"
 
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
@@ -177,7 +177,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:8186999014 "
@@ -249,6 +249,15 @@
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
                                 android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:5079"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9704611704 "
                                 android:textColor="#000000"
@@ -257,7 +266,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
-                    android:id="@+id/games15"
+                    android:id="@+id/games125"
 
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
@@ -318,6 +327,15 @@
                             <TextView
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:5369"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:7674983988 "
@@ -387,7 +405,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9908583551 "
@@ -397,7 +415,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
-                    android:id="@+id/games17"
+                    android:id="@+id/games173"
 
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
@@ -458,6 +476,15 @@
                             <TextView
                                 android:layout_width="250dp"
                                 android:layout_height="30dp"
+                                android:layout_weight="1"
+
+                                android:fontFamily="@font/amiko_semibold"
+                                android:text="Bus Number:0547"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:8639636223"
@@ -527,7 +554,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:6303795301 "
@@ -537,6 +564,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/games19"
@@ -599,7 +627,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9390172555 "
@@ -671,7 +699,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:7032084669 "
@@ -743,7 +771,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:8639942842"
@@ -815,7 +843,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9618477971"
@@ -888,7 +916,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9618670937 "
@@ -960,7 +988,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9553743536"
@@ -1032,7 +1060,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="50dp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:9398841985"
@@ -1105,7 +1133,7 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="30dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Ph No:7032084669 "

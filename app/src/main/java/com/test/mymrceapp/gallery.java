@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -51,11 +52,15 @@ public class gallery extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        /*toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setTitle("Gallery");
-        mRecyclerView = findViewById(R.id.recycler_view);
+        toolbar.setTitle("Gallery");*/
+
+        WebView browser = (WebView) findViewById(R.id.wb1);
+        browser.loadUrl("https://mrce.in/placements.html");
+
+        /*mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(gallery.this));
 
@@ -80,7 +85,7 @@ public class gallery extends AppCompatActivity {
                 Toast.makeText(gallery.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
-        });
+        });*/
 
     }
 

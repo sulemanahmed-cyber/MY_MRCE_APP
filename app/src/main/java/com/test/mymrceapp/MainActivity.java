@@ -1,6 +1,6 @@
 package com.test.mymrceapp;
 
-import      androidx.annotation.NonNull;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         models.add(new Model(R.drawable.the_nn, "Sri. Ch. Malla Reddy", "Founder Chairman, MRGI"));
         models.add(new Model(R.drawable.pres_bhadra, "Dr. Ch. Bhadra Reddy", "President, MRGI"));
         models.add(new Model(R.drawable.mahender, "Dr. Ch. Mahender Reddy", "Secretary,MRGI"));
-        models.add(new Model(R.drawable.principal, "Dr.M Sreedhar Reddy ", "Principal,MRCE"));
+        models.add(new Model(R.drawable.prinsree, "Dr.M Sreedhar Reddy ", "Prinipalc,MRCE"));
         models.add(new Model(R.drawable.tv_reddy, "Dr.T.V. Reddy ", "Vice-Principal,MRCE"));
 
         adapter = new Adapter(models, this);
@@ -129,10 +129,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setPadding(10, 0, 130, 0);
 
 
-
         //viewflipper
-        int images[] = {R.drawable.mrce_main,/*R.drawable.mrce_broch,*/R.drawable.ss_mrce, R.drawable.mrce_hecd, R.drawable.mrdd, R.drawable.mrce_cancer
-        };
+        int images[] = {R.drawable.mrce_main, R.drawable.backdrop123, R.drawable.ss_mrce, R.drawable.grad1, R.drawable.grad2, R.drawable.mrce_hecd, R.drawable.grad3, R.drawable.mrce_cancer,
+                R.drawable.grad4};
         v_flipper = findViewById(R.id.v_flipper);
         for (int image : images) {
             flipperImages(image);
@@ -168,29 +167,29 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                      startActivity(intent);
-                      /*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*/
-                      break;
+                        startActivity(intent);
+                        /*  Toast.makeText(MainActivity.this, "HOME CLICKED", Toast.LENGTH_SHORT).show();*/
+                        break;
 
-                  case R.id.nav_syllabus:
-                      Intent intent3 = new Intent(getApplicationContext(), syllabus.class);
-                      startActivity(intent3);
-                      break;
+                    case R.id.nav_syllabus:
+                        Intent intent3 = new Intent(getApplicationContext(), syllabus.class);
+                        startActivity(intent3);
+                        break;
 
-                  case R.id.nav_cources:
-                      Intent intent1 = new Intent(getApplicationContext(), cources.class);
-                      startActivity(intent1);
-                      /* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*/
-                      break;
+                    case R.id.nav_cources:
+                        Intent intent1 = new Intent(getApplicationContext(), cources.class);
+                        startActivity(intent1);
+                        /* Toast.makeText(MainActivity.this, "SETTINGS CLICKED", Toast.LENGTH_SHORT).show();*/
+                        break;
 
-                  case R.id.nav_gallery:
-                      Intent intent2 = new Intent(getApplicationContext(), gallery.class);
-                      startActivity(intent2);
-                      break;
-                  case R.id.nav_bus_routes:
-                      Intent intent4 = new Intent(getApplicationContext(), bus_routes.class);
-                      startActivity(intent4);
-                      break;
+                    case R.id.nav_gallery:
+                        Intent intent2 = new Intent(getApplicationContext(), gallery.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.nav_bus_routes:
+                        Intent intent4 = new Intent(getApplicationContext(), bus_routes.class);
+                        startActivity(intent4);
+                        break;
                 /*  case R.id.nav_notice:
                       Intent intent5 = new Intent(getApplicationContext(),notice.class);
                       startActivity(intent5);
@@ -200,39 +199,39 @@ public class MainActivity extends AppCompatActivity {
                       Intent intent6 = new Intent(getApplicationContext(),faculty.class);
                       startActivity(intent6);
                       break;*/
-                  case R.id.nav_events:
-                      Intent intent7 = new Intent(getApplicationContext(),events.class);
-                      startActivity(intent7);
-                      break;
+                    case R.id.nav_events:
+                        Intent intent7 = new Intent(getApplicationContext(), events.class);
+                        startActivity(intent7);
+                        break;
 
-                  case R.id.nav_studentc:
-                      Intent intent8 = new Intent(getApplicationContext(),student_chapters.class);
-                      startActivity(intent8);
-                      break;
+                    case R.id.nav_studentc:
+                        Intent intent8 = new Intent(getApplicationContext(), student_chapters.class);
+                        startActivity(intent8);
+                        break;
                   /*case R.id.nav_cells:
                       Intent intent9 = new Intent(getApplicationContext(),cells.class);
                       startActivity(intent9);
                       break;*/
-                  case R.id.nav_notification:
-                      Intent intent10 = new Intent(getApplicationContext(), notification.class);
-                      startActivity(intent10);
-                      break;
-                  case R.id.nav_assignment:
-                      Intent intent16 = new Intent(getApplicationContext(), assignments.class);
-                      startActivity(intent16);
-                      break;
+                    case R.id.nav_notification:
+                        Intent intent10 = new Intent(getApplicationContext(), notification.class);
+                        startActivity(intent10);
+                        break;
+                    case R.id.nav_assignment:
+                        Intent intent16 = new Intent(getApplicationContext(), assignments.class);
+                        startActivity(intent16);
+                        break;
 
 
-                  case R.id.nav_quiz:
-                      Intent intent15 = new Intent(getApplicationContext(), quiz.class);
-                      startActivity(intent15);
-                      break;
+                    case R.id.nav_quiz:
+                        Intent intent15 = new Intent(getApplicationContext(), quiz.class);
+                        startActivity(intent15);
+                        break;
 
-                  case R.id.nav_canteen:
-                      Intent intent11 = new Intent(getApplicationContext(), canteen.class);
-                      startActivity(intent11);
-                      break;
-                  case R.id.nav_contact:
+                    case R.id.nav_canteen:
+                        Intent intent11 = new Intent(getApplicationContext(), canteen.class);
+                        startActivity(intent11);
+                        break;
+                    case R.id.nav_contact:
                       /*
                       if(user.isAnonymous()){
                           startActivity(new Intent(getApplicationContext(),Activity_Register.class));
@@ -248,11 +247,11 @@ public class MainActivity extends AppCompatActivity {
                           startActivity(new Intent(getApplicationContext(),Activity_Register.class));
                       }*/
 
-                      //if(/*flag==1*/){
-                      Intent intent12 = new Intent(getApplicationContext(), contact.class);
-                      startActivity(intent12);
+                        //if(/*flag==1*/){
+                        Intent intent12 = new Intent(getApplicationContext(), contact.class);
+                        startActivity(intent12);
 
-                      break;
+                        break;
                  /* case R.id.nav_dum_1:
 
 
@@ -298,47 +297,40 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, syllabus.class);
                         startActivity(intent);
                     }
-                    if(finalI == 1)
-                    {
-                        Intent intent = new Intent(MainActivity.this,cources.class);
+                    if (finalI == 1) {
+                        Intent intent = new Intent(MainActivity.this, cources.class);
                         startActivity(intent);
                     }
-                    if(finalI == 2)
-                    {
-                        Intent intent = new Intent(MainActivity.this,bus_routes.class);
+                    if (finalI == 2) {
+                        Intent intent = new Intent(MainActivity.this, bus_routes.class);
                         startActivity(intent);
                     }
-                    if(finalI == 3)
-                    {
-                        Intent intent = new Intent(MainActivity.this,events.class);
+                    if (finalI == 3) {
+                        Intent intent = new Intent(MainActivity.this, events.class);
                         startActivity(intent);
                     }
-                    if(finalI == 4)
-                    {
+                    if (finalI == 4) {
                         Intent intent = new Intent(MainActivity.this, notification.class);
                         startActivity(intent);
                     }
-                    if(finalI == 5)
-                    {
-                        Intent intent = new Intent(MainActivity.this,student_chapters.class);
+                    if (finalI == 5) {
+                        Intent intent = new Intent(MainActivity.this, student_chapters.class);
                         startActivity(intent);
                     }
-                    if(finalI == 6)
-                    {
-                        Intent intent = new Intent(MainActivity.this,canteen.class);
+                    if (finalI == 6) {
+                        Intent intent = new Intent(MainActivity.this, canteen.class);
                         startActivity(intent);
                     }
-                    if(finalI == 7) {
+                    if (finalI == 7) {
                         Intent intent = new Intent(MainActivity.this, quiz.class);
                         startActivity(intent);
                     }
-                    if(finalI == 8)
-                    {
+                    if (finalI == 8) {
                        /* Intent intent = new Intent(MainActivity.this,contact.class);
                         startActivity(intent);*/
-                   /*     if(flag==1){*/
-                            Intent intent12 = new Intent(getApplicationContext(),contact.class);
-                            startActivity(intent12);
+                        /*     if(flag==1){*/
+                        Intent intent12 = new Intent(getApplicationContext(), contact.class);
+                        startActivity(intent12);
                         //}else {
 
                         //}
@@ -353,10 +345,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-}
+    }
+
     //view flipper images
-    public void  flipperImages(int image){
-        ImageView imageView= new ImageView(this);
+    public void flipperImages(int image) {
+        ImageView imageView = new ImageView(this);
         imageView.setBackgroundResource(image);
 
         v_flipper.addView(imageView);
@@ -364,22 +357,20 @@ public class MainActivity extends AppCompatActivity {
         v_flipper.setAutoStart(true);
 
         //animation
-        v_flipper.setInAnimation(this,android.R.anim.slide_in_left);
-     }
-
+        v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+    }
 
 
     //toolbar code
-    private void setUpToolbar()
-    {
-    drawerLayout=(DrawerLayout) findViewById(R.id.drawer_layout);
-    toolbar=(Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
+    private void setUpToolbar() {
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
    /* getActionBar().setDisplayHomeAsUpEnabled(true);
     getActionBar().setDisplayShowTitleEnabled(false);*/
-    actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.app_name,R.string.app_name);
-    drawerLayout.addDrawerListener(actionBarDrawerToggle);
-    actionBarDrawerToggle.syncState();
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -390,7 +381,6 @@ public class MainActivity extends AppCompatActivity {
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
-
 
 
     }
@@ -418,7 +408,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 // Do something when want to stay in the app
-                Toast.makeText(MainActivity.this,"thank you", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "thank you", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -434,7 +424,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "okie", Toast.LENGTH_SHORT).show();
 
 
-        Intent intent_reg= new Intent(getApplicationContext(),Activity_Register.class);
+        Intent intent_reg = new Intent(getApplicationContext(), Activity_Register.class);
         startActivity(intent_reg);
 
 
@@ -443,7 +433,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
         /*SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();

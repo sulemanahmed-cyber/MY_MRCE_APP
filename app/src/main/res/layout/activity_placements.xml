@@ -10,15 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/webview"></WebView>-->
-
-    <LinearLayout
-
+    <!--<com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdf1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"/>
+-->
+    <WebView
+        android:id="@+id/wb1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
-        <ImageView
-            android:id="@+id/img_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+
 </ScrollView>
