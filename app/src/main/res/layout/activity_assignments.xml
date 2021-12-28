@@ -30,7 +30,7 @@
         android:backgroundTint="#78909c"
         android:textSize="@dimen/_22sdp"
         android:onClick="btn_action_cse"
-        android:text="view Assignments\t\n (CSE)" />
+        android:text="view Assignments" />
 
 
 

@@ -90,12 +90,12 @@ private static final String TAG ="my_loginn";
         if (InternetConnection.checkConnection(context)) {
             // Its Available...
 
-            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+           /* GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestEmail()
                     .build();
-            mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+            mGoogleSignInClient = GoogleSignIn.getClient(this, gso);*/
 
-            google_button = findViewById(R.id.google_button);
+           /* google_button = findViewById(R.id.google_button);*/
             mAuth = FirebaseAuth.getInstance();
             mregister = findViewById(R.id.register_here);
             mregister.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +126,7 @@ private static final String TAG ="my_loginn";
             prefs.edit().putString("name", userName).apply();
 
 
-            google_button.setOnClickListener(new View.OnClickListener() {
+            /*google_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     switch (view.getId()) {
@@ -136,7 +136,7 @@ private static final String TAG ="my_loginn";
                     }
 
                 }
-            });
+            });*/
         /*mAuthListener=new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {

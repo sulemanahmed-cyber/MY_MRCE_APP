@@ -50,7 +50,7 @@
                     android:id="@+id/games33"
 
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="160dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -123,7 +123,7 @@
                     android:id="@+id/games122"
 
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="160dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -195,7 +195,7 @@
                     android:id="@+id/games14"
 
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="180dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -276,7 +276,7 @@
                     android:id="@+id/games125"
 
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="175dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -429,7 +429,7 @@
                     android:id="@+id/games173"
 
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="200dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -510,7 +510,7 @@
                     android:id="@+id/games18"
 
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="170dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"
@@ -585,7 +585,7 @@
                     android:id="@+id/games19"
 
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="180dp"
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:contentDescription="todo"

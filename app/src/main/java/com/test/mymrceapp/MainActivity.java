@@ -318,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                     if (finalI == 4) {
-                        Intent intent = new Intent(MainActivity.this, notification.class);
+                        Intent intent = new Intent(MainActivity.this, assignments.class);
                         startActivity(intent);
                     }
                     if (finalI == 5) {
