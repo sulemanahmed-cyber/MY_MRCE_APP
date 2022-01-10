@@ -21,7 +21,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:title="Assignments"></androidx.appcompat.widget.Toolbar>
 
-    <Button
+    <!--<Button
         android:id="@+id/view_cse"
         android:layout_width="match_parent"
         android:layout_margin="@dimen/_35sdp"
@@ -30,12 +30,17 @@
         android:backgroundTint="#78909c"
         android:textSize="@dimen/_22sdp"
         android:onClick="btn_action_cse"
-        android:text="view Assignments" />
+        android:text="view Assignments" />-->
 
 
 
 
-
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_200sdp"
+        android:layout_width="match_parent"
+        android:src="@mipmap/ic_launcher_comingsoon"
+        android:layout_height="@dimen/_100sdp"/>
 </LinearLayout>
 
 
@@ -101,7 +106,13 @@
                     android:textSize="22sp" />
         -->
 
-
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/drawer_menu"></com.google.android.material.navigation.NavigationView>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

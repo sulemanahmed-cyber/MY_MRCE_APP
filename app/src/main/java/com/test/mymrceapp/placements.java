@@ -1,7 +1,9 @@
 package com.test.mymrceapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.widget.ContentLoadingProgressBar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import com.github.barteksc.pdfviewer.PDFView;
 
 public class placements extends AppCompatActivity {
     public static Context context;
+    DrawerLayout drawerLayout;
+    Toolbar toolbar;
     //ImageView img_1;
     //WebView webView;
     //PDFView pdfView;
@@ -20,8 +24,11 @@ public class placements extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_placements);
-        WebView browser = (WebView) findViewById(R.id.wb1);
-        browser.loadUrl("https://mrce.in/photogallery.html");
+        drawerLayout=findViewById(R.id.drawer_placements);
+        toolbar= findViewById(R.id.toolbar_placements);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
        /* webView = findViewById(R.id.webview);
          webView.getSettings().getJavaScriptEnabled();

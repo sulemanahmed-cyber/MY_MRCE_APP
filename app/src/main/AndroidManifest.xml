@@ -20,7 +20,10 @@
             android:parentActivityName=".MainActivity"
 
             />
-        <activity android:name=".placements" />
+        <activity android:name=".placements"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            />
         <activity android:name=".profile" />
         <activity
             android:name=".college_admin"
@@ -34,6 +37,7 @@
         <activity android:name=".quiz" />
         <activity android:name=".Score" />
         <activity android:name=".QuestionActivity" />
+
         <activity
             android:name=".Sets_Activity"
             android:parentActivityName=".Online_Test" />
@@ -48,6 +52,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Activity_Register"
             android:parentActivityName=".MainActivity"
@@ -56,6 +61,10 @@
             android:name=".my_loginn"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".gallery"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            />
         <!--
  <activity
             android:name=".ui.login.my_loginActivity"
@@ -107,10 +116,7 @@
             android:name=".cources"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".gallery"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".syllabus"
             android:parentActivityName=".MainActivity"

@@ -11,16 +11,39 @@
 
     tools:context=".gallery">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B2EBF2"
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0097a7"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Gallery">
 
 
 
-        <WebView
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_200sdp"
+            android:layout_width="match_parent"
+            android:src="@mipmap/ic_launcher_comingsoon"
+            android:layout_height="@dimen/_100sdp"/>
+
+
+</LinearLayout>
+
+        <!--<WebView
             android:id="@+id/wb1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/>-->
         <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -48,7 +71,6 @@
                 android:layout_height="match_parent" />
 
         </LinearLayout>-->
-    </ScrollView>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_menu"
@@ -57,5 +79,6 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
         app:menu="@menu/drawer_menu"></com.google.android.material.navigation.NavigationView>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

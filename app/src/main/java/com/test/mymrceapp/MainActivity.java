@@ -220,10 +220,10 @@ public class MainActivity extends AppCompatActivity {
                       Intent intent9 = new Intent(getApplicationContext(),cells.class);
                       startActivity(intent9);
                       break;*/
-                    case R.id.nav_notification:
+                    /*case R.id.nav_notification:
                         Intent intent10 = new Intent(getApplicationContext(), notification.class);
                         startActivity(intent10);
-                        break;
+                        break;*/
                     case R.id.nav_assignment:
                         Intent intent16 = new Intent(getApplicationContext(), assignments.class);
                         startActivity(intent16);

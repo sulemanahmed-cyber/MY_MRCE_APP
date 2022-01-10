@@ -67,9 +67,9 @@ public class assignments extends AppCompatActivity  {
 
 
 
-        storageReference = FirebaseStorage.getInstance().getReference();
+       /* storageReference = FirebaseStorage.getInstance().getReference();
 
-           databaseReference = FirebaseDatabase.getInstance().getReference("cse");
+           databaseReference = FirebaseDatabase.getInstance().getReference("cse");*/
 
 
 
