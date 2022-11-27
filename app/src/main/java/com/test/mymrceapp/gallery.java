@@ -23,9 +23,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -48,28 +46,19 @@ public class gallery extends AppCompatActivity {
     private List<Upload> mUploads;
 
     Toolbar toolbar;
-    WebView webView;
-    DrawerLayout drawerLayout;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        /*toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setTitle("Gallery");
-        /*webView=findViewById(R.id.wb1);
-        webView.getSettings().setSupportZoom(false);
-        webView.getSettings().setDomStorageEnabled(true);
-        webView.setWebViewClient(new myWebViewClient());
-        webView.loadUrl("https://www.mrce.in/photogallery.html");*/
+        toolbar.setTitle("Gallery");*/
 
-
-
-
-       /* browser.loadUrl("https://www.mrce.in/photogallery.html");*/
+        //WebView browser = (WebView) findViewById(R.id.wb1);
+        //browser.loadUrl("https://mrce.in/placements.html");
 
         /*mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -99,7 +88,6 @@ public class gallery extends AppCompatActivity {
         });*/
 
     }
-
 
 
 }

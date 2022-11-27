@@ -50,12 +50,12 @@ public class quiz extends AppCompatActivity {
         alertDialog1.setCancelable(false);
         // Showing Alert Message
 */
-        quiz_btn.setOnClickListener(new View.OnClickListener() {
+        /*quiz_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Online_Test.class));
             }
-        });
+        });*/
 
     }
 

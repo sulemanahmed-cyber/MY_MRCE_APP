@@ -33,14 +33,18 @@
         android:text="view Assignments" />-->
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coming soon"
+        />
 
-
-    <ImageView
+    <!--<ImageView
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_200sdp"
         android:layout_width="match_parent"
         android:src="@mipmap/ic_launcher_comingsoon"
-        android:layout_height="@dimen/_100sdp"/>
+        android:layout_height="@dimen/_100sdp"/>-->
 </LinearLayout>
 
 

@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         my_login = findViewById(R.id.my_login);
         logout = findViewById(R.id.logout);
         about_us=findViewById(R.id.about_us);
+/*
         about_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+*/
 
 
         fAuth = FirebaseAuth.getInstance();

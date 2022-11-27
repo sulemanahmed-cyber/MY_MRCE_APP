@@ -22,6 +22,34 @@
         app:title="About Developers">
 
     </androidx.appcompat.widget.Toolbar>
+        <ImageView
+            android:paddingTop="@dimen/_20sdp"
+            android:layout_width="@dimen/_190sdp"
+            android:layout_height="@dimen/_190sdp"
+            android:src="@drawable/suleman"
+            android:layout_gravity="center"
+            />
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Mohammed Suleman -2019 C.S.E."
+               android:textColor="#000000"
+               android:gravity="center"
+               android:paddingBottom="@dimen/_60sdp"/>
+        <ImageView
+
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:src="@drawable/satvik"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="K.V. Satvik -2019 I.T."
+            android:textColor="#000000"
+            android:gravity="center"/>
+
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

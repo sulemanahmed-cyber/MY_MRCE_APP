@@ -307,13 +307,13 @@
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_baseline_assignment_24" />
+                                android:src="@drawable/ic_baseline_card_membership_grid" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway_semibold"
-                                android:text="Assignments"
+                                android:text="Admin"
                                 android:textAlignment="center"
                                 android:textColor="#B2EBF2"
                                 android:textSize="10dp" />
